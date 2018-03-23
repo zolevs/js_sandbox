@@ -7,3 +7,5 @@
 			document.write("Opis za x: " + x +"<br/>" + "Opis za y je: " + y);
 		}
 		fun("This is text"," opis");
+
+		// git pass
