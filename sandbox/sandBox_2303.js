@@ -9,3 +9,4 @@
 		fun("This is text"," opis");
 
 		// git pass
+		// git pass 2
