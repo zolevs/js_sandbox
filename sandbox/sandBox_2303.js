@@ -1,13 +1,50 @@
+//// 24.03
+//
+//
+//
 
-			// document.write("Hello again.")
-			// console.log("Hello console.");
-			// alert("Wellcome");
-		function fun(x,y){
 
-			document.write("Opis za x: " + x +"<br/>" + "Opis za y je: " + y);
-		}
-		fun("This is text"," opis");
 
-		// git pass
-		// git pass 2
-		// git pass 3
+
+
+// var broj = 25;
+
+// broj *= 24;
+// broj /= 2;
+
+// broj -=10;
+
+// document.write (broj);
+
+
+
+// var name = "Michel";
+
+// function fun(){
+// 	var name = "Lokalna"
+// 	document.write(name);
+// }
+
+// fun();
+// document.write("<br/>"+name);
+
+
+
+//// 23.03
+//
+//
+//
+
+// function jedan(){
+// 	document.write("Ja sam Zoran ");
+// }
+// function dva(){
+// 	document.write(" i ovo je nesto.")
+// }
+
+// function start(){
+// 	jedan();
+// 	dva();
+// }
+
+// start();
