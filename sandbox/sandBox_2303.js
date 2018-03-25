@@ -3,15 +3,27 @@
 //
 //
 
+// let myPet = 'Oskar';
+// console.log('I own pet ${myPet}.');
+let myPet = 'Oskar';
+let mySecondPet = 'Laki';
+console.log(`I own pet ${myPet}`);
 
-var number1 = 22;
-var number2 = 22;
+document.write("I own pet " + myPet);
 
-if(number1 >= number2){
-	document.write("Heloo " + number1);
-} else {
-	document.write ("Again " + number2);
-}
+console.log(`I own pet ${myPet} and ${mySecondPet} also.`);
+
+
+
+
+// var number1 = 22;
+// var number2 = 22;
+
+// if(number1 >= number2){
+// 	document.write("Heloo " + number1);
+// } else {
+// 	document.write ("Again " + number2);
+// }
 
 
 
