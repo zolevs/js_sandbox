@@ -1,3 +1,111 @@
+//// 25.03
+//
+//
+//
+	x = 51;
+
+	do {
+		document.write(x + "<br/>");
+		x++;
+	} while(x<10);
+
+
+
+
+	// var x = 1;
+
+	// while(x < 15){
+	// 	document.write(x+"<br/>");
+	// 	x++;
+	// }
+
+
+// // while
+	// var x = 1;
+
+	// while(x < 10){
+	// 	document.write(x + " apples <br/>");
+	// 	x++;
+	// }
+
+
+// // for
+
+	// for (i = 0; i < 10; i+=2) {
+	// 	document.write("Print ...<br/>");
+	// }
+
+
+///// SWITCH
+
+// var name = "Zorann";
+
+// switch (name){
+// 	case "Zoran":
+// 		document.write("Name is Zoran.");
+// 		break;
+// 	case "Milan":
+// 		document.write("Name is Milan");
+// 		break;
+// 	case "Dejan":
+// 		document.write("Name is Dejan");
+// 		break;
+// 	default:
+// 		document.write("Nothing...");
+// }
+
+
+
+
+
+
+
+
+// var first = "Zoran";
+// var last = "Ivanovic";
+
+// if( (first=="Zoran") || (last=="Ivanovicc") ){
+// 	console.log("Ok");
+// }
+
+
+
+
+
+
+
+
+
+// var name = "Zoran";
+// var lastName = "Ivanovic";
+
+// if(name == "Zorann"){
+// 	document.write("Prvi uslov ispunjen.");
+// 	if (lastName == "Ivanovicc"){
+// 		document.write ("Sve se poklapa");
+// 	} else {
+// 		document.write("Poklapa se samo ime");
+
+// 	}
+
+// } else {
+// 	document.write("Nista se ne poklapa...");
+// }
+
+
+
+
+
+// var blue = 43;
+// var red = 29;
+
+// if (blue != 43){
+// 	console.log("I love ...");
+// } else {
+// 	document.write("Other...")
+// }
+
+
 //// 24.03
 //
 //
@@ -5,13 +113,13 @@
 
 // let myPet = 'Oskar';
 // console.log('I own pet ${myPet}.');
-let myPet = 'Oskar';
-let mySecondPet = 'Laki';
-console.log(`I own pet ${myPet}`);
+// let myPet = 'Oskar';
+// let mySecondPet = 'Laki';
+// console.log(`I own pet ${myPet}`);
 
-document.write("I own pet " + myPet);
+// document.write("I own pet " + myPet);
 
-console.log(`I own pet ${myPet} and ${mySecondPet} also.`);
+// console.log(`I own pet ${myPet} and ${mySecondPet} also.`);
 
 
 
