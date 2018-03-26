@@ -1,13 +1,69 @@
+//// 26.03
+//
+//
+//
+
+var answer = prompt("Glavni grad:");
+if (answer == "Beograd"){
+	document.write("Tacno tako BGD "+answer);
+} else {
+	document.write("Zamo mi je "+"taca odgovor je Beograd");
+}
+
+
+
+
+
+
+
+
+// var name = "Milisca";
+
+// switch (name){
+// 	case "Zoran":
+// 		document.write("Tacno");
+// 		break;
+// 	case "Milica":
+// 		document.write("Tacno Milica");
+// 		break;
+// 	default:
+// 	document.write("Nothing...");
+// }
+
+
+
+
 //// 25.03
 //
 //
 //
-	x = 51;
 
-	do {
-		document.write(x + "<br/>");
-		x++;
-	} while(x<10);
+// var myFavoriteMovie = "Fargo";
+
+// // document.write(myFavoriteMovie);
+
+// var randomNumber = Math.random()*8;
+
+// console.log(randomNumber);
+
+
+
+
+	// var x = 200;
+	// var y = 10;
+
+	// document.write(x / y + "<br/>");
+	// document.write(typeof(x / y));
+
+	// console.log(typeof(b));
+
+
+	// x = 51;
+
+	// do {
+	// 	document.write(x + "<br/>");
+	// 	x++;
+	// } while(x<10);
 
 
 
