@@ -1,14 +1,96 @@
+//// 27.03
+//
+//
+//
+
+
+// ///////// ver 3
+var randomNumber = Math.round(Math.random()*15);
+
+if(randomNumber % 3 === 0 && randomNumber != 0){
+	if(randomNumber % 5 === 0 ){
+		document.write("fizzbuzz");
+	} else {
+		document.write("fizz");
+	}
+} else if(randomNumber % 5 === 0 && randomNumber !=0){
+	document.write("buzz");
+} else {
+	document.write("<br/>"+randomNumber+"<br/>");
+}
+
+
+
+
+// ///////// ver 2
+
+// var randomNumber = Math.round(Math.random()*15);
+
+// console.log(randomNumber);
+
+// if (randomNumber % 3 ===0 && randomNumber != 0){
+// 	document.write("Fizz");
+// } else if (randomNumber % 5 === 0 && randomNumber != 0){
+// 	document.write("Buzz");
+// } else if( randomNumber % 3 === 0 && randomNumber % 5 === 0){
+// 	document.write("Fizz Buzz");
+// } else {
+// 	document.write(randomNumber);
+// }
+
+// ///////// ver 1
+
+// var randomNumber = Math.round(Math.random()*5);
+// // randomNumber = 0;
+
+// console.log (randomNumber);
+// if (randomNumber != 0){
+// 	if(randomNumber % 3 === 0){
+// 		document.write("Fizz");
+// 	} else if( randomNumber % 5 === 0){
+// 		document.write("Buzz");
+// 	} else {
+// 		document.write(randomNumber);
+// 	}
+// } else {
+// 	console.log("Zero...");
+// }
+
+
+
+
+
+// var answer = prompt("What is the capital of Serbia");
+
+// if(answer == "Belgrade"){
+// 	console.log("You are correct !!!");
+// } else {
+// 	console.log("Sorry " + answer + " is not correct.");
+// }
+
+// var favoriteAnimal = prompt("What is your favorite animal.");
+
+// if (favoriteAnimal === "cat"){
+// 	document.write("Awesome");
+// } else if (favoriteAnimal === "dog") {
+// 	document.write("Dog's are ok");
+// } else if (favoriteAnimal === "oskar"){
+// 	document.write("You are my man.");
+// } else {
+// 	document.write("Yayks !!!!");Oskar
+// }
+
 //// 26.03
 //
 //
 //
 
-var answer = prompt("Glavni grad:");
-if (answer == "Beograd"){
-	document.write("Tacno tako BGD "+answer);
-} else {
-	document.write("Zamo mi je "+"taca odgovor je Beograd");
-}
+// var answer = prompt("Glavni grad:");
+// if (answer == "Beograd"){
+// 	document.write("Tacno tako BGD "+answer);
+// } else {
+// 	document.write("Zamo mi je "+"taca odgovor je Beograd");
+// }
 
 
 
