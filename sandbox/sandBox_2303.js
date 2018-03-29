@@ -1,23 +1,59 @@
+//// 28.03
+//
+//
+//
+
+
+for(i = 0; i < 11; i++){
+	console.log(i);
+}
+
+
+
+
+
+// var name = prompt("Your name ?").toLowerCase();
+
+// // //// toLowerCase() - radimo dabismo dobili sve u mala slova i na taj nacin izvrsili proveru.
+
+// switch(name){
+// 	case "zoran":
+// 		document.write("Hello Zole");
+// 		break;
+// 	case "milan":
+// 		document.write("Welcome to Vrsac");
+// 		break;
+// 	case "dejan":
+// 		document.write("Hello Klisa.");
+// 		break;
+// 	default:
+// 		document.write("None of ....");
+// 		break;
+// }
+
+
+
+
 //// 27.03
 //
 //
 //
 
 
-// ///////// ver 3
-var randomNumber = Math.round(Math.random()*15);
+// // ///////// ver 3
+// var randomNumber = Math.round(Math.random()*15);
 
-if(randomNumber % 3 === 0 && randomNumber != 0){
-	if(randomNumber % 5 === 0 ){
-		document.write("fizzbuzz");
-	} else {
-		document.write("fizz");
-	}
-} else if(randomNumber % 5 === 0 && randomNumber !=0){
-	document.write("buzz");
-} else {
-	document.write("<br/>"+randomNumber+"<br/>");
-}
+// if(randomNumber % 3 === 0 && randomNumber != 0){
+// 	if(randomNumber % 5 === 0 ){
+// 		document.write("fizzbuzz");
+// 	} else {
+// 		document.write("fizz");
+// 	}
+// } else if(randomNumber % 5 === 0 && randomNumber !=0){
+// 	document.write("buzz");
+// } else {
+// 	document.write("<br/>"+randomNumber+"<br/>");
+// }
 
 
 
