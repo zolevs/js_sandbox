@@ -1,12 +1,129 @@
+//// 06.04
+//
+//
+//
+
+
+
+
+
+
+
+
+
+// function randomNumber(){
+// 	document.write(Math.random());
+// }
+
+// randomNumber();
+
+
+
+
+
+// function calculate(side1, side2){
+// 	console.log(side1 * side2);
+// }
+
+// calculate(10,12);
+
+
+
+
+
+
+
+//// 02.04
+//
+//
+//
+
+
+// var sad = confirm("Would you like to be cheered up?");
+
+// console.log(sad);
+
+// while(sad){
+// 	console.log("What do you call a boomerang that doesn't come back? ... A stick !");
+// 	var yes = confirm("Would you like to continue our session?");
+// 	if (yes) {
+// 		var responses = prompt("Tell me about your troubles: ","Type your feelings here?");
+
+// 		if (responses) {
+// 			alert("I am sorry you are feeling down about that. I know you can't see it ...");
+// 			sad = false;
+// 		}
+// 	} else {
+// 		sad = false;
+// 	}
+// }
+
+
+
+
+
+
+
+// var x = 0;
+
+// do {
+// 	console.log(x);
+// 	x++;
+// } while ( x <= 10);
+
+// while (x <= 10){
+// 	// console.log("while");
+// 	console.log(x);
+// 	x++;
+// }
+
+
+
+
+
+
+
+
+// for (var i = 1; i <= 100; i++) {
+// 		if( i % 3 === 0){
+// 			if(i % 5 ===0){
+// 				console.log("FizzBuzz");
+// 			} else {
+// 			console.log("Fizz");
+// 			}
+// 		} else if (i % 5 === 0){
+// 			console.log("Buzz");
+// 		}
+// 		else {
+// 			console.log(i);
+// 		}
+// 	}
+
+
+
+
+
+//// 30.03
+//
+//
+//
+
+
+
+
+
+
+
+
 //// 28.03
 //
 //
 //
 
 
-for(i = 0; i < 11; i++){
-	console.log(i);
-}
+// for(i = 0; i < 11; i++){
+// 	console.log(i);
+// }
 
 
 
