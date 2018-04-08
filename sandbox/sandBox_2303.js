@@ -1,19 +1,33 @@
+//// 08.04
+//
+//
+//
+
+
+
+
+
+
+
+
+
+
 //// 06.04
 //
 //
 //
 
 
-var friends = ["Milan","Sasa","Dejan","Boban","Zoran","Stevan","VV"];
+// var friends = ["Milan","Sasa","Dejan","Boban","Zoran","Stevan","VV"];
 
-function greetFriends(){
-	for(i = 0; i < friends.length; i++)
-	console.log(friends[i]);
-	// document.write(i);
-	// console.log(i);
-}
+// function greetFriends(){
+// 	for(i = 0; i < friends.length; i++)
+// 	console.log(friends[i]);
+// 	// document.write(i);
+// 	// console.log(i);
+// }
 
-greetFriends();
+// greetFriends();
 
 
 
