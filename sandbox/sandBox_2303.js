@@ -1,13 +1,19 @@
-//// 08.04
+//// 10.04
 //
 //
 //
 
+ function person(name, age){
+ 	this.name = name;
+ 	this.age = age;
 
+ }
 
+ var zole = new person("Zoran Ivan", 43);
+ var milan = new person("Milan Anki", 43);
 
-
-
+	document.write(zole.name);
+	document.write(milan.name);
 
 
 
