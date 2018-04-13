@@ -1,19 +1,47 @@
+//// 13.04
+//
+//
+//
+
+var Pizza = {
+	crust: 'thin',
+	toppings: 3,
+	hasBacon: true,
+	howmanyToppings: function(){
+		return this.toppings;
+	}
+};
+
+console.log(Pizza.crust);
+
+
+// var x = new Object ();
+// var y = {};
+
+// console.log(x);
+
+// //// opsirnije o objektu
+// console.dir(y)
+
+
+
+
 //// 10.04
 //
 //
 //
 
- function person(name, age){
- 	this.name = name;
- 	this.age = age;
+ // function person(name, age){
+ // 	this.name = name;
+ // 	this.age = age;
 
- }
+ // }
 
- var zole = new person("Zoran Ivan", 43);
- var milan = new person("Milan Anki", 43);
+ // var zole = new person("Zoran Ivan", 43);
+ // var milan = new person("Milan Anki", 43);
 
-	document.write(zole.name);
-	document.write(milan.name);
+	// document.write(zole.name);
+	// document.write(milan.name);
 
 
 
