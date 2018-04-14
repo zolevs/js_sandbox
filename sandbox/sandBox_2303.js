@@ -1,18 +1,77 @@
+//// 14.04
+//
+//
+//
+
+
+
+
+// console.log( 3 !== '3');
+// console.log( 4 !== 3);
+// console.log( 4 !== '3');
+// console.log( 4 !== 4);
+// console.log( 4 !== '4');
+
+
+
+
+// console.log(1 != 2);
+// console.log(1 != "1");
+// console.log(1 != 1);
+// console.log(1 != false);
+
+
+
+
+
+// function equalityTest(myVal){
+// 	if (myVal === 12){
+// 		return "Equal";
+// 	}
+// 	return "Not Equal";
+// }
+// console.log(equalityTest('12'));
+
+
+
+
+
+// var ourArray = [1,2,3,4];
+// console.log(ourArray);
+// var removeFromArray = ourArray.pop();
+// document.write(removeFromArray);
+
+
+
+// var ourArray = ["Simpson", "Homer", "Bart"]
+// ourArray.push(["Lisa", "Marge"]);
+
+// console.log(ourArray[1]);
+// console.log(ourArray[3]);
+
+
+
+
+
+
+
+
+
 //// 13.04
 //
 //
 //
 
-var Pizza = {
-	crust: 'thin',
-	toppings: 3,
-	hasBacon: true,
-	howmanyToppings: function(){
-		return this.toppings;
-	}
-};
+// var Pizza = {
+// 	crust: 'thin',
+// 	toppings: 3,
+// 	hasBacon: true,
+// 	howmanyToppings: function(){
+// 		return this.toppings;
+// 	}
+// };
 
-console.log(Pizza.crust);
+// console.log(Pizza.crust);
 
 
 // var x = new Object ();
