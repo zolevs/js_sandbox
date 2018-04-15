@@ -3,20 +3,74 @@
 //
 //
 
-function testGreaterThan(val){
-	if (val >= 100){
-		return "100 or over 100";
-	}
-	if (val >= 10){
-		return "10 or over 10";
-	}
-	return "Under 10";
-}
+var bp = Array("Head", "Shoulders", "Knees", "Toes");
 
-// console.log(testGreaterThan(101));
-document.write(testGreaterThan('100'));
+bp.reverse();
+// console.log(bp);
 
-console.log(76 <= 6);
+bp.push("Tongue", "Liver");
+
+console.log(bp);
+
+bp.sort();
+
+console.log(bp);
+
+var stringJoin = bp.join();
+document.write(stringJoin);
+
+
+// // //// POP
+
+// var movies = new Array("Avatar", "Roler ball", "Fight Club", "Oz");
+// document.write(movies[3] + "<br/>");
+
+// movies.pop();
+
+
+// //// JOIN - method
+// var movies = new Array("Avatar", "Roler ball", "Fight Club", "Oz");
+
+// var string1 = movies.join(" | ");
+
+// document.write(string1);
+
+
+
+
+
+// var ljudovi = new Array("Homer", "Bart", "Randy", "Kid");
+// var chicks = new Array("Lisa", "Aron", "Hannah")
+
+// var people = ljudovi.concat(chicks);
+
+
+// document.write(ljudovi.length+"<br/>");
+// document.write(people.length);
+
+
+// var stuff = new Array();
+
+// stuff[0] = "Zoran";
+// stuff[1] = "Komsija";
+
+// console.log(stuff);
+
+
+// function testGreaterThan(val){
+// 	if (val >= 100){
+// 		return "100 or over 100";
+// 	}
+// 	if (val >= 10){
+// 		return "10 or over 10";
+// 	}
+// 	return "Under 10";
+// }
+
+// // console.log(testGreaterThan(101));
+// document.write(testGreaterThan('100'));
+
+// console.log(76 <= 6);
 
 
 
