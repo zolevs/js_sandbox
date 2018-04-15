@@ -1,9 +1,48 @@
+//// 15.04
+//
+//
+//
+
+function testGreaterThan(val){
+	if (val >= 100){
+		return "100 or over 100";
+	}
+	if (val >= 10){
+		return "10 or over 10";
+	}
+	return "Under 10";
+}
+
+// console.log(testGreaterThan(101));
+document.write(testGreaterThan('100'));
+
+console.log(76 <= 6);
+
+
+
+
+
 //// 14.04
 //
 //
 //
 
 
+// var things = new Array(3);
+
+// console.log (things);
+
+// things[0] = "Javascript";
+// things[1] = "Text";
+// things[2] = "Book";
+// things[3] = "Thing";
+// things[4] = "Again";
+
+// var people = new Array("Komsija", "Sused", "Milan", "Opasno", "Sunce");
+
+// document.write(people[0]+'<br/>');
+// document.write(people[4]+"<br/>");
+// document.write(people[8]+'<br/>');
 
 
 // console.log( 3 !== '3');
