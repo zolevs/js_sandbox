@@ -1,23 +1,52 @@
+//// 17.04
+//
+//
+//
+
+var stuff = new Array("apples", "pears", "bacon", "tuna", "ham");
+
+stuff.sort();
+
+for(i = 0; i < stuff.length; i++){
+	document.write(stuff[i]+"<br/>");
+}
+
+
+
+
+
+
+
+
+// var pie = prompt("Enter your name: ", "...");
+// console.log (pie);
+// document.write(pie);
+
+// var crap = new Array(3)
+
+// for (i=0; i<3; i++){
+// 	crap[i] = prompt("Enter", "");
+// }
 //// 15.04
 //
 //
 //
 
-var bp = Array("Head", "Shoulders", "Knees", "Toes");
+// var bp = Array("Head", "Shoulders", "Knees", "Toes");
 
-bp.reverse();
+// bp.reverse();
+// // console.log(bp);
+
+// bp.push("Tongue", "Liver");
+
 // console.log(bp);
 
-bp.push("Tongue", "Liver");
+// bp.sort();
 
-console.log(bp);
+// console.log(bp);
 
-bp.sort();
-
-console.log(bp);
-
-var stringJoin = bp.join();
-document.write(stringJoin);
+// var stringJoin = bp.join();
+// document.write(stringJoin);
 
 
 // // //// POP
