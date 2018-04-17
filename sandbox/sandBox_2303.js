@@ -3,15 +3,25 @@
 //
 //
 
-var stuff = new Array("apples", "pears", "bacon", "tuna", "ham");
+var ime = new Array();
 
-stuff.sort();
+ime["color"] = "Blue";
+ime["food"] = "hot";
 
-for(i = 0; i < stuff.length; i++){
-	document.write(stuff[i]+"<br/>");
-}
+document.write(ime["color"]);
 
 
+
+
+
+
+// var stuff = new Array("apples", "pears", "bacon", "tuna", "ham");
+
+// stuff.sort();
+
+// for(i = 0; i < stuff.length; i++){
+// 	document.write(stuff[i]+"<br/>");
+// }
 
 
 
