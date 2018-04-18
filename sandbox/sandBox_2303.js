@@ -4,6 +4,8 @@
 //
 
 function printTime(){
+	document.body.innerHTML = "";
+
 	var now = new Date();
 	var hours = now.getHours();
 	var min = now.getMinutes();
