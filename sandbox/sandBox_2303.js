@@ -3,9 +3,44 @@
 //
 //
 
-function isLess(a, b){
-	return (a < b);
+function printTime(){
+	var now = new Date();
+	var hours = now.getHours();
+	var min = now.getMinutes();
+	var sec = now.getSeconds();
+
+	document.write(hours + ":" + min +":"+ sec+"<br/>");
+
+	// document.write(now+"<br/>");
+	// document.write(hours+"<br/>");
+	// document.write(min + "<br/>");
+	// document.write(sec + "<br/>");
 }
+
+// printTime();
+
+setInterval("printTime()", 1000);
+
+// function doSomething(){
+// 	document.write("Tuna ");
+// }
+
+// setInterval("doSomething()", 2000);
+
+// var n = prompt("","");
+// var answer = Math.sqrt(n);
+// document.write(answer);
+
+
+// document.write(Math.PI);
+
+
+
+
+
+// function isLess(a, b){
+// 	return (a < b);
+// }
 
 
 // function isLess(a, b){
@@ -16,7 +51,7 @@ function isLess(a, b){
 // 	}
 // }
 
-console.log(isLess(10, 15));
+// console.log(isLess(10, 15));
 
 
 
