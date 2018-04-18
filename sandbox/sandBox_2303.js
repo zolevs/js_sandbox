@@ -3,13 +3,38 @@
 //
 //
 
-var ime = new Array();
+function isLess(a, b){
+	return (a < b);
+}
 
-ime["color"] = "Blue";
-ime["food"] = "hot";
 
-document.write(ime["color"]);
+// function isLess(a, b){
+// 	if(a < b){
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }
 
+console.log(isLess(10, 15));
+
+
+
+
+
+//// 17.04
+//
+//
+//
+
+
+
+// var ime = new Array();
+
+// ime["color"] = "Blue";
+// ime["food"] = "hot";
+
+// document.write(ime["color"]);
 
 
 
@@ -22,7 +47,6 @@ document.write(ime["color"]);
 // for(i = 0; i < stuff.length; i++){
 // 	document.write(stuff[i]+"<br/>");
 // }
-
 
 
 
