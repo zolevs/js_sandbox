@@ -1,27 +1,52 @@
+//// 22.04
+//
+//
+//
+
+var ourDog = {
+	"name" : "Oskar",
+	"legs" : 4,
+	"tails" : 1,
+	"friends" : ["everything"]
+}
+
+ourDog.name = "Laki";
+ourDog["name"] = "Oskar";
+ourDog.brother = "Laki";
+ourDog["brother"] = "Laki";
+
+console.log(ourDog);
+
+delete ourDog.friends;
+
+console.log(ourDog);
+
+
+
 //// 17.04
 //
 //
 //
 
-function printTime(){
-	document.body.innerHTML = "";
+// function printTime(){
+// 	document.body.innerHTML = "";
 
-	var now = new Date();
-	var hours = now.getHours();
-	var min = now.getMinutes();
-	var sec = now.getSeconds();
+// 	var now = new Date();
+// 	var hours = now.getHours();
+// 	var min = now.getMinutes();
+// 	var sec = now.getSeconds();
 
-	document.write(hours + ":" + min +":"+ sec+"<br/>");
+// 	document.write(hours + ":" + min +":"+ sec+"<br/>");
 
-	// document.write(now+"<br/>");
-	// document.write(hours+"<br/>");
-	// document.write(min + "<br/>");
-	// document.write(sec + "<br/>");
-}
+// 	// document.write(now+"<br/>");
+// 	// document.write(hours+"<br/>");
+// 	// document.write(min + "<br/>");
+// 	// document.write(sec + "<br/>");
+// }
 
 // printTime();
 
-setInterval("printTime()", 1000);
+// setInterval("printTime()", 1000);
 
 // function doSomething(){
 // 	document.write("Tuna ");
