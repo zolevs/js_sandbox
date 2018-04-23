@@ -4,7 +4,52 @@
 //
 
 
+// Setup
+function phoneticLookup(val) {
+  var result = "";
 
+  // Only change code below this line
+  var lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta":"Denver",
+    "echo":"Easy",
+    "foxtrot":"Frank"
+  };
+
+  result = lookup[val];
+
+  // Only change code above this line
+  return result;
+}
+
+// Change this value to test
+console.log(phoneticLookup("charlie"));
+
+
+
+
+
+
+
+
+
+// var alpha = {
+// 	1: "Z",
+// 	2: "Y",
+// 	3: "X",
+// 	4: "W",
+// 	5: "C",
+// 	6: "B",
+// 	7: "A"
+// }
+
+// console.log(alpha[2]);
+// console.log(alpha[7]);
+
+// let value = 4;
+// console.log(alpha[value]);
 
 
 // var testObj = {
