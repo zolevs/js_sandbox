@@ -1,25 +1,78 @@
+//// 23.04
+//
+//
+//
+
+
+
+
+
+// var testObj = {
+// 	12: "Namath",
+// 	16: "Montana",
+// 	19: "Unitas",
+// 	20: "Opera"
+// }
+
+// var playerNumber = 20;
+// var playerName = testObj[20];
+
+// console.log(playerName);
+
+// testObj[12] = "Zoran";
+// testObj.temp = "Ovo je test";
+
+// delete testObj[19];
+// console.log(testObj);
+
+
+
+// var someProp = "propName";
+// var myObj = {
+// 	propName: "Some Value",
+// 	name: "Oskar",
+// 	age: 12
+// }
+
+// test = myObj[someProp];
+
+// console.log(test);
+
+// test  = myObj.name;
+// console.log(test);
+
+// let variable = "age";
+// test = myObj[variable];
+
+// console.log(test);
+
+
+
+
 //// 22.04
 //
 //
 //
 
-var ourDog = {
-	"name" : "Oskar",
-	"legs" : 4,
-	"tails" : 1,
-	"friends" : ["everything"]
-}
+// var ourDog = {
+// 	"name" : "Oskar",
+// 	"legs" : 4,
+// 	"tails" : 1,
+// 	"friends" : ["everything"]
+// }
 
-ourDog.name = "Laki";
-ourDog["name"] = "Oskar";
-ourDog.brother = "Laki";
-ourDog["brother"] = "Laki";
+// ourDog.name = "Laki";
+// ourDog["name"] = "Oskar";
+// ourDog.brother = "Laki";
+// ourDog["brother"] = "Laki";
 
-console.log(ourDog);
+// console.log(ourDog);
 
-delete ourDog.friends;
+// delete ourDog.friends;
 
-console.log(ourDog);
+// console.log(ourDog);
+
+
 
 
 
