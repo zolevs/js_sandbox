@@ -3,18 +3,36 @@
 //
 //
 
+var myPlants = [
+{
+	type: "flowers",
+	list: [
+		"rose",
+		"tulip",
+		"dendelion"
+	]
+},
+{
+	type: "trees",
+	list: [
+		"fir",
+		"pine",
+		"birch"
+	]
+}
+]
 
-var myStorage = {
-	"car":{
-		"inside":{
-			"glove box": "maps",
-			"passenger seat":"crumbs"
-		},
-		"outside":{
-			"trunk":"jack"
-		}
-	}
-};
+// var myStorage = {
+// 	"car":{
+// 		"inside":{
+// 			"glove box": "maps",
+// 			"passenger seat":"crumbs"
+// 		},
+// 		"outside":{
+// 			"trunk":"jack"
+// 		}
+// 	}
+// };
 
 
 
