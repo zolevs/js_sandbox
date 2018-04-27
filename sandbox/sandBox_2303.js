@@ -1,31 +1,82 @@
+//// 27.04
+//
+//
+//
+
+
+var myStorage = {
+	"car":{
+		"inside":{
+			"glove box": "maps",
+			"passenger seat":"crumbs"
+		},
+		"outside":{
+			"trunk":"jack"
+		}
+	}
+};
+
+
+
+
+
+
+// var ourStorage = {
+// 	"desk":{
+// 		"drawer": "stapler"
+// 	},
+// 	"cabinet":{
+// 		"top drawer":{
+// 			"folder1":"a file",
+// 			"folder2":"secrets"
+// 		},
+// 		"bottom drawe":"sode"
+// 	}
+// };
+
+
+
+
 //// 23.04
 //
 //
 //
 
 
-// Setup
-function phoneticLookup(val) {
-  var result = "";
+// function person(name, age){
+// 	this.name = name;
+// 	this.age = age;
+// 	this.yearOfBirth = bornYear;
+// }
+// function bornYear(){
+// 	return 2018 - this.age;
+// }
+// var p = new person("Zoran", 44);
+// document.write(p.yearOfBirth());
 
-  // Only change code below this line
-  var lookup = {
-    "alpha": "Adams",
-    "bravo": "Boston",
-    "charlie": "Chicago",
-    "delta":"Denver",
-    "echo":"Easy",
-    "foxtrot":"Frank"
-  };
 
-  result = lookup[val];
+// // Setup
+// function phoneticLookup(val) {
+//   var result = "";
 
-  // Only change code above this line
-  return result;
-}
+//   // Only change code below this line
+//   var lookup = {
+//     "alpha": "Adams",
+//     "bravo": "Boston",
+//     "charlie": "Chicago",
+//     "delta":"Denver",
+//     "echo":"Easy",
+//     "foxtrot":"Frank"
+//   };
 
-// Change this value to test
-console.log(phoneticLookup("charlie"));
+//   result = lookup[val];
+
+//   // Only change code above this line
+//   return result;
+// }
+
+// // Change this value to test
+// console.log(phoneticLookup("charlie"));
 
 
 
