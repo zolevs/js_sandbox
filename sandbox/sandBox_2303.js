@@ -1,26 +1,77 @@
+//// 28.04
+//
+//
+//
+
+var ourArray = [];
+
+for (let i=0; i<10; i += 2){
+	ourArray.push(i);
+};
+
+var odd = [];
+
+for (let i=1; i<10; i +=2){
+	odd.push(i);
+}
+
+
+
+// var myArray = [];
+
+// for (let i=0; i < 5; i++){
+// 	myArray.push(i);
+// }
+
+// console.log(myArray);
+
+
+
+
+// var ourArray = [];
+// for (var i = 0; i < 5; i++) {
+// ourArray.push(i);
+// }
+
+
+// var ourVar = [];
+
+// for (var i = 0; i < 5; i++){
+// 	ourVar.push(i);
+// }
+
+// for (var i = 0; i < ourVar.length; i++){
+// 	document.write(ourVar[i]+"<br/>");
+// }
+
+
+
+
+
+
 //// 27.04
 //
 //
 //
 
-var myPlants = [
-{
-	type: "flowers",
-	list: [
-		"rose",
-		"tulip",
-		"dendelion"
-	]
-},
-{
-	type: "trees",
-	list: [
-		"fir",
-		"pine",
-		"birch"
-	]
-}
-]
+// var myPlants = [
+// {
+// 	type: "flowers",
+// 	list: [
+// 		"rose",
+// 		"tulip",
+// 		"dendelion"
+// 	]
+// },
+// {
+// 	type: "trees",
+// 	list: [
+// 		"fir",
+// 		"pine",
+// 		"birch"
+// 	]
+// }
+// ];
 
 // var myStorage = {
 // 	"car":{
