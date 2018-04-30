@@ -1,19 +1,84 @@
+//// 30.04
+//
+//
+//
+
+var person = {
+	name:'Ja Ti',
+	age: 44
+};
+
+// // (person.name)
+// // (person.age)
+
+person.birth = 1974;
+
+person.age = 2018 - person.birth;
+
+
+
+// var names = ["Zoran", "Milan", "Dejan"];
+// var textToDisplay = "";
+
+// for (var i=0; i<names.length; i++){
+// 	textToDisplay += names[i];
+// 	textToDisplay += "<br/>";
+// }
+
+// document.body.innerHTML = textToDisplay;
+
+
+
+
+
+// var names = ["Zoran", "Milan", "Dejan"];
+
+// console.log(names[2]);
+// names.push("Ila");
+// // names.pop();
+// names.unshift("Dejan");
+
+// console.log(names[0]);
+
+
+
+
+
+// var cashInWallet = 10;
+
+// cashInWallet = cashInWallet + 1;
+//  //// cashInWallet + 1; (false)
+
+// document.write(cashInWallet);
+
+// cashInWallet = 2 * cashInWallet++;
+
+// document.write(cashInWallet);
+
+
+
+
+
+
+
+
+
 //// 28.04
 //
 //
 //
 
-var ourArray = [];
+// var ourArray = [];
 
-for (let i=0; i<10; i += 2){
-	ourArray.push(i);
-};
+// for (let i=0; i<10; i += 2){
+// 	ourArray.push(i);
+// };
 
-var odd = [];
+// var odd = [];
 
-for (let i=1; i<10; i +=2){
-	odd.push(i);
-}
+// for (let i=1; i<10; i +=2){
+// 	odd.push(i);
+// }
 
 
 
