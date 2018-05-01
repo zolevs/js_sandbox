@@ -1,19 +1,81 @@
+//// 01.05
+//
+//
+//
+
+var ourArray = [];
+var i = 0;
+
+while(i<5){
+	ourArray.push(i);
+	i++
+}
+
+console.log(ourArray);
+
+
+
+// function multiplyAll(arr){
+
+// 	var product = 1;
+
+// 	for (var i=0; i < arr.length; i++){
+// 		for(var j = 0; j < arr[i].length; j++){
+// 			product *= arr[i][j];
+// 			console.log(product);
+// 		}
+// 	}
+// 	console.log(product);
+// 	return product;
+// }
+
+// multiplyAll([[1],[3],[2],[2,1],[4,3,4]]);
+
+
+// var arr = [
+// 	[1,2],[3,4],[5,6]
+// ];
+
+// for (var i = 0; i < arr.length; i++){
+// 	for (var j = 0; j < arr[i].length; j++){
+// 		console.log(arr[i][j]);
+// 	}
+// }
+
+
+
+
+
+
+
+
+// var ourArray = [9, 10, 11, 12];
+// var ourTotal = 0;
+
+// for (var i=0; i<ourArray.length; i++){
+// 	ourTotal += ourArray[i];
+// }
+
+
+
+
+
 //// 30.04
 //
 //
 //
 
-var person = {
-	name:'Ja Ti',
-	age: 44
-};
+// var person = {
+// 	name:'Ja Ti',
+// 	age: 44
+// };
 
-// // (person.name)
-// // (person.age)
+// // // (person.name)
+// // // (person.age)
 
-person.birth = 1974;
+// person.birth = 1974;
 
-person.age = 2018 - person.birth;
+// person.age = 2018 - person.birth;
 
 
 
