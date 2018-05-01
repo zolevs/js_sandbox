@@ -3,15 +3,88 @@
 //
 //
 
-var ourArray = [];
-var i = 0;
-
-while(i<5){
-	ourArray.push(i);
-	i++
+for (var i=0; i<10; i++){
+	if(i % 2 == 0){
+		document.body.innerHTML += (i + '<br/>');
+	} else {
+		document.body.innerHTML += ('Not ' + i + '<br/>');
+	}
 }
 
-console.log(ourArray);
+
+
+
+// var name = 'Jane';
+
+// if(name == 'Jane Doe'){
+// 	document.body.innerHTML = 'It is Jane Doe !!!';
+// } else if (name.toUpperCase() == 'JANE'){
+// 	document.body.innerHTML = 'It is JANE toUpperCase.';
+// }else {
+// 	document.body.innerHTML = 'It is not Jane Doe ?!?!';
+// }
+
+
+
+
+
+
+
+// var people = [
+
+// 	{name: "Yo Jo", age: 43},
+// 	{name: "JoHan Han", age: 55},
+// 	{name: "Mi Sao", age: 74}
+
+// ];
+
+// people.push({
+// 	name: "Eli Batman",
+// 	age: 123
+// });
+
+// var sumOfAges = 0;
+// for (var i=0; i < people.length; i++){
+// 	// sumOfAges += people[i].age;
+// 	var person = people[i];
+
+// 	sumOfAges += person.age;
+// 	console.log('Hello '+person.name+' nice to see you. You are '+person.age + ' old.');
+// }
+
+// console.log(Math.round(sumOfAges/people.length));
+
+
+
+
+
+
+
+
+// var person = {name:"Jo Yo", age: 42};
+
+// console.log(person);
+
+// console.log(person.name);
+// console.log(person.age);
+
+// person.birth = 1974;
+
+// person.age = 2018 - person.birth;
+// console.log(person.age);
+// console.log(person);
+
+
+
+// var ourArray = [];
+// var i = 0;
+
+// while(i<5){
+// 	ourArray.push(i);
+// 	i++
+// }
+
+// console.log(ourArray);
 
 
 
