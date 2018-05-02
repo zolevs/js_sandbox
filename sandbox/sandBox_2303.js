@@ -1,15 +1,100 @@
+//// 02.05
+//
+//
+//
+
+// var ourArray = [];
+// var i=0;
+// while(i<=5){
+// 	ourArray.push(i);
+// 	i++;
+// }
+
+
+// var arr = [
+// 	[1,2],[3,44],[34,21]
+// ];
+
+// for (var i=0; i < arr.length; i++){
+// 	// console.log(arr[i]);
+// 	for (var j=0; j < arr[i].length; j++){
+// 		console.log(arr[i][j]);
+// 	}
+// }
+
+
+
+
+// var arr = [10, 229 , 48, 27, 6];
+// var total = 0;
+
+// for (var i=0; i < arr.length; i++){
+// 	console.log(arr[i]);
+// 	total += arr[i];
+// }
+// console.log(total);
+
+
+
+
+
+// var contacts = [
+// {
+// 	"firstName":"Akira",
+// 	"lastname":"Laine",
+// 	"number":"012345",
+// 	"likes":["Pizza", "Coding", "Brown"]
+// },
+// {
+// 	"firstName":"Zoran",
+// 	"lastname":"Ivanovic",
+// 	"number":"222211111",
+// 	"likes":["Chocolate", "Walk", "Blue"]
+// },
+// {
+// 	"firstName":"Ljiljana",
+// 	"lastname":"Ivanovic",
+// 	"number":"264352111",
+// 	"likes":["Parfume", "Milk", "Red"]
+// },
+// {
+//     "firstName": "Kristian",
+//     "lastName": "Vos",
+//     "number": "unknown",
+//     "likes": ["Javascript", "Gaming", "Foxes"]
+// }
+
+// ]
+// function lookUpProfile(firstName, prop){
+// 	for (var i=0; i < contacts.length; i++){
+// 		if (contacts[i].firstName == firstName){
+// 			console.log("Radi");
+// 		} else {
+// 			console.log("Ovde");
+// 		}
+
+// 	}
+// }
+
+// lookUpProfile("Kristian", "likes");
+
+
+
+
+
+
 //// 01.05
 //
 //
 //
 
-for (var i=0; i<10; i++){
-	if(i % 2 == 0){
-		document.body.innerHTML += (i + '<br/>');
-	} else {
-		document.body.innerHTML += ('Not ' + i + '<br/>');
-	}
-}
+// for (var i=0; i<10; i++){
+// 	if(i % 2 == 0){
+// 		document.body.innerHTML += (i + '<br/>');
+// 	} else {
+// 		document.body.innerHTML += ('Not ' + i + '<br/>');
+// 	}
+// }
 
 
 
