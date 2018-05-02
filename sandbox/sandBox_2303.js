@@ -3,6 +3,79 @@
 //
 //
 
+
+
+
+
+
+// let twoD = [
+// 	[1,3,4,6,7,8,3,2],
+// 	[6,3,56,3,5,3],
+// 	[423,533,522,1]
+// ];
+// let bigHero = { characters: [
+// 	{name:'Hir', voice:'R. Potter'},
+// 	{name: 'Baymax', voice:'S. Adsit', prop: 123},
+// 	{name: 'Spiderman', voice:'L. Nonao'},
+// 	{name: 'Fred', voice:'T.J Miller'}
+// ]};
+
+// let chars = bigHero['characters'];	//bigHero.characters;
+// console.log(chars);
+// for (let i = 0, len=chars.length; i<len; i++){
+// 	// console.log(chars[i]);
+// 	// console.log(chars[i].name);
+// 	// console.log(chars[i]['name']);
+
+// 	for(let prop in chars[i]){
+// 		console.log(prop, chars[i].prop, chars[i][prop]);
+// // // chars[i].prop ovo je pristup varijabli prop
+// // // chars[i][prop] ovo je pristup objektu prop
+// // // https://youtu.be/AqgVLYpBWG8?t=631
+// 	}
+
+// }
+
+
+
+
+// // // nested for loops
+// let rows = twoD.length;
+// for (let i=0; i<rows; i++){
+// 	let items = twoD[i].length;
+// 	console.log(i, items);
+// 	for(let j=0; j<items; j++){
+// 		console.log(twoD[i][j]);
+// 	}
+// }
+
+// var cars = [
+// 	{
+// 		make: "Honda",
+// 		model: "civic",
+// 		year: 2014,
+// 		color: "blue"
+// 	},
+// 	{
+// 		make: "Mercedes",
+// 		model: "B 180",
+// 		year: 2015,
+// 		color: "red"
+// 	},
+// 	{
+// 		make: "Opel",
+// 		model: "corsa",
+// 		year: 2006,
+// 		color: "perla"
+// 	}
+// ]
+// for (i=0; i < cars.length; i++){
+// 	if (cars[i].year > 2010){
+// 		console.log(cars[i].model);
+// 		document.write(cars[i].make+" "+cars[i].year+"<br/>");
+// 	}
+// }
+
 // var ourArray = [];
 // var i=0;
 // while(i<=5){
