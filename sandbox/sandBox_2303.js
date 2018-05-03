@@ -1,11 +1,33 @@
+//// 03.05
+//
+//
+//
+
+var names = ["Abe", "Babe", "Chuck"];
+names.push("Dave");
+
+var obj = {age: 44, name:"Joe", showsize:9.5};
+
+for (var key in names){
+	console.log("key: "+key+" value: "+names[key]);
+}
+for (var key in obj){
+	console.log("Key: "+key+" value: "+obj[key]);
+}
+
+
+// for (var i = 0; i < names.length; i++){
+// 	console.log(names[i]);
+// }
+
+
+
+
+
 //// 02.05
 //
 //
 //
-
-
-
-
 
 
 // let twoD = [
