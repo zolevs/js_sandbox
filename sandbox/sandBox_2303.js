@@ -1,19 +1,59 @@
+//// 06.05
+//
+//
+//
+
+var people = [
+	{name: "Jane Doe", age: 44},
+	{name: "Nada Top", age: 100},
+	{name: "Tap Top", age: 21}
+]
+var age = 0;
+for (var i=0; i < people.length; i++){
+	var person = people[i];
+
+	console.log("Person "+person.name+" is "+person.age+" old.");
+
+	age += person.age;
+}
+
+console.log(age);
+
+// var person = {name: "Jane Doe", age: 41};
+// person.birth = 1974;
+
+// console.log(person);
+
+// person.age = 2018 - person.birth;
+
+// console.log(person);
+
+
+// function randomRange(myMin, myMax){
+// 	return Math.floor(Math.random()*(myMax - myMin + 1))+myMin;
+// }
+
+// var myRandom = randomRange(5, 15);
+// console.log(myRandom);
+
+
+
 //// 03.05
 //
 //
 //
 
-var names = ["Abe", "Babe", "Chuck"];
-names.push("Dave");
+// var names = ["Abe", "Babe", "Chuck"];
+// names.push("Dave");
 
-var obj = {age: 44, name:"Joe", showsize:9.5};
+// var obj = {age: 44, name:"Joe", showsize:9.5};
 
-for (var key in names){
-	console.log("key: "+key+" value: "+names[key]);
-}
-for (var key in obj){
-	console.log("Key: "+key+" value: "+obj[key]);
-}
+// for (var key in names){
+// 	console.log("key: "+key+" value: "+names[key]);
+// }
+// for (var key in obj){
+// 	console.log("Key: "+key+" value: "+obj[key]);
+// }
 
 
 // for (var i = 0; i < names.length; i++){
