@@ -1,23 +1,53 @@
+//// 08.05
+//
+//
+//
+
+for (var i = 0; i < 10; i++) {
+	if(i % 2 == 0){
+		document.body.innerHTML += (i + '<br/>');
+	} else {
+		document.body.innerHTML += ('Not ' + i + '<br/>');
+	}
+}
+
+
+
+
+// var name = 'John Doe';
+// if (name.toUpperCase() == 'JANE DOE') {
+// 	document.body.innerHTML = 'It is Jane Doe';
+// }else if (name =='John Doe'){
+// 	document.body.innerHTML = 'It is John Doe'
+// } else {
+// 	document.body.innerHTML = 'It is not Jane Doe';
+// }
+
+
+
+
+
+
 //// 06.05
 //
 //
 //
 
-var people = [
-	{name: "Jane Doe", age: 44},
-	{name: "Nada Top", age: 100},
-	{name: "Tap Top", age: 21}
-]
-var age = 0;
-for (var i=0; i < people.length; i++){
-	var person = people[i];
+// var people = [
+// 	{name: "Jane Doe", age: 44},
+// 	{name: "Nada Top", age: 100},
+// 	{name: "Tap Top", age: 21}
+// ]
+// var age = 0;
+// for (var i=0; i < people.length; i++){
+// 	var person = people[i];
 
-	console.log("Person "+person.name+" is "+person.age+" old.");
+// 	console.log("Person "+person.name+" is "+person.age+" old.");
 
-	age += person.age;
-}
+// 	age += person.age;
+// }
 
-console.log(age);
+// console.log(age);
 
 // var person = {name: "Jane Doe", age: 41};
 // person.birth = 1974;
