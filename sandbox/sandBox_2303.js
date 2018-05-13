@@ -1,15 +1,35 @@
+//// 13.05
+//
+//
+//
+
+var timeOutFunction = function(){
+	document.write("I finally ran.")
+}
+
+setTimeout(timeOutFunction, 2000);
+
+// var doeFunction = function(name,numberOfTimes){
+// 	for(let i=0; i<numberOfTimes; i++){
+// 		document.write("Hello " + name+" Function." + i + "<br/>");
+// 	}
+// }
+
+// doeFunction("Zole",5);
+
+
 //// 08.05
 //
 //
 //
 
-for (var i = 0; i < 10; i++) {
-	if(i % 2 == 0){
-		document.body.innerHTML += (i + '<br/>');
-	} else {
-		document.body.innerHTML += ('Not ' + i + '<br/>');
-	}
-}
+// for (var i = 0; i < 10; i++) {
+// 	if(i % 2 == 0){
+// 		document.body.innerHTML += (i + '<br/>');
+// 	} else {
+// 		document.body.innerHTML += ('Not ' + i + '<br/>');
+// 	}
+// }
 
 
 
