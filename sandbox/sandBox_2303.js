@@ -1,13 +1,58 @@
+//// 14.05
+//
+//
+//
+
+var backgroundColors = ["blue","yellow","green","purple"];
+
+var currentBackgroundIndex = 0;
+
+var changeBackgroundColor = function(){
+	var newBackgroundColor = backgroundColors[currentBackgroundIndex];
+	console.log(newBackgroundColor);
+	document.body.style.backgroundColor = newBackgroundColor;
+
+	currentBackgroundIndex++;
+
+	if(currentBackgroundIndex >= backgroundColors.length){
+		currentBackgroundIndex = 0;
+	}
+}
+
+
+setInterval(changeBackgroundColor, 1000);
+
+
+
+// var timeout = function(){
+// 	console.log("I was waited for 2sec.");
+// }
+// setTimeout(timeout, 2000);
+
+
+// var sayHi = function(name, numberOfTimes){
+// 	for (var i=0; i<numberOfTimes; i++){
+// 	console.log(name+' says hi');
+// 	}
+// };
+
+// sayHi("Zole",3);
+// sayHi("Dejan",4);
+
+
+
+
+
 //// 13.05
 //
 //
 //
 
-var timeOutFunction = function(){
-	document.write("I finally ran.")
-}
+// var timeOutFunction = function(){
+// 	document.write("I finally ran.")
+// }
 
-setTimeout(timeOutFunction, 2000);
+// setTimeout(timeOutFunction, 2000);
 
 // var doeFunction = function(name,numberOfTimes){
 // 	for(let i=0; i<numberOfTimes; i++){
