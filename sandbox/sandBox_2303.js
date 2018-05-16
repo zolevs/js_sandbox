@@ -1,26 +1,67 @@
+//// 16.05
+//
+//
+//
+
+var clickMeButton = document.getElementById('clickMeButton');
+
+var fontSize = 16;
+
+clickMeButton.addEventListener('click', function(){
+	fontSize++;
+
+	clickMeButton.style.fontSize = fontSize + 'px';
+});
+
+// var clickMeButton = document.getElementById('clickMeButton');
+
+// console.log(clickMeButton);
+
+// var backgroundColors = ['blue', 'yellow', 'green', 'purple'];
+// var backgroundColorIndex = 0;
+// var clickMeButtonFunction = function(){
+// 	// console.log('Another click...');
+// 	var newBackgroundColor = backgroundColors[backgroundColorIndex];
+
+// 	document.body.style.backgroundColor = newBackgroundColor;
+// 	backgroundColorIndex++;
+// 	if (backgroundColorIndex >= backgroundColors.length){
+// 		backgroundColorIndex = 0;
+// 	};
+
+// };
+
+// clickMeButton.addEventListener('click', clickMeButtonFunction);
+
+
+// clickMeButton.addEventListener('click', function(){
+// 	console.log('It was clicked');
+// });
+
+
 //// 14.05
 //
 //
 //
 
-var backgroundColors = ["blue","yellow","green","purple"];
+// var backgroundColors = ["blue","yellow","green","purple"];
 
-var currentBackgroundIndex = 0;
+// var currentBackgroundIndex = 0;
 
-var changeBackgroundColor = function(){
-	var newBackgroundColor = backgroundColors[currentBackgroundIndex];
-	console.log(newBackgroundColor);
-	document.body.style.backgroundColor = newBackgroundColor;
+// var changeBackgroundColor = function(){
+// 	var newBackgroundColor = backgroundColors[currentBackgroundIndex];
+// 	console.log(newBackgroundColor);
+// 	document.body.style.backgroundColor = newBackgroundColor;
 
-	currentBackgroundIndex++;
+// 	currentBackgroundIndex++;
 
-	if(currentBackgroundIndex >= backgroundColors.length){
-		currentBackgroundIndex = 0;
-	}
-}
+// 	if(currentBackgroundIndex >= backgroundColors.length){
+// 		currentBackgroundIndex = 0;
+// 	}
+// }
 
 
-setInterval(changeBackgroundColor, 1000);
+// setInterval(changeBackgroundColor, 1000);
 
 
 
