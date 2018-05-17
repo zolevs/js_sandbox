@@ -3,8 +3,36 @@
 //
 //
 
+$('#inputText').keyup(function(){
+	var resultText = $(this).val();
+	// console.log(text);
+
+	if(resultText != ''){
+		resultText = "You typed: "+resultText;
+	}
+	$('#results').text(resultText);
+});
 
 
+
+
+// var button1 = document.getElementById('button1');
+// var button2 = document.getElementById('button2');
+
+// button1.addEventListener('click', function(){
+// 	console.log('Clicked button 1');
+// });
+
+// button2.addEventListener('click', function(){
+// 	console.log('Clicked button 2');
+// });
+
+// $('#button2').click(function(){
+// 	// console.log('Hello from jQuery');
+// 	$(this).animate({
+// 		opacity: 0.1
+// 	}, 1000);
+// });
 
 // var clickMeButton = document.getElementById('clickMeButton');
 // var backgroundColors = ['blue','yellow','red'];
