@@ -1,17 +1,59 @@
+//// 17.05
+//
+//
+//
+
+
+
+
+// var clickMeButton = document.getElementById('clickMeButton');
+// var backgroundColors = ['blue','yellow','red'];
+// var backgroundColorIndex = 0;
+
+
+// clickMeButton.addEventListener('click', function(){
+
+// 	var newBackgroundColor = backgroundColors[backgroundColorIndex];
+// 	document.body.style.backgroundColor = newBackgroundColor;
+
+// 	backgroundColorIndex++;
+// 	if(backgroundColorIndex >= backgroundColors.length){
+// 		backgroundColorIndex = 0;
+// 		console.log('Start from the beginning');
+// 	}
+
+// });
+
+
+
+// var clickMeButton = document.getElementById('clickMeButton');
+
+// console.log(clickMeButton);
+
+// clickMeButton.addEventListener('click', function(){
+// 	console.log('Hello');
+// });
+
+// clickMeButton.addEventListener('click', clickMeButtonFunction);
+
+// function clickMeButtonFunction(){
+// 	console.log("Hello from function.");
+// }
+
 //// 16.05
 //
 //
 //
 
-var clickMeButton = document.getElementById('clickMeButton');
+// var clickMeButton = document.getElementById('clickMeButton');
 
-var fontSize = 16;
+// var fontSize = 16;
 
-clickMeButton.addEventListener('click', function(){
-	fontSize++;
+// clickMeButton.addEventListener('click', function(){
+// 	fontSize++;
 
-	clickMeButton.style.fontSize = fontSize + 'px';
-});
+// 	clickMeButton.style.fontSize = fontSize + 'px';
+// });
 
 // var clickMeButton = document.getElementById('clickMeButton');
 
