@@ -7,10 +7,17 @@ $('#inputText').keyup(function(){
 	var resultText = $(this).val();
 	// console.log(text);
 
-	if(resultText != ''){
-		resultText = "You typed: "+resultText;
+	// if(resultText != ''){
+	// 	resultText = "You typed: "+resultText;
+	// }
+
+	if(resultText.indexOf('@') >= 0){
+		$('#results').text('No @ symbols allowed');
+	} else {
+		$('#results').text(resultText);
 	}
-	$('#results').text(resultText);
+
+	// $('#results').text(resultText);
 });
 
 
