@@ -4,13 +4,37 @@
 //
 
 $(function(){
-	// $('div').css('opacity', 0.0);
-	// isto i kada pristupamo direktno cssu
+	var helloDiv = $('div');
 
-	$('div').delay(800).animate({
-		opacity: 1.0
+	var width = $(helloDiv).width();
+	var height = $(helloDiv).height();
+
+	$('body').mousemove(function(event){
+		var mouseX = event.pageX;
+		var mouseY = event.pageY;
+
+		// console.log(mouseY);
+
+		$(helloDiv).css({
+			left: mouseX - (width/2),
+			// top: mouse
+			top: mouseY - (height/2)
+		});
 	});
+
 });
+
+
+
+
+// $(function(){
+// 	// $('div').css('opacity', 0.0);
+// 	// isto i kada pristupamo direktno cssu
+
+// 	$('div').delay(800).animate({
+// 		opacity: 1.0
+// 	});
+// });
 
 
 
