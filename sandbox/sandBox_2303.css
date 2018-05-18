@@ -9,4 +9,5 @@ input[type=text]{
 div {
 	padding-top: 10px;
 	font-family: 'helveticaNeue';
+	opacity: 0;
 }

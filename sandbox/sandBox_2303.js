@@ -3,29 +3,42 @@
 //
 //
 
+$(function(){
+	// $('div').css('opacity', 0.0);
+	// isto i kada pristupamo direktno cssu
 
-var clickMeButton = document.getElementById=(clickMe);
-/* var clickedFunction = function (){
-  console.log('I was clicked from function');
-}
- */
-var backgroundColors = ['blue','red','green','orange'];
-var backgroundColorIndex = 0;
+	$('div').delay(800).animate({
+		opacity: 1.0
+	});
+});
 
 
-function clickedFunction (){
-	console.log('Clicked from another function');
-	var newBackgroundColor = backgroundColors[backgroundColorIndex];
-	console.log(newBackgroundColor);
-	document.body.style.backgroundColor = newBackgroundColor;
-	backgroundColorIndex++;
-	if(backgroundColorIndex >= backgroundColors.length){
-		backgroundColorIndex = 0;
-		console.log('End');
-	}
-}
 
-clickMeButton.addEventListener('click', clickedFunction);
+
+
+
+// var clickMeButton = document.getElementById=(clickMe);
+// /* var clickedFunction = function (){
+//   console.log('I was clicked from function');
+// }
+//  */
+// var backgroundColors = ['blue','red','green','orange'];
+// var backgroundColorIndex = 0;
+
+
+// function clickedFunction (){
+// 	console.log('Clicked from another function');
+// 	var newBackgroundColor = backgroundColors[backgroundColorIndex];
+// 	console.log(newBackgroundColor);
+// 	document.body.style.backgroundColor = newBackgroundColor;
+// 	backgroundColorIndex++;
+// 	if(backgroundColorIndex >= backgroundColors.length){
+// 		backgroundColorIndex = 0;
+// 		console.log('End');
+// 	}
+// }
+
+// clickMeButton.addEventListener('click', clickedFunction);
 
 
 
