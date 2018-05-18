@@ -1,24 +1,55 @@
+//// 18.05
+//
+//
+//
+
+
+var clickMeButton = document.getElementById=(clickMe);
+/* var clickedFunction = function (){
+  console.log('I was clicked from function');
+}
+ */
+var backgroundColors = ['blue','red','green','orange'];
+var backgroundColorIndex = 0;
+
+
+function clickedFunction (){
+	console.log('Clicked from another function');
+	var newBackgroundColor = backgroundColors[backgroundColorIndex];
+	console.log(newBackgroundColor);
+	document.body.style.backgroundColor = newBackgroundColor;
+	backgroundColorIndex++;
+	if(backgroundColorIndex >= backgroundColors.length){
+		backgroundColorIndex = 0;
+		console.log('End');
+	}
+}
+
+clickMeButton.addEventListener('click', clickedFunction);
+
+
+
 //// 17.05
 //
 //
 //
 
-$('#inputText').keyup(function(){
-	var resultText = $(this).val();
-	// console.log(text);
+// $('#inputText').keyup(function(){
+// 	var resultText = $(this).val();
+// 	// console.log(text);
 
-	// if(resultText != ''){
-	// 	resultText = "You typed: "+resultText;
-	// }
+// 	// if(resultText != ''){
+// 	// 	resultText = "You typed: "+resultText;
+// 	// }
 
-	if(resultText.indexOf('@') >= 0){
-		$('#results').text('No @ symbols allowed');
-	} else {
-		$('#results').text(resultText);
-	}
+// 	if(resultText.indexOf('@') >= 0){
+// 		$('#results').text('No @ symbols allowed');
+// 	} else {
+// 		$('#results').text(resultText);
+// 	}
 
-	// $('#results').text(resultText);
-});
+// 	// $('#results').text(resultText);
+// });
 
 
 
