@@ -3,40 +3,52 @@
 //
 //
 
-var string1 = "Partone";
-var string2 = "Part two";
-var string3 = "Part three";
-var string4	= "dolordolorLorem ipsum dolor Dolor sit DOLOR amet, consectetur adipisicing elit.dolor Dolorum, ratione! dolor "
+var first_name = "Ricky";
+var last_name = "Bobby";
+var age = 45;
+var first = true;
+var last = false;
 
-var result = string1.concat(" ","from concat." + string3 + " "+string2);
 
-console.log(result);
-var toLowerCase = string4.toLowerCase();
-console.log(toLowerCase);
 
-var toUpperCase = string4.toUpperCase();
 
-console.log(toUpperCase);
-console.log(string4);
 
-console.log(string4.length);
 
-var regularExpresion = string4.replace(/dolor/gi, "promena");
 
-console.log(regularExpresion);
-var part = string1.substring(2,5);
-console.log(part);
+// var string1 = "Partone";
+// var string2 = "Part two";
+// var string3 = "Part three";
+// var string4	= "dolordolorLorem ipsum dolor Dolor sit DOLOR amet, consectetur adipisicing elit.dolor Dolorum, ratione! dolor "
 
-var partSubstr = string1.substr(2,3);
-console.log(partSubstr);
+// var result = string1.concat(" ","from concat." + string3 + " "+string2);
 
-var partSlice = string1.slice(2,5);
-console.log(partSlice);
+// console.log(result);
+// var toLowerCase = string4.toLowerCase();
+// console.log(toLowerCase);
 
-var firstChar = string4.indexOf("s");
-var firstCharNonExisting = string4.indexOf("f");
-console.log(firstChar);
-console.log(firstCharNonExisting);
+// var toUpperCase = string4.toUpperCase();
+
+// console.log(toUpperCase);
+// console.log(string4);
+
+// console.log(string4.length);
+
+// var regularExpresion = string4.replace(/dolor/gi, "promena");
+
+// console.log(regularExpresion);
+// var part = string1.substring(2,5);
+// console.log(part);
+
+// var partSubstr = string1.substr(2,3);
+// console.log(partSubstr);
+
+// var partSlice = string1.slice(2,5);
+// console.log(partSlice);
+
+// var firstChar = string4.indexOf("s");
+// var firstCharNonExisting = string4.indexOf("f");
+// console.log(firstChar);
+// console.log(firstCharNonExisting);
 
 
 
