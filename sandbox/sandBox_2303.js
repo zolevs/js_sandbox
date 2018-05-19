@@ -1,28 +1,79 @@
+//// 19.05
+//
+//
+//
+
+var string1 = "Partone";
+var string2 = "Part two";
+var string3 = "Part three";
+var string4	= "dolordolorLorem ipsum dolor Dolor sit DOLOR amet, consectetur adipisicing elit.dolor Dolorum, ratione! dolor "
+
+var result = string1.concat(" ","from concat." + string3 + " "+string2);
+
+console.log(result);
+var toLowerCase = string4.toLowerCase();
+console.log(toLowerCase);
+
+var toUpperCase = string4.toUpperCase();
+
+console.log(toUpperCase);
+console.log(string4);
+
+console.log(string4.length);
+
+var regularExpresion = string4.replace(/dolor/gi, "promena");
+
+console.log(regularExpresion);
+var part = string1.substring(2,5);
+console.log(part);
+
+var partSubstr = string1.substr(2,3);
+console.log(partSubstr);
+
+var partSlice = string1.slice(2,5);
+console.log(partSlice);
+
+var firstChar = string4.indexOf("s");
+var firstCharNonExisting = string4.indexOf("f");
+console.log(firstChar);
+console.log(firstCharNonExisting);
+
+
+
+
+
+
+
+
+
+
+
+
 //// 18.05
 //
 //
 //
 
-$(function(){
-	var helloDiv = $('div');
+// $(function(){
+// 	var helloDiv = $('div');
 
-	var width = $(helloDiv).width();
-	var height = $(helloDiv).height();
+// 	var width = $(helloDiv).width();
+// 	var height = $(helloDiv).height();
 
-	$('body').mousemove(function(event){
-		var mouseX = event.pageX;
-		var mouseY = event.pageY;
+// 	$('body').mousemove(function(event){
+// 		var mouseX = event.pageX;
+// 		var mouseY = event.pageY;
 
-		// console.log(mouseY);
+// 		// console.log(mouseY);
 
-		$(helloDiv).css({
-			left: mouseX - (width/2),
-			// top: mouse
-			top: mouseY - (height/2)
-		});
-	});
+// 		$(helloDiv).css({
+// 			left: mouseX - (width/2),
+// 			// top: mouse
+// 			top: mouseY - (height/2)
+// 		});
+// 	});
 
-});
+// });
 
 
 
