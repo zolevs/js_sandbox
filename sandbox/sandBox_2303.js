@@ -3,21 +3,68 @@
 //
 //
 
-var userInput = Number(prompt("Enter a number ", ""));
+// // ternary
 
-if(userInput == 1 ){
-	alert("Your number is one");
-}
-else if(userInput == 2 ){
-	alert("Your number is two");
-}
-else if(userInput == 3 ){
-	alert("Your number is three");
-}
-else {
-	// ((userInput != 1) && (userInput !=2) && (userInput != 3))
-	alert("Your number is not between 1 and 3");
-}
+var userInput = Number(prompt("Enter number 1,2,3", ""));
+// var message = (userInput % 2 == 0 ? "Your number is even": "ODD");
+var monthName = userInput == 1 ? "January": userInput == 2 ? "February": userInput == 3 ? "March" : "Unknown";
+
+
+// if( userInput )
+
+// if(userInput % 2 == 0){
+// 	message = "Your number is even";
+// } else {
+// 	message = "Your number is odd";
+// }
+
+console.log(monthName);
+
+// // switch ()
+
+// switch(userInput){
+// 	case 1:
+// 	case 2:
+// 	case 3:
+// 		console.log("User input is "+userInput);
+// 		break;
+// 	default:
+// 		console.log("Entered number is not between 1 and 3");
+// }
+
+
+// switch(userInput){
+// 	case 1:
+// 		console.log("Entered number is one");
+// 		break;
+// 	case 2:
+// 		console.log("Entered nuber is two");
+// 		break;
+// 	case 3:
+// 		console.log("Entered number is three");
+// 		break;
+// 	default:
+// 		console.log("Number is not in range");
+
+// }
+
+
+
+// var userInput = Number(prompt("Enter a number ", ""));
+
+// if(userInput == 1 ){
+// 	alert("Your number is one");
+// }
+// else if(userInput == 2 ){
+// 	alert("Your number is two");
+// }
+// else if(userInput == 3 ){
+// 	alert("Your number is three");
+// }
+// else {
+// 	// ((userInput != 1) && (userInput !=2) && (userInput != 3))
+// 	alert("Your number is not between 1 and 3");
+// }
 
 
 
