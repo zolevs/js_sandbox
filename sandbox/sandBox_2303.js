@@ -1,15 +1,70 @@
+//// 20.05
+//
+//
+//
+
+var userInput = Number(prompt("Enter a number ", ""));
+
+if(userInput == 1 ){
+	alert("Your number is one");
+}
+else if(userInput == 2 ){
+	alert("Your number is two");
+}
+else if(userInput == 3 ){
+	alert("Your number is three");
+}
+else {
+	// ((userInput != 1) && (userInput !=2) && (userInput != 3))
+	alert("Your number is not between 1 and 3");
+}
+
+
+
+
+
+
+
+// var emailAddress = "zoleeeee@gmail.com";
+
+// var position = emailAddress.indexOf("@");
+// console.log(position);
+
+// var emailPart = emailAddress.substring(0, emailAddress.indexOf("@"));
+
+// console.log(emailPart);
+
+// var domainPart = emailAddress.substring(emailAddress.indexOf("@")+1);
+// console.log(domainPart);
+
+// // // // //
+
+// var fullDomain = "www.google.com.rs";
+
+// var domain = fullDomain.substr(fullDomain.lastIndexOf("."));
+
+// console.log(domain);
+
+
+
+
+
 //// 19.05
 //
 //
 //
 
-var first_name = "Ricky";
-var last_name = "Bobby";
-var age = 45;
-var first = true;
-var last = false;
+// var first_name = "Ricky";
+// var last_name = "Bobby";
+// var age = 45;
+// var first = true;
+// var last = false;
 
+// if ( age == 45) {
 
+// } else {
+
+// }
 
 
 
