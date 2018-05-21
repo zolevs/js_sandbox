@@ -1,3 +1,24 @@
+//// 21.05
+//
+//
+//
+var targetNumber = Number(prompt("Enter number",''));
+
+var start = 0;
+
+while (start <= targetNumber){
+	document.write(start + "<br/>");
+	start = start + 2;
+
+	if (start > 100){
+		break;
+	}
+}
+
+
+
+
+
 //// 20.05
 //
 //
@@ -5,9 +26,9 @@
 
 // // ternary
 
-var userInput = Number(prompt("Enter number 1,2,3", ""));
+// var userInput = Number(prompt("Enter number 1,2,3", ""));
 // var message = (userInput % 2 == 0 ? "Your number is even": "ODD");
-var monthName = userInput == 1 ? "January": userInput == 2 ? "February": userInput == 3 ? "March" : "Unknown";
+// var monthName = userInput == 1 ? "January": userInput == 2 ? "February": userInput == 3 ? "March" : "Unknown";
 
 
 // if( userInput )
@@ -18,7 +39,7 @@ var monthName = userInput == 1 ? "January": userInput == 2 ? "February": userInp
 // 	message = "Your number is odd";
 // }
 
-console.log(monthName);
+// console.log(monthName);
 
 // // switch ()
 
