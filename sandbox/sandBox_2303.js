@@ -2,18 +2,32 @@
 //
 //
 //
-var targetNumber = Number(prompt("Enter number",''));
 
 var start = 0;
 
-while (start <= targetNumber){
-	document.write(start + "<br/>");
-	start = start + 2;
-
-	if (start > 100){
-		break;
+while (start < 10){
+	start = start + 1;
+	if(start % 2 == 0){
+		continue;
 	}
+	document.write(start + "<br/>");
 }
+
+
+
+
+// var targetNumber = Number(prompt("Enter number",''));
+
+// var start = 0;
+
+// while (start <= targetNumber){
+// 	document.write(start + "<br/>");
+// 	start = start + 2;
+
+// 	if (start > 100){
+// 		break
+// ;	}
+// }
 
 
 
