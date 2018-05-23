@@ -3,11 +3,32 @@
 //
 //
 
+var evenNumbersArray = [];
+for (var i = 0; i <= 5; i++){
+	evenNumbersArray[i] = i * 2;
+}
+// document.write(evenNumbersArray);
+
+for (var i = 0; i <= evenNumbersArray.length -1; i++){
+
+}
 
 
 
 
 
+
+// var myArray = [10, 20, 44, 12];
+
+// console.log(myArray[2]);
+
+// document.write("First element = " + myArray[0] + "<br/>");
+// document.write("Last element = " + myArray[myArray.length-1] + "<br/>");
+// myArray[4] = 110;
+// console.log(myArray.length);
+// document.write(myArray[4]);
+
+// var newArray = new Array(20,33,245,33,242,344,52);
 
 
 //// 22.05
