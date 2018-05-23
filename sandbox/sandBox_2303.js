@@ -1,27 +1,39 @@
+//// 23.05
+//
+//
+//
+
+
+
+
+
+
+
+
 //// 22.05
 //
 //
 //
 
-var userChoice = "";
+// var userChoice = "";
 
-do {
-var targetNumber = Number(prompt("Enter target number ",""));
-var start = 0;
-	while (start <= targetNumber){
-		document.write(start + "<br/>");
-		start = start + 2;
-	}
+// do {
+// var targetNumber = Number(prompt("Enter target number ",""));
+// var start = 0;
+// 	while (start <= targetNumber){
+// 		document.write(start + "<br/>");
+// 		start = start + 2;
+// 	}
 
 
-	do {
-		userChoice = prompt("Continue - Yes or No");
+// 	do {
+// 		userChoice = prompt("Continue - Yes or No");
 
-		if(userChoice != "Yes" || userChoice != "No") {
-			alert("Invalid choice");
-	}
-	} while (userChoice != "Yes" && userChoice != "No");
-} while (userChoice == "Yes");
+// 		if(userChoice != "Yes" || userChoice != "No") {
+// 			alert("Invalid choice");
+// 	}
+// 	} while (userChoice != "Yes" && userChoice != "No");
+// } while (userChoice == "Yes");
 
 
 
