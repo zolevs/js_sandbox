@@ -1,17 +1,32 @@
+//// 24.05
+//
+//
+//
+
+var myArray = [];
+
+for (var i = 0; i <= 5; i++){
+	myArray[i] = i * 2;
+}
+
+for (var i = 0; i <= 5; i++){
+	document.write(myArray[i]+"<br/>");
+}
+
 //// 23.05
 //
 //
 //
 
-var evenNumbersArray = [];
-for (var i = 0; i <= 5; i++){
-	evenNumbersArray[i] = i * 2;
-}
-// document.write(evenNumbersArray);
+// var evenNumbersArray = [];
+// for (var i = 0; i <= 5; i++){
+// 	evenNumbersArray[i] = i * 2;
+// }
+// // document.write(evenNumbersArray);
 
-for (var i = 0; i <= evenNumbersArray.length -1; i++){
+// for (var i = 0; i <= evenNumbersArray.length -1; i++){
 
-}
+// }
 
 
 
