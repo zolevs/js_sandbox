@@ -1,17 +1,66 @@
+//// 25.05
+//
+//
+//
+
+ var myArray = ["Sam", "Mark", "Tom", "David"];
+var myNumArray = [1, 20, 31, 4, 9, 22, 11];
+console.log(myNumArray);
+
+
+console.log(myArray);
+
+ myArray.sort();
+
+ document.write(myArray + "<br/>");
+
+
+myNumArray.sort(function(a,b){ return a - b});
+document.write(myNumArray+"<br/>");
+
+
+myNumArray.sort(function(a,b){ return a - b}).reverse();
+document.write(myNumArray);
+
+
+
+
+
 //// 24.05
 //
 //
 //
 
-var myArray = [];
+// // // // Verzija 2
 
-for (var i = 0; i <= 5; i++){
-	myArray[i] = i * 2;
-}
+// var myArray = [];
 
-for (var i = 0; i <= 5; i++){
-	document.write(myArray[i]+"<br/>");
-}
+// for (var i = 0; i <= 5; i++){
+// 	myArray.push(i * 2);
+// }
+
+// for (var i = 0; i <= 5; i++){
+// 	document.write(myArray.pop() + "<br/>");
+
+// }
+
+// console.log(myArray.length);
+
+// // // Verzija 1
+
+// var myArray = [];
+
+// for (var i = 0; i <= 5; i++){
+// 	myArray[i] = i * 2;
+// }
+
+// for (var i = 0; i <= 5; i++){
+// 	document.write(myArray[i] + "<br/>");
+// }
+
+// console.log(myArray.length);
+
+
 
 //// 23.05
 //
