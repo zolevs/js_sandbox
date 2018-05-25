@@ -3,13 +3,42 @@
 //
 //
 
-var myArray = [6,4,2,5,1];
-// myArray.splice(2,0,3,4,1);
 
-console.log(myArray);
 
-myArray.splice(0,1);
-console.log(myArray);
+
+
+
+
+
+// var myArray = [1,2,3,4,5,6,7,8,9,10];
+
+// function isEven(value, index, array){
+
+// 	// if (value % 2 == 0){
+// 	// 	return true;
+// 	// } else {
+// 	// 	return false;
+// 	// }
+
+// 	// // kraca verzija
+// 	return value % 2 == 0;
+
+// }
+
+// var result = myArray.filter(isEven);
+
+
+// console.log(result);
+
+
+
+// var myArray = [6,4,2,5,1];
+// // myArray.splice(2,0,3,4,1);
+
+// console.log(myArray);
+
+// myArray.splice(0,1);
+// console.log(myArray);
 
 
 
