@@ -3,24 +3,36 @@
 //
 //
 
- var myArray = ["Sam", "Mark", "Tom", "David"];
-var myNumArray = [1, 20, 31, 4, 9, 22, 11];
-console.log(myNumArray);
-
+var myArray = [6,4,2,5,1];
+// myArray.splice(2,0,3,4,1);
 
 console.log(myArray);
 
- myArray.sort();
-
- document.write(myArray + "<br/>");
-
-
-myNumArray.sort(function(a,b){ return a - b});
-document.write(myNumArray+"<br/>");
+myArray.splice(0,1);
+console.log(myArray);
 
 
-myNumArray.sort(function(a,b){ return a - b}).reverse();
-document.write(myNumArray);
+
+
+
+//  var myArray = ["Sam", "Mark", "Tom", "David"];
+// var myNumArray = [1, 20, 31, 4, 9, 22, 11];
+// console.log(myNumArray);
+
+
+// console.log(myArray);
+
+//  myArray.sort();
+
+//  document.write(myArray + "<br/>");
+
+
+// myNumArray.sort(function(a,b){ return a - b});
+// document.write(myNumArray+"<br/>");
+
+
+// myNumArray.sort(function(a,b){ return a - b}).reverse();
+// document.write(myNumArray);
 
 
 
