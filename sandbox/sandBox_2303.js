@@ -3,7 +3,28 @@
 //
 //
 
+var myArray = [4,8,2,19,1,24,25,33,31,3];
 
+myArray.splice(2,0,1,1);
+
+document.write(myArray);
+
+document.write("<br>");
+
+myArray.splice(2,5);
+
+document.write(myArray);
+
+
+
+
+// // var myArray = ["Zoran","Dejan","Milan","Sasa","Alexa"];
+// var myArray = [4,8,2,19,1,24,25,33,31,3];
+// // var myArray = [3,4,1];
+
+// myArray.sort(function(a,b){ return a-b}).reverse();
+
+// document.write(myArray );
 
 
 
