@@ -1,19 +1,44 @@
+//// 27.05
+//
+//
+//
+
+
+var number = 100;
+
+if (number > 10) {
+	var otherNumber = number;
+}
+console.log(otherNumber);
+
+// function addNumbers(firstNumber, secondNumber){
+// 	var sum = firstNumber + secondNumber;
+// 	return sum;
+// }
+
+// var result = addNumbers(10,2);
+
+// document.write(result);
+
+
+
+
 //// 25.05
 //
 //
 //
 
-var myArray = [4,8,2,19,1,24,25,33,31,3];
+// var myArray = [4,8,2,19,1,24,25,33,31,3];
 
-myArray.splice(2,0,1,1);
+// myArray.splice(2,0,1,1);
 
-document.write(myArray);
+// document.write(myArray);
 
-document.write("<br>");
+// document.write("<br>");
 
-myArray.splice(2,5);
+// myArray.splice(2,5);
 
-document.write(myArray);
+// document.write(myArray);
 
 
 
