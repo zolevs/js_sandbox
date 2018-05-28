@@ -1,15 +1,85 @@
+//// 28.05
+//
+//
+//
+
+var number = 100;
+
+if (number > 10){
+	var otherNumber = number + 10;
+}
+
+document.write(otherNumber);
+
+
+
+// // // function expresion ver 3 - self invoking function expression Immediately - Invoked Function Expression (IIFE)
+
+// var result = (function computeFactorial(number){
+// 	if (number <= 1){
+// 		return 1;
+// 	}
+// 	return number * computeFactorial(number - 1);
+// }) (5);
+
+// console.log(result);
+
+
+
+
+// // // function expresion ver 2 - named function expression
+
+// var factorial = function computeFactorial (number){
+// 	if(number <= 1){
+// 		return 1;
+// 	}
+// 	return number * computeFactorial(number - 1);
+// }
+
+// // // var result = computeFactorial(10); // // ovo nece raditin jer nemozemo pozivati funkciju izvan funkcije vec samo iz nje, a izvan mozemo samo pozivom varijable factorial
+
+// var result = factorial(6);
+// console.log(result);
+
+
+
+
+// // // function expresion ver 1 - anonymous function
+
+// var add = function (firstNumber, secondNumber){
+// 	var result = firstNumber + secondNumber;
+// 	return result;
+// }
+
+// var sum = add (119, 1);
+// console.log(sum);
+
+
+
+// function addNumbers(firstNumber, secondNumber){
+// 	var sum = firstNumber + secondNumber;
+// 	return sum;
+// }
+
+// var result = addNumbers(20, 43);
+// console.log(result);
+
+
+
+
+
 //// 27.05
 //
 //
 //
 
 
-var number = 100;
+// var number = 100;
 
-if (number > 10) {
-	var otherNumber = number;
-}
-console.log(otherNumber);
+// if (number > 10) {
+// 	var otherNumber = number;
+// }
+// console.log(otherNumber);
 
 // function addNumbers(firstNumber, secondNumber){
 // 	var sum = firstNumber + secondNumber;
