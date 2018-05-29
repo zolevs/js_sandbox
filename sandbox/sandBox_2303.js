@@ -1,15 +1,84 @@
+//// 29.05
+//
+//
+//
+// // // ARGUMENTS Object
+
+// // // convert arguments object to array
+
+function printNumbers(){
+	// var argsArray = Array.prototype.slice.call(arguments);
+
+	// // isto dobijamo i sa ovom notacijom
+
+	var argsArray = [].slice.call(arguments);
+	console.log(argsArray);
+	argsArray.sort();
+	console.log(argsArray);
+
+}
+
+printNumbers(12,20,43,2,32,1);
+
+
+// function addNumbers(){
+// 	var sum = 0;
+
+// 	document.write("Count of arguments = " + arguments.length + "<br/>");
+
+// 	for (var i = 0; i < arguments.length; i++){
+// 		sum = sum + arguments[i];
+// 	}
+// 	document.write("Sum of numbers = " + sum);
+// 	document.write("<br/> <br/>");
+// }
+
+// addNumbers();
+// addNumbers(10,10);
+// addNumbers(10,20,30,40);
+
+
+
+
+// function numArguments(){
+// 	var num = arguments.length;
+// 	console.log(num);
+// }
+
+// numArguments(1,2,3,4,);
+
+
+
+
+
+
+// function printArguments(){
+// 	document.write("Number of arguments = " + arguments.length + "<br/>");
+// 	for (var i=0; i<arguments.length; i++){
+// 		document.write("Argument " + i + " = " + arguments[i] + "<br>");
+// 	}
+// 	document.write("<br/>");
+
+// }
+// printArguments();
+// printArguments(10,20,40,20,10,7);
+// printArguments("A", "B", "C", "d");
+
+
+
+
 //// 28.05
 //
 //
 //
 
-var number = 100;
+// var number = 100;
 
-if (number > 10){
-	var otherNumber = number + 10;
-}
+// if (number > 10){
+// 	var otherNumber = number + 10;
+// }
 
-document.write(otherNumber);
+// document.write(otherNumber);
 
 
 
