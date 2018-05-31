@@ -1,3 +1,16 @@
+//// 31.05
+//
+//
+//
+
+
+// // // Error Handling
+// // // TRY; CATCH
+// // //
+
+
+
+
 //// 29.05
 //
 //
@@ -6,19 +19,19 @@
 
 // // // convert arguments object to array
 
-function printNumbers(){
-	// var argsArray = Array.prototype.slice.call(arguments);
+// function printNumbers(){
+// 	// var argsArray = Array.prototype.slice.call(arguments);
 
-	// // isto dobijamo i sa ovom notacijom
+// 	// // isto dobijamo i sa ovom notacijom
 
-	var argsArray = [].slice.call(arguments);
-	console.log(argsArray);
-	argsArray.sort();
-	console.log(argsArray);
+// 	var argsArray = [].slice.call(arguments);
+// 	console.log(argsArray);
+// 	argsArray.sort();
+// 	console.log(argsArray);
 
-}
+// }
 
-printNumbers(12,20,43,2,32,1);
+// printNumbers(12,20,43,2,32,1);
 
 
 // function addNumbers(){
