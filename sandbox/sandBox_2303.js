@@ -5,8 +5,34 @@
 
 
 
+let dateOfBirth = new Date("August 31, 2015 17:00:00");
+
+document.write(dateOfBirth + "<br/>");
+// document.write(dateOfBirth);
 
 
+// // dd/mm/yy
+function formatDate(date){
+	// let date = new Date();
+
+	let year = date.getFullYear();
+	let month = date.getMonth();
+	month= month + 1;
+
+	if (month < 10) {
+		month = "0"+ month;
+	}
+
+	let day = date.getDate();
+	if(day < 10){
+		day = "0" + day;
+	}
+
+	return day + "/" + month + "/" + year;
+
+}
+
+document.write(formatDate(dateOfBirth));
 
 
 
