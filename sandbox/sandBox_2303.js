@@ -1,3 +1,69 @@
+//// 02.06
+//
+//
+//
+
+
+
+
+
+
+
+
+// let dayOfBirth = new Date("August 31, 2015 17:00:00")
+// var day = dayOfBirth.getDay();
+
+// document.write(getDayNameFromDay(day));
+
+// function getDayNameFromDay(day){
+// 	var days = ["Sun","Mon","Tues","Wed","thurs","Fri","Sat"];
+// 	return days[day];
+// }
+
+
+
+
+// let dateOfBirth = new Date();
+// let dateOfBirth = new Date("August 31, 2015 17:00:00");
+// // console.log(dateOfBirth.getMonth());
+// let monthNumber = dateOfBirth.getMonth();
+
+// document.write(monthNumber);
+
+// function getMonthNameFromMonthNumber(monthNumber){
+// 	let monthName= ["January","February","March","April","May","June","July",
+// "August","September","October","November","December"];
+
+// return monthName[monthNumber];
+// }
+
+// document.write(getMonthNameFromMonthNumber(monthNumber));
+
+
+// let dateOfBirth = new Date(2015, 7, 31, 17, 0, 0);
+
+// console.log(dateOfBirth);
+
+
+
+
+// let d = new Date();
+
+// console.log(d);
+
+// document.write(new Date());
+
+// //  var dateOfBirth = new Date('Avgust 31, 2016 17:00:00');
+// var dateOfBirth = new Date('August 31, 2015 17:00:00');
+
+// document.write(dateOfBirth);
+
+// var date1 = new Date('December 17, 1995 03:24:00');
+
+// console.log(date1);
+
+
+
 //// 31.05
 //
 //
