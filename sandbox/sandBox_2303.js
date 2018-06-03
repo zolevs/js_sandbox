@@ -1,38 +1,98 @@
 //// 02.06
 //
+//	// Timing Function
 //
-//
 
 
-
-let dateOfBirth = new Date("August 31, 2015 17:00:00");
-
-document.write(dateOfBirth + "<br/>");
-// document.write(dateOfBirth);
+var intervalID;
 
 
-// // dd/mm/yy
-function formatDate(date){
-	// let date = new Date();
+function startTimer(controlId){
+	var control = document.getElementById(controlId);
+	// console.log(control);
+	var seconds = control.value;
+	// console.log(seconds);
+	seconds = seconds - 1;
 
-	let year = date.getFullYear();
-	let month = date.getMonth();
-	month= month + 1;
-
-	if (month < 10) {
-		month = "0"+ month;
+	if(seconds == 0){
+		control.value = 'Done';
+		return;
+	} else {
+		control.value = seconds;
 	}
 
-	let day = date.getDate();
-	if(day < 10){
-		day = "0" + day;
-	}
-
-	return day + "/" + month + "/" + year;
-
+	intervalID = setTimeout(function() { startTimer("txtBox") }, 1000);
+}
+function stopTimer(){
+	clearTimeout(intervalID);
 }
 
-document.write(formatDate(dateOfBirth));
+
+
+
+
+
+// let x = 0;
+// let intervalID;
+
+
+// function getCurrentDateTime(){
+// 	document.getElementById("timeDiv").innerHTML =  new Date();
+// 	x++;
+// 	console.log(x);
+
+// }
+// function startClock(){
+// 	intervalID = setInterval(getCurrentDateTime, 1000);
+// }
+
+// function stopClock(){
+// 	clearInterval(intervalID);
+// }
+
+// getCurrentDateTime();
+
+// // setInterval(getCurrentDateTime, 1000);
+
+
+
+
+
+//// 02.06
+//
+//
+//
+
+
+
+// let dateOfBirth = new Date("August 31, 2015 17:00:00");
+
+// document.write(dateOfBirth + "<br/>");
+// // document.write(dateOfBirth);
+
+
+// // // dd/mm/yy
+// function formatDate(date){
+// 	// let date = new Date();
+
+// 	let year = date.getFullYear();
+// 	let month = date.getMonth();
+// 	month= month + 1;
+
+// 	if (month < 10) {
+// 		month = "0"+ month;
+// 	}
+
+// 	let day = date.getDate();
+// 	if(day < 10){
+// 		day = "0" + day;
+// 	}
+
+// 	return day + "/" + month + "/" + year;
+
+// }
+
+// document.write(formatDate(dateOfBirth));
 
 
 
