@@ -9,9 +9,9 @@ var intervalID;
 
 function startTimer(controlId){
 	var control = document.getElementById(controlId);
-	// console.log(control);
+	console.log(control);
 	var seconds = control.value;
-	// console.log(seconds);
+	console.log(seconds);
 	seconds = seconds - 1;
 
 	if(seconds == 0){

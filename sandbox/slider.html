@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slider</title>
+</head>
+<body>
+	<img src="img/1.jpg" id="image">
+	<br>
+	<br>
+	<input type="button" name="" value="Start slide show" onclick="startSlideShow()">
+	<input type="button" name="" value="Stop slide show" onclick="stopSlideShow()">
+	<br>
+	<br>
+	<div id="result"></div>
+</body>
+
+<script type="text/javascript">
+	var intervalId;
+
+	function startSlideShow(){
+		intervalId = setInterval(changeImage, 600);
+	}
+	function stopSlideShow(){
+		clearInterval(intervalId);
+	}
+
+	function changeImage(){
+		var imageSrc = document.getElementById("image").getAttribute("src");
+		// // console.log(imageSrc);
+		var currentImageNumber = imageSrc.substring(imageSrc.lastIndexOf("/")+ 1, imageSrc.lastIndexOf("/") + 2);
+		// // console.log(currentImageNumber);
+		if(currentImageNumber == 4){
+			currentImageNumber = 0;
+		}
+		var newImage = "img/"+ (Number(currentImageNumber) + 1  ) + ".jpg"
+		console.log(newImage);
+
+		document.getElementById("result").innerHTML = newImage;
+
+		document.getElementById("image").setAttribute("src", newImage);
+
+
+	}
+
+// // changeImage(); // ovo me je zezalo pa sam stalno imao +1
+</script>
+</html>
