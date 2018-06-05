@@ -9,11 +9,15 @@
 <table>
 	<tr>
 		<td>First name</td>
-		<td><input type="text" id="txtFirstName"></td>
+		<td>
+			<input type="text" id="txtFirstName" onkeyup="validateRequiredField('txtFirstName')">
+		</td>
 	</tr>
 	<tr>
 		<td>Last name</td>
-		<td><input type="text" id="txtLastName"></td>
+		<td>
+			<input type="text" id="txtLastName" onkeyup="validateRequiredField('txtLastName')">
+		</td>
 	</tr>
 </table>
 
