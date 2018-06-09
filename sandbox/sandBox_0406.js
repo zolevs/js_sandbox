@@ -1,20 +1,34 @@
+//// 09.06
+//
+//
+//
+
+
+
+
+
+
+
+
+
+
 //// 04.06
 //
 //
 //
 
-// // deo 3
+// // // deo 3
 
-function validateRequiredField(controlId){
-	var control = document.getElementById(controlId);
-	control.style.color = "white";
-	if(control.value == ''){
-		control.style.background="red";
-	} else {
-		control.style.background="green";
-	}
+// function validateRequiredField(controlId){
+// 	var control = document.getElementById(controlId);
+// 	control.style.color = "white";
+// 	if(control.value == ''){
+// 		control.style.background="red";
+// 	} else {
+// 		control.style.background="green";
+// 	}
 
-}
+// }
 
 
 
