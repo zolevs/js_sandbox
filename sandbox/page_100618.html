@@ -4,12 +4,100 @@
 	<title>Page default action</title>
 </head>
 <body >
-	<h1>Lorem ipsum dolor sit.</h1>
+	<!-- <h1>Lorem ipsum dolor sit.</h1>
 	<a href="http://www.google.com" onclick="preventDefaultAction(event)">Go to google page...</a>
+	 -->
+
+	<input type="button" name="" value="Click me" onmouseup="whichMouseButtonClicked(event)">
+
+	 <!-- <input type="button" value="Click me" onmouseup="getMouseClickCode(event)">
+	 <input type="button" value="Clear" onclick="clearText()"> -->
+
+		<br>
+		<br>
+
+	 <!-- <textarea id="txtArea" rows="3" cols="15"></textarea> -->
 </body>
 
 <script type="text/javascript">
 
+function whichMouseButtonClicked(event){
+	var whichButton;
+
+	if(event.which){
+		switch (event.which){
+			case 1:
+				whichButton = "Left button clicked";
+				break;
+			case 2:
+				whichButton = "Middle button clicked";
+				break;
+			case 3:
+				whichButton = "Right button clicked";
+				break;
+			default:
+				whichButton = "Something happened";
+		}
+	} else {
+		switch(event.button){
+			case 1:
+				whichButton = "Left button clicked";
+				break;
+			case 4:
+				whichButton = "Middle button clicked";
+				break;
+			case 2:
+				whichButton = "Right button clicked";
+				break;
+			default:
+				whichButton = "Something happened";
+		}
+	}
+	console.log(whichButton);
+}
+
+document.oncontextmenu = preventContextMenu;
+
+function preventContextMenu(event){
+	event = event || window.event;
+
+	if (event.preventDefault){
+		event.preventDefault();
+	} else {
+		event.returnValue = false;
+	}
+}
+
+
+/*
+function getMouseClickCode(event){
+	if(event.which){
+		document.getElementById("txtArea").value += "event.which = " + event.which + "\r\n";
+	} else {
+		document.getElementById("txtArea").value += "event.button = " + event.button + "\r\n";
+	}
+}
+
+document.oncontextmenu = preventContextMenu;
+
+function preventContextMenu(event){
+	event = event || window.event;
+
+	if (event.preventDefault){
+		event.preventDefault();
+	} else {
+		event.returnValue = false;
+	}
+}
+function clearText(){
+	document.getElementById("txtArea").value = "";
+}
+*/
+
+
+
+
+/*
 	document.oncontextmenu = preventDefaultAction;
 
 	function preventDefaultAction(event){
@@ -21,6 +109,7 @@
 			event.returnValue = false;
 		}
 	}
+*/
 </script>
 
 </html>
