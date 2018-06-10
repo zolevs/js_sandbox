@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page default action</title>
+</head>
+<body >
+	<h1>Lorem ipsum dolor sit.</h1>
+	<a href="http://www.google.com" onclick="preventDefaultAction(event)">Go to google page...</a>
+</body>
+
+<script type="text/javascript">
+
+	document.oncontextmenu = preventDefaultAction;
+
+	function preventDefaultAction(event){
+		event = event || window.event;
+
+		if(event.preventDefault){
+			event.preventDefault();
+		} else {
+			event.returnValue = false;
+		}
+	}
+</script>
+
+</html>
