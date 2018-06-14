@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+</head>
+<body>
+	<input type="text" id="txtBox">
+	<input type="button" value="Process string" onclick="processString()">
+	<br>
+	<br>
+	<textarea id="txtArea" rows="5" cols="30"></textarea>
+</body>
+
+<script type="text/javascript">
+	function processString(){
+		document.getElementById("txtArea").value = "";
+		var inputString = document.getElementById("txtBox").value;
+
+		var result = inputString.match(/\d+/g);
+		// console.log(result);
+		if(result != null){
+			for(var i = 0; i < result.length; i++){
+				document.getElementById("txtArea").value += result[i] + "\r\n";
+			}
+		}
+	}
+</script>
+</html>
