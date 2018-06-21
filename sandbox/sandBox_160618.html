@@ -33,15 +33,33 @@
 		// 	console.log(a);
 		// });
 		
-		let example1 = ['Zoran', 10, true];
+		// let example1 = ['Zoran', 10, true];
 
-		let example2 = [...example1];
+		// let example2 = [...example1];
 
-		console.log(example1);
-		example2.push(23)
-		console.log(example2);
-		console.log(example1);
+		// console.log(example1);
+		// example2.push(23)
+		// console.log(example2);
+		// console.log(example1);
 		
+	let example1 = ['Zoran', 5, true];
+
+	let example2 = example1;
+	// passing by reference
+	
+	let example3 = [...example1];
+	// ova sintaksa ... pravi novi array a ne kao u slucaju dole gde ga samo kopira odnosno upucuje na njega
+
+	let example4 = example1.map((element) => {
+		return element;
+	});
+	// jos jedan nacin da se napravi novi array
+
+	console.log(example1);
+	example2.push("Test");
+	console.log(example2);
+	console.log(example1);
+	console.log(example4);
 
 	</script>
 </body>
