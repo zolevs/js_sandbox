@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object</title>
+</head>
+<body>
+    
+
+<script>
+  // // constructor function
+
+//   function Employee(firstName, lastName){
+//       this.firstName = firstName;
+//       this.lastName = lastName;
+
+//     //   console.log(firstName);
+//     this.getFullName = function(){
+//         return this.firstName +" "+ this.lastName;
+//     }
+//   }
+
+// // object using literal notation
+
+var employee = {
+    firstName: "ZORAN",
+    lastName: "IVAnOVIC",
+
+    getFullName: function(){
+        return this.firstName + " " + this.lastName;
+    }
+}
+
+//   var employee = new Employee("Zoran", "Ivanovic");
+
+//   console.log(employee);
+
+  document.write("FirstName = " + employee.firstName + "<br/>");
+  document.write("LastName = " + employee.lastName + "<br/>");
+
+  document.write("getFullName = " + employee.getFullName() + "<br/>");
+
+
+
+</script>
+</body>
+</html>
