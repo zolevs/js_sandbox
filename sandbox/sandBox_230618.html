@@ -13,25 +13,48 @@
         // var coffeOunces = 100;
         // var coffeMilk = true;
 
-        var myCoffe = {
-            flavor: "espresso",
-            temerature: "cold",
-            ounces: 100,
-            milk: true,
+        // var myCoffe = {
+        //     flavor: "espresso",
+        //     temerature: "cold",
+        //     ounces: 100,
+        //     milk: true,
 
-            reheat: function(){
-                if(myCoffe.temerature === "cold"){
-                    myCoffe.temerature = "hot";
-                    console.log("Your coffee has been reheated");
-                }
+        //     reheat: function(){
+        //         if(myCoffe.temerature === "cold"){
+        //             myCoffe.temerature = "hot";
+        //             console.log("Your coffee has been reheated");
+        //         }
+        //     }
+        // };
+
+        // // console.log ( myCoffe.ounces ) ;
+        // myCoffe.temerature = "cold";
+        // myCoffe["temerature"] = "lukewarm";
+
+        // myCoffe.reheat();
+
+            var mark = {
+                name: "Mark",
+                tshirtColor: "navy blue"
+            };
+            
+            var lisa = {
+                name: "Lisa",
+                tshirtColor: "Red"
+            };
+
+            function Friend(name, tshirtColor){
+                this.name = name;
+                this.tshirtColor = tshirtColor;
             }
-        };
 
-        // console.log ( myCoffe.ounces ) ;
-        myCoffe.temerature = "cold";
-        myCoffe["temerature"] = "lukewarm";
+            var denny = new Friend("Denny", "Green");
+            var lisa = new Friend("Lisa", "Purple");
 
-        myCoffe.reheat();
+            console.log(denny.name);
+            console.log(lisa.name);
+
+
 
     </script>
 </body>
