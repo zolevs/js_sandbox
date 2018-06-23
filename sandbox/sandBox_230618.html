@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        // var coffeeFlavor = "espresso";
+        // var coffeTemerature = "piping hot";
+        // var coffeOunces = 100;
+        // var coffeMilk = true;
+
+        var myCoffe = {
+            flavor: "espresso",
+            temerature: "cold",
+            ounces: 100,
+            milk: true,
+
+            reheat: function(){
+                if(myCoffe.temerature === "cold"){
+                    myCoffe.temerature = "hot";
+                    console.log("Your coffee has been reheated");
+                }
+            }
+        };
+
+        // console.log ( myCoffe.ounces ) ;
+        myCoffe.temerature = "cold";
+        myCoffe["temerature"] = "lukewarm";
+
+        myCoffe.reheat();
+
+    </script>
+</body>
+</html>
