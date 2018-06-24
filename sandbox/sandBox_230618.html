@@ -33,29 +33,79 @@
 
         // myCoffe.reheat();
 
-            var mark = {
-                name: "Mark",
-                tshirtColor: "navy blue"
-            };
+            // var mark = {
+            //     name: "Mark",
+            //     tshirtColor: "navy blue"
+            // };
             
-            var lisa = {
-                name: "Lisa",
-                tshirtColor: "Red"
-            };
+            // var lisa = {
+            //     name: "Lisa",
+            //     tshirtColor: "Red"
+            // };
 
-            function Friend(name, tshirtColor){
-                this.name = name;
-                this.tshirtColor = tshirtColor;
-            }
+            // function Friend(name, tshirtColor){
+            //     this.name = name;
+            //     this.tshirtColor = tshirtColor;
+            // }
 
-            var denny = new Friend("Denny", "Green");
-            var lisa = new Friend("Lisa", "Purple");
+            // var denny = new Friend("Denny", "Green");
+            // var lisa = new Friend("Lisa", "Purple");
 
-            console.log(denny.name);
-            console.log(lisa.name);
+            // console.log(denny.name);
+            // console.log(lisa.name);
 
+            // function sayHello(){
+            //     window.alert("Hello");
+            // }
+            // window.sayHello();
 
+            // function alert(){
+            //     console.log("Again");
+            // }
+            // alert();
 
+            // var example = "value";
+            
+            // function alertExample (){
+                
+            //     console.log(example);
+            //     var anotherExample = "?";
+            //     // anotherExample = "global scope variable"
+            // }
+
+            // alertExample();
+            // // console.log(anotherExample);
+
+            // function alertNumber() {
+            //     var one = "1";
+            //     console.log(one);
+
+            //     function alertAnotherNumber(){
+            //         var two = "2";
+            //         console.log(two);
+            //     }
+
+            //     alertAnotherNumber();
+            // }
+
+            // alertNumber();
+
+    var date = new Date();
+    
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+
+    var day = date.getDate(); // 1-31
+    var month = date.getMonth(); // 0-11 !!!!!
+    month += 1;
+    var year = date.getFullYear();
+
+    document.write("Current time is: " + hours + ":" + minutes + ":" + seconds+"<br/>");
+    // document.write(day+"<br/>");
+    // document.write(month+"<br/>");
+    // document.write(year);
+    document.write("Today date is: " + day + "-" + month + "-"+year);
     </script>
 </body>
 </html>
