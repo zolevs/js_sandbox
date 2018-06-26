@@ -105,7 +105,13 @@
     // document.write(day+"<br/>");
     // document.write(month+"<br/>");
     // document.write(year);
-    document.write("Today date is: " + day + "-" + month + "-"+year);
+    document.write("Today date is: " + day + "-" + month + "-"+year+"<br/>");
+
+    var numbers = [1, 32, 53, 2, 18, 9, -1];
+
+    var sorted = numbers.sort(function(a,b){ return a > b}); // number sort
+
+    document.write(sorted);
     </script>
 </body>
 </html>
