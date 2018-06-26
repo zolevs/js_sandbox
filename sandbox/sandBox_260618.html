@@ -8,7 +8,48 @@
 </head>
 <body>
     <script>
-    
+        function Employee(firstName, lastName){
+            // public field
+            this.firstName = firstName;
+            this.lastName = lastName;
+
+            // private field
+            var privateFullName;
+           
+            // private function
+            
+            // jedan nacin za private function 
+            // function privateGetFullName(){};
+
+            var privateGetFullName = function () {
+                privateFullName = firstName + " " + lastName;
+                return privateFullName;
+            }
+
+            // Priviledged Function
+
+            this.privilegedGetFullName = function(){
+                return privateGetFullName();
+            }
+
+            Employee.prototype.publicGetFullName = function (){
+                return this.privilegedGetFullName();
+            }
+        }
+
+        var employee = new Employee("Zoran","Ivanovic");
+        document.write(employee.publicGetFullName() + "<br/>");
+        document.write(employee.privilegedGetFullName() + "<br/>");
+
+        // // employee.privilegedGetFullName();
+        // // error
+        
+        // // employee.privateFullName;
+        // // error 
+
+ 
+
+
         // let example = 5;
         // if (example == 6){
         //     console.log("Executed");
@@ -22,6 +63,8 @@
         // console.log(10 === 10 || 5 < 4);
         // console.log((5 >= 5 || 4 > 4) && 3 + 2 === 5); 
     
+
+
     </script>
 </body>
 </html>
