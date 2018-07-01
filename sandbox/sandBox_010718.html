@@ -9,18 +9,48 @@
 <body>
     <script>
 
-        let a = "first";
-        function scopeTest(){
-            console.log(a);
-            if (a != ''){
-                console.log(a);
-                // let c = 'string';
+        function three(){
+            return function(){
+                return 'three';
             }
-            // console.log(c);
-           
         }
+    console.log(three()());
 
-        scopeTest();
+
+        // function two(){
+        //     return function (){
+        //         console.log('Two');
+        //     }
+        // }
+        // let myFunction = two();
+
+        // myFunction();
+
+        
+        // function one(){
+        //     return 'one';
+
+        // }
+
+        // let value = one();
+        // console.log(value);
+
+        // console.log(one());
+
+        // let a = "first";
+        // function scopeTest(){
+        //     console.log(a);
+        //     if (a != ''){
+        //         console.log(a);
+        //         // let c = 'string';
+        //     }
+        //     // console.log(c);
+           
+        // }
+        // scopeTest();
+
+
+
     </script>
 </body>
 </html>
