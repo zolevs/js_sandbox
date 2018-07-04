@@ -9,20 +9,67 @@
 <body>
 <script>
 
+ var counter = (function (){
 
-let carlot = [
-    {year: 2017, make: 'Toyota', model: '4 x 4'},
-    {year: 2016, make: 'Suzuki', model: 'Swift'},
-    {year: 2018, make: 'Skoda', model: 'Rapid'},
-];
+    // private
+    let count = 0;
 
-let contacts = {
-    customer: [
-        { firstName: 'Bob', lastName: 'Bobiska', phoneNumbers: ['(123) 324-554', '(343) 877-837'] },
-        { firstName: 'Kayle', lastName: 'Simpsons', phoneNumbers: ['(343) 877-837'] },
-        { firstName: 'Doba', lastName: 'Iska', phoneNumbers: ['(666) 764-954', '(343) 877-837'] },
-    ],
-};
+    function print(message){
+        console.log(message + " --- " + count)
+    }
+
+    // return an object
+    return {
+        // value: count,
+        get: function(){
+            return count;
+        },
+
+        set: function(value){
+            count = value;
+        },
+
+        increment: function (){
+            count +=1;
+            print('After increment');
+        },
+
+        reset: function(){
+            print('Before reset: ');
+            count = 0;
+            print('After reset: ');
+        }
+    }
+
+ })();
+
+counter.increment();
+counter.increment();
+counter.increment();
+
+// // // console.log(counter.value);
+counter.set(7);
+console.log(counter.get());
+
+counter.reset();
+
+
+////////////////////////
+////////////////////////
+
+// let carlot = [
+//     {year: 2017, make: 'Toyota', model: '4 x 4'},
+//     {year: 2016, make: 'Suzuki', model: 'Swift'},
+//     {year: 2018, make: 'Skoda', model: 'Rapid'},
+// ];
+
+// let contacts = {
+//     customer: [
+//         { firstName: 'Bob', lastName: 'Bobiska', phoneNumbers: ['(123) 324-554', '(343) 877-837'] },
+//         { firstName: 'Kayle', lastName: 'Simpsons', phoneNumbers: ['(343) 877-837'] },
+//         { firstName: 'Doba', lastName: 'Iska', phoneNumbers: ['(666) 764-954', '(343) 877-837'] },
+//     ],
+// };
 
 
 
