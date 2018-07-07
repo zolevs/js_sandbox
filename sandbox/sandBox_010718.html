@@ -5,9 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>July</title>
+
+  
+
 </head>
 <body>
+
+    <button onclick="clickHandler(this)">Click me</button>
+
 <script>
+// /////////////
+
+function clickHandler(arg){
+    console.log(arg);
+    console.log(arg.innerText);
+    console.log(this);
+
+}
+
+
+// /////////////
+
+/* function first(){
+    return this;;
+}
+
+console.log(first() === window);
+
+console.log(first());
+ */
+
+
+//  function second(){
+//     'use strict';
+
+//     return this;
+// }
+// console.log(second() === window);
+
+
+// let myObject = {value: 'My object.'};
+
+// window.value = 'Global object.';
+
+// function third(){
+//     return this.value;
+// }
+
+// console.log(third());
+
+// console.log(third.call(myObject));
+
+// console.log(third.apply(myObject));
+
+// function fifth(){
+//     console.log(this.firstName + ' ' + this.lastName);
+// }
+// let customer1 = {
+//     firstName: 'Bob',
+//     lastName: 'Tajlor',
+//     print: fifth
+// }
+
+// let customer2 = {
+//     firstName: 'Babaroga',
+//     lastName: 'Tabor',
+//     print: fifth
+// }
+
+// customer2.print();
+
+
+
 
 
 
