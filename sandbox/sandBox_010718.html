@@ -11,17 +11,46 @@
 </head>
 <body>
 
-    <button onclick="clickHandler(this)">Click me</button>
+    <!-- <button onclick="clickHandler(this)">Click me</button> -->
 
 <script>
+
+let originalCar = {
+    make: 'bmw',
+    model: '745 li',
+    year: 2010
+};
+
+ let newCar = Object.create(originalCar);
+/*
+console.log(newCar.make);
+newCar.make = 'audi';
+console.log(newCar.make); 
+*/
+console.log(newCar.whatever);
+
+
+/* 
+console.log(Object.getPrototypeOf(newCar));
+
+let myPrototype = Object.getPrototypeOf(newCar);
+console.log(myPrototype.make);
+
+originalCar.doors = 4;
+console.log(newCar.doors);
+
+console.log(originalCar.hasOwnProperty('doors'));
+console.log(newCar.hasOwnProperty('doors'));
+ */
+
 // /////////////
 
-function clickHandler(arg){
-    console.log(arg);
-    console.log(arg.innerText);
-    console.log(this);
+// function clickHandler(arg){
+//     console.log(arg);
+//     console.log(arg.innerText);
+//     console.log(this);
 
-}
+// }
 
 
 // /////////////
