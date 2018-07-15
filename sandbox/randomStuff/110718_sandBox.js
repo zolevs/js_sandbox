@@ -1,4 +1,31 @@
-var personnel = new Array();
+
+var myAge = prompt('Your age ',"18");
+
+if (myAge >= 0 && myAge <= 10){
+    document.write('Your age is betwen 0 and 10');
+} if( !(myAge >=0) && (myAge <= 10)){
+    document.write(!(myAge >=0) && (myAge <= 10));
+}
+
+
+
+
+// // // //
+
+
+
+/* var age = prompt("Your age ","");
+var isOverSixty = parseInt(age) > 60;
+document.write("Older than 60: " + isOverSixty);
+
+
+ */
+
+
+
+// // //
+
+/* var personnel = new Array();
 
 personnel[0] = new Array();
     personnel[0][0] = "Name0";
@@ -14,7 +41,7 @@ personnel[2] = new Array();
     personnel[2][0] = "Name2";
     personnel[2][1] = "Age2";
     personnel[2][2] = "Address2";
-
+ */
 /* var myArray = new Array();
 myArray [0] = "Zoran";
 myArray [1] = "Prezime";
