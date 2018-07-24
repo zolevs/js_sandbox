@@ -1,11 +1,3 @@
-function hello (name){
-    console.log('---------');
-    console.log('Hello  ' + name);
-    console.log('---------');
-}
-// hello();
-
-let a = hello;
-
-console.log(a);
-a('Zole');
+a = 4;
+message = (a > 2) ? 'true naravno' : 'false svakako';
+console.log(message);
