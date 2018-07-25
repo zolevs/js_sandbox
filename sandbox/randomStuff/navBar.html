@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nav Bar</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <style>
+        #nav-1 {
+            height: 200px;
+        }
+        #nav-1 ul, #nav-1 li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #nav-1 a{
+            display: block;
+            float: left;
+            text-decoration: none;
+            padding: 0.5em;
+            background-color: black;
+            color: #fff;
+            margin: 5px;
+        }
+        #nav-2 {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 0, 0, 0.5);
+            height: 60px;
+        }
+        #nav-2 ul, #nav-2 li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #nav-2 a{
+            display: block;
+            float: left;
+            text-decoration: none;
+            padding: 0 0.5em;
+            /* margin: 5px; */
+            line-height: 60px;
+        }
+        .box {
+            height: 400px;
+        }
+        #a {
+            background-color: yellow;
+        }
+        #b {
+            background-color: cyan;
+        }
+        #c {
+            background-color: magenta;
+        }
+        #d {
+            background-color: lightcoral;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="nav-1">
+            <ul>
+                <li><a href="#">Item A</a></li>
+                <li><a href="#">Item B</a></li>
+                <li><a href="#">Item C</a></li>
+                <li><a href="#">Item D</a></li>
+            </ul>
+        </div>
+
+        <div id="nav-2">
+            <ul>
+                <li><a href="#">Item A</a></li>
+                <li><a href="#">Item B</a></li>
+                <li><a href="#">Item C</a></li>
+                <li><a href="#">Item D</a></li>
+            </ul>
+        </div>
+
+        <div id="a" class="box"></div>
+        <div id="b" class="box"></div>
+        <div id="c" class="box"></div>
+        <div id="d" class="box"></div>
+
+    </div>
+    <script>
+        $("#nav-2").css("top", "-60px");
+
+        var nav2IsHidden = true;
+
+        $(window).scroll(function(){
+            // console.log($(window).scrollTop());
+
+            if ($(window).scrollTop() > 200 && nav2IsHidden){
+                // show nav 2
+                nav2IsHidden = false;
+                console.log("show nav 2");
+                // $("#nav-2").css("top", "0px");
+                $("#nav-2").animate({top:0}, 400);
+
+            } else if ($(window).scrollTop() < 200 && !nav2IsHidden) {
+                // hide nav 2
+                // console.log("Opa");
+                nav2IsHidden = true;
+                console.log("hide nav bar 2");
+                $("#nav-2").animate({top:"-60px"}, 500);
+            }
+        });
+    </script>
+</body>
+</html>
