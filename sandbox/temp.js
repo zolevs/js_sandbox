@@ -11,5 +11,5 @@ function reverseWords(string){
     });
     return reversedWordsArr.join(' ');
 }
-
+console.log('My name is zolevs\n');
 console.log(reverseWords('My name is zolevs'));
