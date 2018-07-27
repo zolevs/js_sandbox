@@ -1,15 +1,13 @@
-function reverseWords(string){
-    var wordsArr = string.split(' ');
-    var reversedWordsArr = [];
-    
-    wordsArr.forEach(word => {
-        var reversedWord = '';
-        for(var i = word.length - 1; i >= 0; i--){
-            reversedWord += word[i];
-        }
-        reversedWordsArr.push(reversedWord);
-    });
-    return reversedWordsArr.join(' ');
+let a = 'first';
+
+function scopeTest() {
+    console.log(a);
+    a = 'Changed';
+    if (a != ''){
+        console.log(a);
+    }
+    let b = 'Second';
 }
-console.log('My name is zolevs\n');
-console.log(reverseWords('My name is zolevs'));
+
+scopeTest();
+console.log(a);
