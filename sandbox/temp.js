@@ -1,13 +1,27 @@
-let a = 'first';
-
-function scopeTest() {
-    console.log(a);
-    a = 'Changed';
-    if (a != ''){
-        console.log(a);
-    }
-    let b = 'Second';
+/* function one(){
+    return 'one';
 }
 
-scopeTest();
-console.log(a);
+let value = one;
+ */
+// console.log(typeof(value));
+// // console.log(one());
+// console.log(value);
+
+// console.log(value());
+
+/* function two(){
+    return function (){
+        console.log('Two');
+    };
+}
+let myFunction = two();
+myFunction(); */
+
+function three(){
+    return function(){
+        return 'three';
+    }
+}
+
+console.log(three()());
