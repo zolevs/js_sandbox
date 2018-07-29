@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event</title>
+</head>
+<body>
+    <div class="header">
+        <h1 id="heading">Lorem, ipsum dolor.</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="container">
+        <!-- <button onclick="this.innerHTML = 'You Clicked...'">Click me</button> -->
+        <button onclick="changeText(this)">Click me</button>
+    </div>
+
+    <script>
+/*         
+    function doClick(){
+        document.write("You Clicked");
+    }
+ */ 
+    /* function changeText(svasta){
+        svasta.innerHTML = "You clicked...";
+    } */
+
+function changeText(){
+    var heading = document.getElementById('heading');
+    heading.innerHTML = 'Hello JS';
+}
+
+
+    </script>
+</body>
+</html>
