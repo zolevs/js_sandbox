@@ -1,50 +1,40 @@
-// // Object
-/* 
-let car = {
-    make: 'bmw',
-    model: 'c1',
-    year: 2018,
-    getPrice: function(){
-        // some operation and result is 5000
-        return 5000;
-    },
-    printDescription: function(){
-        console.log(this.make + ' '+ this.model);
+
+var counter = (function (){
+
+    // private stuff
+    let count = 0;
+    function print(message){
+        console.log(message + ' --- ' + count);
     }
-}
-car.printDescription();
-console.log(car.year);
- */
-// // console.log(car['year']);
-// // console.log(car[1]); // undefined
+    // return an object
+    return {
+        // value: count,
+        get: function(){
+            return count;
+        },
+        set: function(value){
+            count = value;
+        },
 
-/*
-var anotherCar = {};
+        increment: function(){
+            count += 1;
+            print("After increment: ");
+        },
+        reset: function(){
+            print("Before reset: ");
+            count = 0;
+            print('After reset ');
+        }
+    }
 
-anotherCar.whatever = 'bob';
-console.log(anotherCar.whatever);
- */
+})();
 
-/* var a = {
-    myProperty: {b: 'Hi'}
-}
-console.log(a.myProperty.b); */
-/* 
-var c = {
-    myProperty: [
-        { d: 'one'},
-        { e: 'two'},
-        { f: 'three'},
-        { g: 'last'}
-    ]
-};
- */
+counter.increment();
+counter.increment();
+counter.increment();
 
-let carLot = [
-    { year: 2017, make: 'Toyota', model: 'runner'},
-    { year: 2016, make: 'Opel', model: 'Corsa'},
-    { year: 2015, make: 'Citroen', model: 'C4'}
-];
+counter.set(7);
 
+console.log(counter.get());
 
-
+counter.reset();
