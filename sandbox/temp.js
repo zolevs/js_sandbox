@@ -1,16 +1,4 @@
-var start = "a".charCodeAt();
-var array = [];
+var random = Math.random();
 
-for (var i = start; i < start+26; i++){
-    array.push(String.fromCharCode(i));
-}
-console.log(array);
+console.log(Math.ceil(random*10));
 
-var  randomArray = [];
-for (var i in array){
-    var position = Math.round(Math.random()*randomArray.length);
-    randomArray.splice(position, 0, array[i]);
-    
-}
-
-console.log(randomArray);
