@@ -1,4 +1,13 @@
-var random = Math.random();
+(function(){
+    var message = "Hello message";
+    function printMessage(){
+        console.log(message);
+    }
+    printMessage();
 
-console.log(Math.ceil(random*10));
-
+    var obj = {};
+    obj.talk = function(){
+        printMessage();
+    };
+    return obj;
+}) ();
