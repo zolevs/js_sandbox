@@ -1,5 +1,5 @@
-/*
- (function(){
+/* 
+(function(){
     var message = "Hello message";
     function printMessage(){
         console.log(message);
@@ -12,7 +12,11 @@
     };
     return obj;
 }) ();
+
+
  */
+
+
 
 var theObject = (function(){
     var message = "Hello message";
@@ -25,14 +29,25 @@ var theObject = (function(){
 
     var obj = {};
 
-    obj.probni = function(){
+    obj.talk = function(){
         printMessage();
     }
     return obj;
 }) ();
 
+// theObject.talk();
 
-theObject.probni();
+var makeCounter = function (){
+    var count = 0;
+    return function(){
+        count++;
+        console.log("Counter: " + count);
+    };
+};
 
-
-
+ var a = makeCounter();
+a();
+a();
+a();
+var b = makeCounter();
+b(); 
