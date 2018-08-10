@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        var names = ["Zoran", "John", "Mike", "Dex"];
+        var years = [1974, 1973, 1988, 1990];
+
+        console.log(names[0], years[0]);
+
+        names[1] = "Ben";
+
+        console.log(names[1]);
+
+        var john = ["John", "Smith", 1990, "exteacher", false];
+
+        john.push("blue");
+        john.unshift("Mr.");
+        john.pop(); // sa kraja
+        john.shift(); // sa pocetka
+        console.log(john);
+
+        console.log(john.indexOf('Smith'));
+
+        if(john.indexOf('teacher') === -1){
+            console.log('nije teacher');
+
+        }
+    </script>
+</body>
+</html>
