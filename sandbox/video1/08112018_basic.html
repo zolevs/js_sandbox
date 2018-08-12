@@ -8,7 +8,8 @@
 </head>
 <body>
     <script>
-    
+
+ /*   
         var john = {
             name: 'John',
             lastName: 'Smith',
@@ -19,6 +20,7 @@
     
         console.log(john.name);
         console.log(john['lastName']);
+        console.log(john.isMarried);
 
         var xyz = 'job';
 
@@ -43,6 +45,67 @@
         jane['job'] = 'retired';
         jane.isMarried = true;
         jane['color'] = 'Red';
+
+
+        console.log(jane);
+
+*/ 
+
+// // // // v1.0
+/*
+        var john = {
+            name: 'John',
+            lastName: 'Smith',
+            yearOfBirth: 1974,
+            job: 'teacher',
+            isMarried: false,
+            family: ['Jane', 'Mark', 'Bob'],
+            calculateAge: function(yearOfBirth){
+                return 2018 - this.yearOfBirth;
+            } 
+
+        };
+
+        console.log(john.family);
+        console.log(john.family[2]);
+        // // console.log(john.calculateAge('nije bitno kada radimo this'));
+        console.log(john.calculateAge());
+
+        var age = john.calculateAge();
+        john.age = age;
+        console.log(age);
+*/
+
+        var john = {
+            name: 'John',
+            lastName: 'Smith',
+            yearOfBirth: 1974,
+            job: 'teacher',
+            isMarried: true,
+            family: ['Jane', 'Dane', 'Bob'],
+            calculateAge: function(yearOfBirth){
+                // return 2018 - this.yearOfBirth;
+                this.age = 2018 - this.yearOfBirth;
+            }
+        };
+
+        john.calculateAge();
+        console.log(john);
+
+
+        
+        var mike = {
+           
+            yearOfBirth: 2000,
+            
+            calculateAge: function(yearOfBirth){
+                // return 2018 - this.yearOfBirth;
+                this.age = 2018 - this.yearOfBirth;
+            }
+        };
+
+        mike.calculateAge();
+        console.log(mike);
 
     </script>
 </body>
