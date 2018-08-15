@@ -46,6 +46,7 @@ var makeCounter = function (){
 };
 
  var a = makeCounter();
+ console.log('just a ' + a);
 a();
 a();
 a();
