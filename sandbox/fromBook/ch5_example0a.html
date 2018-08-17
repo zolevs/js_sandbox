@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document Title</title>
+</head>
+<body>
+    
+
+    <script>
+        var fileName = window.location.href;
+        console.log(fileName);
+
+        fileName = fileName.substr(fileName.lastIndexOf("/") + 1);
+        document.write("The file name is " + fileName);
+    </script>
+</body>
+</html>
