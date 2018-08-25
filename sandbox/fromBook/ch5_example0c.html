@@ -7,6 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        
+        var names = ['Paul', 'Adam', 'Jeremmy', 'Bob'];
+        var elementIndex;
+
+        names.sort();
+        document.write('Now the names again in order'+'</br>');
+
+        for(elementIndex = 0; elementIndex < names.length; elementIndex++){
+            document.write(names[elementIndex]+'<br/>');
+        }
+
+        names.reverse();
+        document.write('Now in reverse order' + '<br/>');
+
+        for (elementIndex = 0; elementIndex < names.length; elementIndex++){
+            document.write(names[elementIndex]+'<br/>');
+        }
+    </script>
 </body>
 </html>
