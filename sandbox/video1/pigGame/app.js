@@ -54,6 +54,33 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
 
     } else {
         // next player
+        nextPlayer();
+    }
+
+});
+
+    document.querySelector('.btn-hold').addEventListener('click', function (){
+        // add current score to global score
+        scores[activePlayer] += roundScore;
+        // updatee the UI
+        document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+        
+        // check if the player won the game
+        if (scores[activePlayer] >= 20) {
+            document.querySelector('#name-'+activePlayer).textContent = 'Winner';
+            document.querySelector('.dice').style.display = 'none';
+            document.querySelector('.player-'+activePlayer+'-panel').classList.add('winner');
+            document.querySelector('.player-'+activePlayer+'-panel').classList.remove('active');
+        } else {
+            nextPlayer(); // // // !!! proveri ishod ako promenimoo gde se nalazi kao recimo pre if-a    
+        }
+        
+
+
+    });
+
+    function nextPlayer(){
+        // next player
         activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
         roundScore = 0;
         document.getElementById('current-0').textContent = 0;
@@ -63,5 +90,3 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         // ako je 1 onda sklanjamo jedan sliku
         document.querySelector('.dice').style.display = 'none';
     }
-
-});

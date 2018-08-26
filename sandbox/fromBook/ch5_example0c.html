@@ -8,23 +8,40 @@
 </head>
 <body>
     <script>
-        
-        var names = ['Paul', 'Adam', 'Jeremmy', 'Bob'];
-        var elementIndex;
+    
+        var myShopping = ['Eggs', 'Bannanas', 'Ananas', 'Milk', 'Potatoes', 'Ananas', 'Apple'];
 
-        names.sort();
-        document.write('Now the names again in order'+'</br>');
+ /*        var order = prompt('Enter 1 for alphabetical and -1 for reverse order', 1);
 
-        for(elementIndex = 0; elementIndex < names.length; elementIndex++){
-            document.write(names[elementIndex]+'<br/>');
+        if (order == 1){
+            myShopping.sort();
+            document.write(myShopping.join('</br>'));
+            console.log('sort');
+        } else if (order == -1) {
+            myShopping.reverse();
+            console.log('reverse')
+            document.write(myShopping.join('</br>'));
+        } else {
+            document.write('Not valid input !');2
+        }
+ */
+
+   /*  console.log(myShopping.indexOf('Apple'));
+    console.log(myShopping.lastIndexOf('Ananas'));
+ */
+
+        var numbers = [2, 4, 5, 2, 1, 5, 9];
+
+        function isLessThan(value, index, array){
+            var returnValue = false;
+            if(value < 3){
+                returnValue = true;
+            }
+            return returnValue;
         }
 
-        names.reverse();
-        document.write('Now in reverse order' + '<br/>');
+        console.log(numbers.some(isLessThan));
 
-        for (elementIndex = 0; elementIndex < names.length; elementIndex++){
-            document.write(names[elementIndex]+'<br/>');
-        }
     </script>
 </body>
 </html>
