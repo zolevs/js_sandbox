@@ -62,7 +62,6 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
             scores[activePlayer] += roundScore;
             // updatee the UI
             document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
-            
             // check if the player won the game
             if (scores[activePlayer] >= 20) {
                 document.querySelector('#name-'+activePlayer).textContent = 'Winner';
@@ -72,7 +71,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
 
                 gamePlaying = false;
             } else {
-                nextPlayer(); // // // !!! proveri ishod ako promenimoo gde se nalazi kao recimo pre if-a    
+                nextPlayer(); // // // !!! proveri ishod ako promenimoo gde se nalazi kao recimo pre if-a
             }
 
         }
@@ -116,4 +115,4 @@ function init(){
     document.querySelector('.player-1-panel').classList.remove('active');
 
     document.querySelector('.player-0-panel').classList.add('active');
-};
+}
