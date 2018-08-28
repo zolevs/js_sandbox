@@ -30,7 +30,7 @@
     console.log(myShopping.lastIndexOf('Ananas'));
  */
 
-        var numbers = [2, 4, 5, 2, 1, 5, 9];
+/*         var numbers = [2, 4, 5, 2, 1, 5, 9];
 
         function isLessThan(value, index, array){
             var returnValue = false;
@@ -41,6 +41,47 @@
         }
 
         console.log(numbers.some(isLessThan));
+ */
+
+/*         var theDate = new Date();
+        document.write(theDate+"</br>");
+
+        var day = theDate.getDate();
+        document.write(day); */
+
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var dateNow = new Date();
+    var yearNow = dateNow.getFullYear();
+    var monthNow = months[dateNow.getMonth()];
+    var dayNow = dateNow.getDate();
+    var daySuffix;
+
+    switch (dayNow){
+        case 1:
+        case 21:
+        case 31:
+            daySuffix = 'st';
+            break;
+        case 2:
+        case 22: 
+            daySuffix = 'nd';
+            break;
+        case 3:
+        case 23:
+            daySuffix = 'rd';
+            break;
+        default: 
+            daySuffix = 'th';
+            break;
+    }
+
+    document.write('It is the '+ dayNow + daySuffix + ' day ');
+    document.write('in the month of ' + monthNow);
+    document.write(' in the year ' + yearNow);
+
+
+
+
 
     </script>
 </body>
