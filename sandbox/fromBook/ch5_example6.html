@@ -45,6 +45,9 @@
     var nowDate = new Date();
     var currentDay = nowDate.getDay();
     
+    nowDate.setDate(currentDay + 1);
+
+    console.log(nowDate);
     // nowDate.setDate(currentDay + 1);
     // console.log(nowDate);
     // console.log(currentDay);
