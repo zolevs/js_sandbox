@@ -15,6 +15,10 @@
             this.film = film;
             this.showDate = showDate;
         }
+ 
+        Cinema.prototype.addBooking = function (bookingId, customerName, film, showDate){
+            this.bookings[bookingId] = new CustomerBooking(bookingId, customerName, film, showDate);
+        }
         CustomerBooking.prototype.getCustomerName = function(){
             return this.customerName;
         }
@@ -39,10 +43,52 @@
         CustomerBooking.prototype.setBookingId = function(bookingId){
             this.bookingId = bookingId;
         }
+        
+        // // // //
+        
+        function Cinema(){
+            this.bookings = new Array();
+        }
+        Cinema.prototype.addBooking = function(bookingId, customerName, film, showDate){
+            this.bookings[bookingId] = new CustomerBooking(bookingId, customerName, film, showDate);
+        }
+
+        Cinema.prototype.getBookingsTable = function(){
+            var booking;
+            var bookingsTableHTML = "<table border=1>";
+
+                for (booking in this.bookings){
+                    bookingsTableHTML += "<tr><td>";
+                    bookingsTableHTML += this.bookings[booking].getBookingId();
+                    bookingsTableHTML += "</td>";
+
+                    bookingsTableHTML += "<td>";
+                    bookingsTableHTML += this.bookings[booking].getCustomerName();
+                    bookingsTableHTML += "</td>";
+
+                    bookingsTableHTML += "<td>";
+                    bookingsTableHTML += this.bookings[booking].getFilm();
+                    bookingsTableHTML += "</td>";
+
+                    bookingsTableHTML += "<td>";
+                    bookingsTableHTML += this.bookings[booking].getShowDate();
+                    bookingsTableHTML += "</td>";
+                }
+                bookingsTableHTML +="<table>";
+                return bookingsTableHTML;
+        }
+        
+        var londonOdeon = new Cinema();
+        londonOdeon.addBooking(1, 'Arnold Palmer', 'Toy story', '15 July 2009 14:30');
+        londonOdeon.addBooking(2, 'Fox Palmer', 'True romance', '19 Jun 2018 14:30');
+        londonOdeon.addBooking(3, 'Lolo Lux', 'Alien', '20 Jun 2018 14:30');
 
         var firstBooking = new CustomerBooking (1234, 'Robert Loodlaom', 'Red bull', '25 July 2009 18:20');
         var secondBooking = new CustomerBooking (2234, 'Djuro Salaj', 'Good Will hunting', '14 April 1974 07:14');
         var thirdBooking = new CustomerBooking (3245, 'Dusan Kovacevic', 'Maratonci', '25 Septembar 2018');
+
+        document.write(londonOdeon.getBookingsTable());
+
     </script>
 </body>
 </html>
