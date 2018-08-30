@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>From book</title>
+</head>
+
+<body>
+
+    <a href="ch5_example0.html" onclick="linkSomePage()">Text for link</a>
+    <h2>Hello Chapter 6</h2>
+    <img name="img" src="" alt="picture">
+    <br>
+
+    <script>
+            var myImages = ["img-1.jpg", "img-2.jpg", "img-3.jpg"];
+            var imgIndex = prompt('enter 0,1,2','');
+            document.images["img"].src = myImages[imgIndex];
+    
+            function linkSomePage(){
+                console.log('Clicked on link')
+                return false;
+            }
+    </script>
+
+</body>
+</html>

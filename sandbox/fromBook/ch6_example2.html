@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book example</title>
+</head>
+<body>
+    <script>
+        function linkSomePage_onclick(){
+            console.log('Link goes no where ....');
+            return false;
+        }    
+    </script>
+
+    <a href="somepage.html">Link to page</a>
+    <a href="somepage2.html">Link to page 2</a>
+
+    <script>
+        window.document.links[0].onclick = linkSomePage_onclick;
+        window.document.links[1].onclick = linkSomePage_onclick;
+    </script>
+</body>
+</html>
