@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ch 6</title>
+</head>
+
+<script>
+    var myImages = ['img-1.jpg', 'img-2.jpg', 'img-3.jpg'];
+
+    function changeImage(that){
+        // that.src = myImages[2];
+        var newImageNumber = Math.round(Math.random()*2);
+        // that.src = myImages[newImageNumber];
+        while (that.src.indexOf(myImages[newImageNumber]) != -1){
+            newImageNumber = Math.round(Math.random()*2);
+        }
+        that.src = myImages[newImageNumber];
+        return false;
+
+    }
+</script>
+
+<body>
+    
+    <img src="img-1.jpg" name="img0" alt="" border="8" onclick="return changeImage(this)">
+    <img src="img-2.jpg" name="img1" alt="" border="8" onclick="return changeImage(this)">
+
+</body>
+</html>
