@@ -4,14 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test env 20.08.2018</title>
+    <title>Test env 31.08.2018</title>
 </head>
 <body>
     <script>
-        var myString;
-        myString = String.fromCharCode(65,66,67,68);
-        
-        document.write(myString);
+
+        var a = String('I am a String Object');
+        var b = 'I am a String Object';
+        var c = 11;
+        var d = new Date();
+        var f = typeof(d);
+
+        if (typeof a === 'string'){
+            console.log('a is a String');
+        } else {
+            console.log('a is not a String');
+        }
+        if ( typeof b === 'string'){
+            console.log('b is a String');
+        } else {
+            console.log('b is not a string');
+        }
+        if (typeof c === 'string'){
+            console.log('c is a string');
+        } else {
+            console.log('c is NOT a string');
+        }
+        if ( typeof d === 'string'){
+            console.log('d is a string');
+        } else {
+            console.log('d is NOT a string');
+        }
+
     </script>
 </body>
 </html>
