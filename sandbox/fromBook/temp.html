@@ -8,34 +8,12 @@
 </head>
 <body>
     <script>
+        var strNumber = '3.141596456';
+        var myNumber = Number(strNumber);
 
-        var a = String('I am a String Object');
-        var b = 'I am a String Object';
-        var c = 11;
-        var d = new Date();
-        var f = typeof(d);
-
-        if (typeof a === 'string'){
-            console.log('a is a String');
-        } else {
-            console.log('a is not a String');
-        }
-        if ( typeof b === 'string'){
-            console.log('b is a String');
-        } else {
-            console.log('b is not a string');
-        }
-        if (typeof c === 'string'){
-            console.log('c is a string');
-        } else {
-            console.log('c is NOT a string');
-        }
-        if ( typeof d === 'string'){
-            console.log('d is a string');
-        } else {
-            console.log('d is NOT a string');
-        }
-
+        console.log('myNumber = ' + myNumber);
+        console.log(typeof(strNumber));
+        console.log(typeof(myNumber));
     </script>
 </body>
 </html>

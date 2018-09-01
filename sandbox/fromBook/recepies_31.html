@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Is NaN</title>
+</head>
+<body>
+    <script>
+        var a = NaN;
+        var b = Infinity;
+        var c = -Infinity;
+        var d = 3;
+
+        if(Number.isNaN(a)){
+            console.log('a is a NaN ');
+        } else {
+            console.log('a is a real number');
+        }
+        if (Number.isFinite(b)){
+            console.log('b is a finite number');
+        } else {
+            console.log('b is not infinite number');
+        }
+        if (Number.isFinite(c)){
+            console.log('c is not a infinite');
+        } else {
+            console.log('c is not infinite, it is +infinite or -infinite');
+        }
+        if (Number.isNaN(d)){
+            console.log('d is a NaN');
+        } else {
+            console.log('d is a real number');
+        }
+        if (Number.isFinite(d)){
+            console.log('d ia finite number');
+        } else {
+            console.log('d is not finite number it is +-infinite');
+        }
+        
+    </script>
+</body>
+</html>
