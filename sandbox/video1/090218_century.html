@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculate Century</title>
+</head>
+<body>
+    <p>
+        Check what CENTURY is it in few diferent ways.
+    </p>
+
+    <script>
+      // // convert year to century
+      // // 
+
+/*       // // solution 1
+        let centFromYear = function(year){
+
+            let parts = (year / 100).toString().split('.');
+            // console.log(parts);
+            if(parts[1]) {
+                return Number(parts[0]) + 1;
+            } else {
+                return Number(parts[0]);
+            }
+        }; */
+
+
+/*         // // solution 2
+        let centFromYear = function(year){
+            let yearStr = year.toString();
+            // console.log(yearStr);
+            // console.log(yearStr);
+            let cent = yearStr.substring(0, yearStr.length - 2);
+            // console.log(cent);
+            let reg = /00$/;
+            if (reg.test(year)) {
+                return Number(cent);
+            } else {
+                return Number(cent)+1;
+            }
+
+        } */
+
+/*         // // solution 3
+
+        let centFromYear = function(year){
+            if (year % 100 === 0){
+                return (Math.floor(year / 100));
+            } else {
+                return (Math.floor(year / 100))+1;
+            }
+        }
+ */
+
+/*         // // solution 4
+
+        let centFromYear = function(year){
+            return Math.floor((year+99)/100);
+        }
+ */
+
+        // // solution 5
+
+        let centFromYear = function(year){
+            return Math.ceil(year / 100);
+        }
+
+
+      // // solution for test years 1, 19, 20, 17, 21, 1         
+    //   document.wirite(centFromYear(45));
+    console.log(centFromYear(45));
+    console.log(centFromYear(1888));
+    console.log(centFromYear(1905));
+    console.log(centFromYear(1700));
+    console.log(centFromYear(2001));
+    console.log(centFromYear(100));
+    </script>
+</body>
+</html>
