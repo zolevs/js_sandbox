@@ -7,6 +7,46 @@
     <title>Test DOM</title>
 </head>
 <body>
-    
+    <!-- <h1 id="title">hello</h1>
+    <button id="btn">Click me</button> -->
+
+<ul id='result'>
+    <li class="special">Apple</li>
+    <li>Orange</li>
+    <li class="special">Lemon</li>
+    <li>Peach</li>
+    <li class="special last">Apricot</li>
+    <li>Pear</li>
+</ul>
+    <script>
+
+    const special = document.getElementsByClassName('special');
+
+    special[1].style.color = 'red';
+    const  result = document.querySelector('#result');
+    result.style.backgroundColor = 'blue';
+
+    const lastItem = document.querySelector('li:last-child');
+    console.log(lastItem);
+
+    const list = document.querySelectorAll('.special');
+    console.log(list);
+
+    list.forEach(function(item){
+        console.log(item);
+        item.style.color = 'pink';
+    })
+
+    //     var h1 = document.getElementById('title');
+    //     const style = document.getElementById('btn');
+
+    //     h1.style.color = 'red';
+    //     style.style.backgroundColor = 'green';
+    // console.log(style);
+
+    // const style = document.getElementById('btn').style;
+
+    // console.log(style);
+    </script>
 </body>
 </html>
