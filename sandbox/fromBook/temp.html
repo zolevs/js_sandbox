@@ -8,12 +8,22 @@
 </head>
 <body>
     <script>
-        var strNumber = '3.141596456';
-        var myNumber = Number(strNumber);
+    var today = new Date();
 
-        console.log('myNumber = ' + myNumber);
-        console.log(typeof(strNumber));
-        console.log(typeof(myNumber));
+    var date = today.getDate();
+    var month = today.getMonth();
+    var year = today.getYear();
+
+    console.log(date + "/" + month + "/" + year);
+
+    var start = Date.now();
+    console.log(start);
+    alert('Press ok and see diference');
+
+    var time = Date.now() - start;
+    console.log(time);
+    console.log(time/1000);
+
     </script>
 </body>
 </html>
