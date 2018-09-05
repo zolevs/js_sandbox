@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+</head>
+<body onload="window_onload()">
+
+    <form action="" name="form1">
+        <p>this is inside form</p>
+    </form>
+    <form action="" name="form2">
+        <p>Lorem, ipsum dolor.</p>
+    </form>
+    <form action="" name="form3">
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+    </form>
+
+    <script>
+        function window_onload(){
+            var numberForms = document.forms.length;
+            for (let formIndex = 0; formIndex < numberForms; formIndex++){
+                console.log(document.forms[formIndex]);
+            }
+        }
+    </script>
+</body>
+</html>
