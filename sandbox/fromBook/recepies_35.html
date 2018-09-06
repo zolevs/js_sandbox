@@ -8,6 +8,8 @@
 </head>
 <body>
     <script>
+
+/* 
         var a = new Date();
         var b = 3.14;
         var c = "I am a string";
@@ -29,7 +31,59 @@
         }
         console.log(typeof(a));
 
-    
+    function Car(make, model, year){
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+        var myCar = new Car('Honda', 'Accord', 1998);
+        var aa = myCar instanceof Car;
+        console.log(aa);
+
+        var bb = myCar instanceof Object;
+        console.log(bb);
+
+        var newCar = new Car('VW', 'Tiguan', 2015);
+        var oldCar = new Car('Opel', 'Corsa', 2004);
+
+        var cc = newCar instanceof Object;
+        var dd = newCar instanceof Car;
+        console.log(cc);
+        console.log(dd);
+ */
+
+// // // // creating an object and assigning properties
+
+// // house object
+
+var House = {};
+House.address = '123 Main Street';
+House.area = 27800;
+House.constructionDate = new Date(1974,03,14);
+
+// // architecture object
+
+House.architecture = {};
+House.architecture.floorPlan = 'http://';
+House.architecture.rooms = ['Living room', 'Bathroom', 'Kitchen'];
+House.architecture.windows = ['Kitchen (4)', 'Living room (4)', 'Bathroom (2)'];
+
+// // house owner
+
+House.owner = {};
+House.owner.name = 'James Bond';
+House.owner.phone = '123-234-566';
+
+// // output
+
+console.log('House address ' + House.address);
+console.log('Built on '+ House.constructionDate);
+
+console.log('House plan '+ House.architecture.floorPlan);
+console.log('House rooms ' + House.architecture.rooms);
+
+console.log('House owner ' + House.owner.name);
+console.log('Phone number ' + House.owner.phone);
     </script>
 </body>
 </html>
