@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom test</title>
+</head>
+<body>
+<!--     <ul id='result'>
+        <li class="first">first</li>
+        <li>element 2</li>
+        <li>element 3</li>
+        <li class="last">Last</li>
+    </ul> -->
+
+    <li id="special">this is special</li>
+
+    <script>
+/*         const first = document.querySelector('.first');
+        console.log(first);
+     
+        const second = first.nextSibling.nextSibling;
+        console.log(second);
+
+        const zero = first.previousSibling;
+        console.log(zero);
+ */
+    const item = document.getElementById('special');
+    // const value = item.nodeValue;
+    const value = item.firstChild.nodeValue;
+    console.log(item.childNodes);
+    console.log(item);
+    console.log(value);
+
+    const best = item.textContent;
+    console.log(best);
+
+
+
+    </script>
+</body>
+</html>
