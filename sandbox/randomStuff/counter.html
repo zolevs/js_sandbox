@@ -18,7 +18,7 @@
            min-height: 100vh; 
         }
         #counter{
-            color: var(--mainGreen);
+            color: var(--mainBlack);
             font-size: 8em;
         }
         .prevBtn,
@@ -72,6 +72,16 @@
                         console.log(counterValue);
                     }
                     counter.textContent = counterValue;
+                    //change text color
+
+                    if(counterValue === 0){
+                        counter.style.color = '#333333';
+                    } else if (counterValue < 0) {
+                        counter.style.color = '#ff5555';
+                    } else if (counterValue > 0){
+                        counter.style.color = '#33b833';
+                    }
+
                 });
             });
         })();
