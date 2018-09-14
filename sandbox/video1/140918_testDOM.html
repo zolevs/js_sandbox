@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test DOM 14.09.2018</title>
+</head>
+<body>
+
+    <ul id="result">
+        <li class="first" id="special">I have first class</li>
+        <a href="link.html" id="link">Link to page no.1</a>
+        <li>I have no attributes</li>
+    </ul>
+
+    <script>
+        // getAttribute()
+        // setAttribute()
+
+        const special = document.querySelector('#special');
+        const showClass =  special.getAttribute('class');
+
+        console.log(showClass);
+        const link =document.getElementById('link');
+        const showLink = link.getAttribute('href');
+        console.log(showLink);
+        
+        const item = link.nextSibling.nextSibling;
+        item.setAttribute('class', 'first');
+        console.log(item);
+        
+        
+
+        const links = document.querySelectorAll('.first');
+        console.log(links);
+        
+    </script>
+</body>
+</html>
