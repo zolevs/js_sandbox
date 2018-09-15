@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template Literals</title>
+</head>
+<body>
+    
+    <script>
+
+    // // template literals
+
+    const name = 'Zoran';
+    const lastName = 'Ivanovic';
+    const age = 44;
+    const phrase = "My name is "+name+" "+lastName+". And I'm " + age + " years old";
+
+    console.log(phrase);
+
+    const div = document.createElement("div");
+ //   div.innerHTML = "<p>"+name+"</p>" + "<p>"+lastName+"</p>";
+
+    document.body.appendChild(div);
+
+    const phraseTemplate = `My name is ${name} ${lastName}`;
+    console.log(phraseTemplate);
+
+    div.innerHTML = `
+    <h1> My name is ${name}</h1>
+    <h3> ${lastName} </h3>
+    <p> ${phrase} </p>
+    `;
+
+    </script>
+</body>
+</html>
