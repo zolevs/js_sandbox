@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+</head>
+<style>
+    .show {
+        font-size: 3rem;
+        color: #fff;
+        background-color: #4444dd;
+    }
+</style>
+<body>
+    <div id="result">
+        <div class="show">I am child of result</div>
+    </div>
+
+    <script>
+        // // createElement('element)
+        // // createTextNode('text content')
+        // // element.appendChild(childElement)
+        const result = document.querySelector('#result');
+        // // create empty element
+        const bodyDiv = document.createElement('div');
+        // // create text node
+        const text = document.createTextNode('body div');
+        // // add text node
+        bodyDiv.appendChild(text);
+        // document.body.appendChild(bodyDiv);
+        // // create empty element
+        const resultLi = document.createElement('li');
+        // // create text node
+        const textContent = document.createTextNode('result li');
+        // // add text node
+        resultLi.appendChild(textContent);
+        resultLi.classList.add('show');
+        // // add to result
+        result.appendChild(resultLi);
+        console.log(result.children);
+
+// // // // 
+
+        // // insertBefore
+        document.body.insertBefore(bodyDiv, result);
+        // // replace child
+        result.replaceChild(bodyDiv, resultLi);
+
+
+    </script>
+</body>
+</html>
