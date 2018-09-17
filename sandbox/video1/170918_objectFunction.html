@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Object and Function</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, vero!</p>
+
+    <script>
+        // // function constructor
+
+        var john = {
+            name: 'John',
+            yearOfBirth: 1974,
+            job: 'teacher'
+        };
+
+        var Person = function (name, yearOfBirth, job){
+            this.name = name;
+            this.yearOfBirth = yearOfBirth;
+            this.job = job;
+            }
+     
+        Person.prototype.calculateAge  = function (){
+            console.log(2018 - this.yearOfBirth);
+        };
+
+        var john = new Person('John', 1974, 'Teacher');
+        var jane = new Person('Jane', 1988, 'Designer');
+        var mark = new Person('Mark', 1941, 'Retired');
+
+        john.calculateAge();
+        jane.calculateAge();
+        mark.calculateAge();
+
+        Person.prototype.lastName = 'Smith';
+
+        console.log(john.lastName);
+        console.log(jane.lastName);
+        console.log(mark.lastName);
+        
+    </script>
+</body>
+</html>
