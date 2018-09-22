@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello Object and Function</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, vero!</p>
+
+    <script>
+        // primitives vs object
+        
+        // primitives
+        var a = 22;
+        var b  = a;
+        a = 44;
+
+        console.log(a, b);
+        
+        // object
+        var obj1 = {
+            name: 'John',
+            age: 44
+        };
+        var obj2 = obj1;
+        console.log(obj2.age);
+
+        obj1.age = 40;
+        console.log(obj1.age);
+        console.log(obj2.age);
+        
+        // funcitons
+        var age = 33;
+        var obj = {
+            name: 'zole',
+            city: 'Vrsac'
+        };
+        function change(a,b){
+            a = 30;
+            b.city = 'Florida'
+        }
+        change (age, obj);
+        console.log(age);
+        console.log(obj.city);
+        
+        
+
+    </script>
+</body>
+</html>
