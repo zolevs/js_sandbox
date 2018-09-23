@@ -41,7 +41,7 @@ console.log(addNumbers(20,10));
 console.log(void (addNumbers(40,50)));
    */      
 
-console.log(typeof 0);
+/* console.log(typeof 0);
 console.log(typeof Infinity);
 console.log(typeof NaN);
 console.log(typeof 'Hi');
@@ -49,12 +49,51 @@ console.log(typeof true);
 console.log(typeof undefined);
 console.log(typeof []);
 console.log(typeof new Object);
+ */
 
+/* var myDate = new Date();
+console.log(myDate);
 
-
-
-
-
+if (myDate instanceof Date){
+    console.log('True');
+}
+if (myDate instanceof Array){
+    console.log('true');
+}
+if (myDate instanceof Object){
+    console.log('instance of object');
+} */
+var house = {
+    bedrooms: 4,
+    flors: 1
+};
+if ('bedrooms' in house){
+    console.log('house has "bedrooms" property');
+    
+}
+if ('style' in house){
+    console.log('house has a "style" property');
+    // // false
+}
+var bedroomPropertyName = 'bedrooms';
+if(bedroomPropertyName in house){
+    console.log('house has a '+bedroomPropertyName+' property');
+    
+}
+var qualifiers = ['FirstNesto', 'SecondNesto', 'ThirdNebitno'];
+    if(0 in qualifiers){
+        console.log('qualifiers has 0 item');
+    }
+    if(2 in qualifiers){
+        console.log('qualifiers has 3 item');
+    }
+    if (3 in qualifiers){
+        console.log('qualifiers has 4 items');
+    } else {
+        console.log('qualifiers han not have an 4 item');
+        
+    }
+    
     </script>
 </body>
 </html>
