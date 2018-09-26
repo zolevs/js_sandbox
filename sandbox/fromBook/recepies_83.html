@@ -7,6 +7,45 @@
     <title>Recepies JS page 83</title>
 </head>
 <body>
-    
+    <script>
+        // true && true = true
+        // true && false = false
+        // fales && true = false
+        // false && false = false
+
+        // var house = {bedrooms: 1, floors: 3};
+        // if (house.bedrooms && house.floors >= 3){
+        //     console.log('House has more or equal to 3.')
+        // } else {
+        //     console.log('House is small.')
+        // }
+
+        
+        // if () {value} else {value}
+        
+        var retake = false;
+        var passMark = retake ? 180 : 150;
+        console.log(passMark);
+        
+        var retake = true;
+        var passMark = retake ? 180 : 150;
+        console.log(passMark);
+        
+        var score = 120, retake = true;
+        var passFail = retake ? (score >= 180 ? 'pass': 'fail') : (score >= 150 ? 'pass':'fail');
+        console.log('You scored ' + score + ' which is a '+passFail);
+        
+        var score = 20;
+        var grade = score >= 180 ? 'a' :
+                    score >= 150 ? 'b' :
+                    score >= 120 ? 'c' :
+                    score >= 100 ? 'd' :
+                    score >= 80 ? 'e':
+                    'f';
+        
+        var anOrA = (grade === 'b' || grade === 'c' || grade === 'd') ? 'a':'an';
+        console.log('You scored '+score+' which is '+ anOrA + ' ' + grade);
+
+    </script>
 </body>
 </html>
