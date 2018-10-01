@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Closure</title>
+</head>
+<body>
+
+    <button id="item1" >Click me 1</button>
+    <button id="item2" >Click me 2</button>
+
+    <script>
+/*     var funct = function(){
+        var a = 2;
+            b = 3;
+            var funct2 = function funct2(){
+                console.log(a+b);
+            }
+            setTimeout(funct2, 1000);
+    };
+
+    funct();
+   */
+   // var counter = 
+/* (function counter(){
+    var cnt = 0;
+    item1 = document.querySelector('#item1');
+    item2 = document.querySelector('#item2');
+
+    var print = function print(){
+        console.log(cnt);
+    };
+    item1.addEventListener('click', function count1(){
+        cnt++;
+        print();
+    });
+    item2.addEventListener('click', function count2(){
+        cnt++;
+        print();
+    });
+
+}()); */
+// immediately invoked function ()
+// instead counter();
+
+var APP = (function module(){
+    var a = 3;
+
+    var printIt = function printIt(val){
+        console.log(val);
+    };
+
+    var sumIt = function sumIt(b){
+        printIt(a+b);
+    }
+    var multiplyIt = function multiplyIt(b){
+        printIt(a*b);
+    };
+    return{
+        sumIt: sumIt,
+        multiplyIt: multiplyIt
+    } ;
+}());
+
+
+
+
+
+    </script>
+</body>
+</html>
