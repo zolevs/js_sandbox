@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Quiz</title>
+</head>
+<body>
+    <h1>JS Quiz</h1>
+    
+    <script>
+
+// // Immediately Invoked function
+
+(function() {
+
+
+// // function construction
+function Question(question, answers, correct){
+            this.question = question;
+            this.answers = answers;
+            this.correct = correct;
+        }
+
+        Question.prototype.displayQuestion = function() {
+            console.log(this.question);
+            for (var i = 0; i < this.answers.length; i++){
+                console.log(i + ' : ' + this.answers[i]);
+            }
+        }
+        Question.prototype.checkAnswer = function(){
+            if (answer === this.correct){
+                console.log('Correct !!!');
+            } else {
+                console.log('Wrong answer.');
+            }
+        }
+
+        var q1 = new Question('Is it javaScript cool language ?', ['Yes','No'], 0);
+        var q2 = new Question('What is the teacher name ?', ['John','Bib','Jonas','Michel'], 2);
+        var q3 = new Question('What does best describe coding?',['Boring','Hard','Fun'], 2);
+
+        var question = [q1, q2, q3];
+        
+        var n = Math.floor(Math.random() * question.length);
+        question[n].displayQuestion();
+
+        var answer = parseInt(prompt('Select your answer'));
+        question[n].checkAnswer(answer);
+
+
+}) ();
+
+
+        
+    </script>
+</body>
+</html>
