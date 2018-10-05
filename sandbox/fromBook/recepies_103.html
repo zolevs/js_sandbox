@@ -8,10 +8,18 @@
 </head>
 <body>
 <script>
-      var myString = 'abcd ef ';
+/*       var myString = 'abcd ef ';
       for (var i in myString){
           console.log('Character at position ' + i + ' is ' + myString[i]);
       }
+ */
+var myString = 'Lorem \uDCD6 ab';
+for (var v of myString){
+    console.log(v);
+}
+
+console.log('a'.repeat(5));
+console.log('zole'.repeat(4));
 
 
 </script>
