@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Searching an Array for a Value</title>
+</head>
+<body>
+<script>
+
+   // indexOf lastIndexOf
+   // array.indexOf(value)
+    let array = [1, 2, 5, 6, 7, 12, 4, 5, 12, 14, 18];
+    
+    console.log(array.indexOf(12));
+    console.log(array.lastIndexOf(12));
+    console.log(array.lastIndexOf(30));
+    
+    let arrayLast = array.lastIndexOf(12);
+
+    console.log(arrayLast);
+    
+    // findIndex(); find();
+
+    // // findIndex
+    /* let over10 = function(elemnt, index, array) {
+        console.log(elemnt + " - " + index + " - " + array);
+        return elemnt > 10;
+    }
+
+        console.log(array.findIndex(over10));
+ */
+
+    // // find
+    console.log("----------------------------");
+    
+    let result = array.find(function(element){
+        return element > 5 && element < 10;
+    });
+    console.log(result);
+    // arrow function
+    let result2 = array.find(element => element > 5 && element < 10);
+    console.log(result2);
+    
+</script>
+</body>
+</html>
