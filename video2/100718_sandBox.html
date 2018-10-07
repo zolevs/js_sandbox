@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lecture 37</title>
+</head>
+<body>
+<script>
+
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'Septemeber', 'October', 'November', 'December'];
+
+const days = ['Sunday', 'Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Sunday'];
+
+// let date = new Date();
+let date = new Date('1/12/2004');
+console.log(date);
+
+let month = date.getMonth();
+console.log(month);
+let day = date.getDay();
+console.log(day);
+let year = date.getFullYear();
+console.log(year);
+
+console.log(`Month is: ${months[month]} and the day is: ${days[day]} `);
+// console.log(days[day]);
+
+date.setDate(25);
+console.log(date);
+
+</script>
+</body>
+</html>
