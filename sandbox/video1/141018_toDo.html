@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ 
+ /*     
+        // quarter = 25 cent
+        // dime = 10 cent
+        // nickel = 5 cent
+        // penny = 1 cent
+
+        function returnChange(amount){
+            let qurters = Math.floor(amount/25);
+            console.log(`There are ${qurters} quarters in your change.`);
+            amount = amount % 25;
+            console.log(`Your change is : ${amount} cents`);
+            
+            let dimes = Math.floor(amount/10);
+            console.log(`There are ${dimes} dimes in your change`);
+            amount = amount % 10;
+            console.log(`Your change is : ${amount} cents`);
+            
+            let nickel = Math.floor(amount/5);
+            console.log(`There are ${nickel} nickels in your change.`);
+            amount = amount % 5;
+            console.log(`Your change is: ${amount} cents`);
+            
+            let penny = Math.floor(amount/1);
+            console.log(`There are ${penny} pennies in your change.`);
+            }
+
+            returnChange(99);
+  */           
+           
+        // // // // // 
+        // // // // // 
+        // // // // // 
+
+           /*  const example = [
+                ['bob', 'John'],
+                ['bannana', 'orange'],
+                ['hammer', 'nail']
+            ];
+
+            console.log(example[0][0]);
+            console.log(example[2][1]);
+
+            let item = example[1][1];
+            console.log(item);
+
+            example[2][1] = 'drayer';
+            console.log(example); */
+
+            const quiz = [
+            ['best state to live?','serbia'],
+            ['Capital of Vojvodina?','novi sad'],
+            ['Best town?', 'vrsac']
+        ];
+        let score = 0;
+        
+        for (let i=0; i<quiz.length; i++){
+            let answer = prompt(quiz[i][0]);
+            let answerCorrect = answer.toLowerCase().trim();
+                if(answerCorrect===quiz[i][1]){
+                    // dugo nisam mogao da skontam zasto mi neradi dobro proveru
+                    // problem mi je bilo sto sam u areju imao i velika i mala slova
+                    // a uporedjujem sa uslovom gde sam kovertovao sve u mala slova !!!!
+                    score++;
+                } else {
+                    alert(`Wrong answer ${answerCorrect} is entered.The correct answer
+                    is ${quiz[i][1]}`);
+                }
+            }
+            
+            let correctPercent = ((score / quiz.length)*100).toFixed(2);
+            console.log(`You answered ${score} question correcty and your correct score is ${correctPercent}%` );
+            
+
+
+
+
+            
+    </script>
+</body>
+</html>
