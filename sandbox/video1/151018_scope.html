@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ 
+        // let sayHi = 'Hello';
+        // // sayHi = 'Peanut Butter';
+
+        // function getGreeting(){
+        //     let sayHi = 'Hi from function - local scope';
+        //     console.log(sayHi);
+        // }
+        //     getGreeting();
+        // if (5>2){
+        //     console.log(sayHi);
+        // }
+        // console.log(sayHi);
+
+        // let sayHi = 'Hello';
+        // function getGreeting(){
+        //     let sayHi = 'Hello from function';
+        //     let peterTheGreat = 'peter the great'; // local scope
+        //     peter = 'peter'; // global scope
+        //     console.log(sayHi);
+        // }
+        // getGreeting();
+        // console.log(peter);
+        // console.log(peterTheGreat);
+
+        let generalNumber = 5;
+        function add(num1, num2){
+            let result = num1 + num2 + generalNumber;
+            function multiply(){
+                let multiplyResult = generalNumber * result;
+                console.log(multiplyResult);
+            }
+            multiply();
+            // console.log(multiplyResult);
+            
+            return result;
+        }
+        
+        let result = add(10,20);
+        console.log(result);
+        
+    </script>
+</body>
+</html>
