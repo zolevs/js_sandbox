@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <button type="button" id='mainBtn'>
+        Click Me
+    </button>
+
+    <script>
+        // // callback function
+
+        function functionName(para1, para2){
+
+        }
+        
+        // setTimeout
+        // setInterval
+        
+        /* setTimeout(function()
+            {console.log('Hello');
+        }, 3000);
+         */
+        
+        /*
+        setInterval(sayHello, 2000);
+
+        function sayHello(){
+            console.log('Print after 2seconds');
+        }
+        */
+
+        let numbers = [1,2,3,4,5,6,7,8,9,10];
+        let even = numbers.filter(function(number){
+            if(number % 2 === 0){
+            return number
+        }
+        });
+        console.log(even);
+        
+        const mainBtn = document.getElementById('mainBtn');
+        mainBtn.addEventListener('click',showAlert);
+
+        function showAlert(){
+            console.log('You just clicked a button');
+        }
+        /*
+         let even = numbers.filter(isEven);
+         function isEven(singleNumber){
+            return singleNumber % 2 === 0;
+        }
+        console.log(even);
+         */
+
+    </script>
+</body>
+</html>
