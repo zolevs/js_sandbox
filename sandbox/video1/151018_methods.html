@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Hello</p>
+   
+    <script>
+
+      /*
+        
+        const number = [0,1,2,3,4,5,6,7,8,9,10];
+        
+        for (let i =  0; i < number.length; i++){
+            console.log(number[i]);
+        }        
+
+        const even = [];
+        for (let i = 0; i < number.length; i++){
+            if(number[i] % 2 === 0){
+                even.push(number[i]);
+            }
+        }
+        console.log(even);
+        
+        */
+        
+        // // forEach
+
+        const names = ['John','Bob','Mike','Susan'];
+        names.forEach(function(parametar) {
+            console.log(parametar);
+        });
+        
+    //    ////
+
+        names.forEach(showName);
+        function showName(name, index){
+            console.log(index,name);
+            // console.log(index);
+            console.log(`Name ${name} is in ${index} position`);
+            let fullName = `${name} Anderson`;
+            console.log(fullName);            
+        }
+    </script>
+</body>
+</html>
