@@ -14,26 +14,29 @@
         // // filter method
 
         const number = [0,1,2,3,4,5,6,7,8,9,10];
+        const names = ['bob', 'susy', 'arnold'];
 
-        // let even =[];
-        // for (let i = 0; i < number.length; i++) {
-        //     if (number[i] % 2 === 0){
-        //         even.push = number[i];
-        //         console.log(number[i]); 
-        //     }
+        // let twoTimes =[];
+
+        // for (let i=0; i < number.length; i++){
+        //     let times  = number[i] * 2;
+        //     twoTimes.push(times);
         // }
-
-        const even = number.filter(function(number){
-            return number % 2 === 0;
-        })
-        console.log(even);
-        
-        const big = number.filter(function(number){
-            return number > 4;
-        })
-        console.log(big);
-        
             
+        // console.log(twoTimes);
+
+        const timesTwo = number.map(function(number){
+            return number * 2;
+        })
+        console.log(timesTwo);
+        
+        const fullNames = names.map(function(nameKakoGod){
+            console.log(nameKakoGod);
+            return `${nameKakoGod} anderson`;
+        })
+        console.log(fullNames);
+        
+
     </script>
 </body>
 </html>
