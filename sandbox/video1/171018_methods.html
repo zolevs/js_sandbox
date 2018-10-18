@@ -11,32 +11,45 @@
     <p>Hello</p>
    
     <script>
-        // // filter method
+        // // redcue method        
 
-        const number = [0,1,2,3,4,5,6,7,8,9,10];
-        const names = ['bob', 'susy', 'arnold'];
+        const numbers = [0,1,2,3,4,5];
+        const fruits = ['orange', 'kiwi', 'apple' ,'lemon', 'orange', 'apple', 'apple'];
 
-        // let twoTimes =[];
-
-        // for (let i=0; i < number.length; i++){
-        //     let times  = number[i] * 2;
-        //     twoTimes.push(times);
-        // }
+        /* const total = numbers.reduce(function(acc, curr){
+            console.log(curr);
+            console.log('this is total '+acc);
             
-        // console.log(twoTimes);
-
-        const timesTwo = number.map(function(number){
-            return number * 2;
-        })
-        console.log(timesTwo);
+            acc = acc + curr;
+            
+            return acc;
+        },0)
+        console.log(total); */
         
-        const fullNames = names.map(function(nameKakoGod){
-            console.log(nameKakoGod);
-            return `${nameKakoGod} anderson`;
-        })
-        console.log(fullNames);
-        
+        /* const distinct = fruits.reduce(function(acc, curr){
+            console.log(curr);
+            // console.log('curr ' + curr );
+           if(acc.indexOf() === -1){
+               acc.push(curr);
+           }
 
+           return acc; 
+            
+        },[])
+        console.log(distinct); */
+
+        const types = fruits.reduce(function(total, fruit){
+            if (total[fruit]){
+                total[fruit] += 1;
+            } else {
+                total[fruit] = 1;
+            }
+            
+
+            return total;
+        },{})
+        console.log(types);
+        
     </script>
 </body>
 </html>

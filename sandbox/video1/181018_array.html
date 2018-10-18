@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Hello</p>
+   
+    <script>
+       /* 
+       const fruits = ['oranges', 'pear', 'apple', 'oranges', 'lemon', 'oranges', 'papaya'];
+
+        const sale = fruits.filter(function(fruit){
+            return fruit === 'oranges';
+        }).map(function(name){
+            return `${name} are on sale`;
+        })
+        console.log(sale);
+        
+        */
+
+        // converter 
+        // celcius = (Fahr-32)*5/9
+        // fahrenheit = celcius * 9/5 + 32
+
+        function toFahrenheit(temp){
+            let fahr = temp * 9/5 + 32;
+            console.log(`${temp} degres in C is ${fahr} degrees in F`);
+            
+        }
+
+        toFahrenheit(40);
+        
+        function toCelcius(temp){
+            let celcius = ((temp - 32)*5/9);
+            console.log(`${temp} degres in F is ${celcius.toFixed(2)} degrees in C`);
+            
+        }
+        toCelcius(100);
+    </script>
+</body>
+</html>
