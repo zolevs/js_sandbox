@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Hello</p>
+   
+    <script>
+      
+        const person = {};
+        const secondPerson = new Object();
+
+        person.name = 'john';
+
+        console.log(person);
+        console.log(person.name);
+
+        person.name = 'bob';
+        console.log(person['name']);
+
+        let lastName = person.lastName;
+        console.log(lastName);
+        
+        let check = 'lastName' in person;
+        console.log(check);
+        
+        if(person.lastName !== undefined){
+
+        }
+        
+        delete person.name;
+        console.log(person);
+
+        const human = {
+            name: 'bob',
+            nickName: 'zippy',
+            height: 7,
+            weight: 200,
+            married: true,
+            education: false,
+            friends:['john', 'sussy'],
+            sign(){
+                return `I'm singing away`
+            }
+        }
+
+        let song = human.sign();
+        console.log(song);
+        
+        for(const key in human){
+            console.log(`${key} : ${human[key]}`);
+            
+        }
+
+        const people = {
+            person1: {name: 'sussy', age: 44},
+            person2: {name: 'john'}
+        }
+        
+        function hello({greet, name}){
+            return `${greet} !!!! ${name}`
+        }
+        let greetPerson = hello({name: 'john', greet:'Hello there'});
+        console.log(greetPerson);
+    </script>
+</body>
+</html>
