@@ -9,15 +9,28 @@
 <body>
 
     <p>Hello DOM</p>
-   
+    <h1 id="title">Hello</h1>
+    <button id="btn">Click Me</button>
+    
     <script>
     //   console.log('Test browser sync & opera');
-      document.body.style.backgroundColor = 'blue';
+     /*  document.body.style.backgroundColor = 'blue';
       document.body.style.color = 'red';
 
       const win = window;
-      console.log(win);
+      console.log(win); */
         
+        // getElementById('element');
+        const h1 = document.getElementById('title');
+
+        // console.log(h1);
+        h1.style.color = 'red';
+        document.getElementById('btn').style.background = '#fa0';
+        const style = document.getElementById('btn').style;
+
+        console.log(style);
+        
+
     </script>
 </body>
 </html>
