@@ -9,21 +9,29 @@
 <body>
 
     <ul id="result">
-        <li class="first">First</li>
-        <li>list element 2</li>
-        <li>List element 3</li>
-        <li>List element 4</li>
+        <li class="first" id="special"> I have first class</li>
+        <a href="firstPage.html" id="link">Link to page number 1</a>
+        <li>I have no attributes</li>
     </ul>
 
+
 <script>
-const first = document.querySelector('.first');
-console.log(first);
 
-const second = first.nextSibling;
-console.log(second);
+const special = document.querySelector('#special');
+const showClass = special.getAttribute('class');
+console.log(showClass);
 
-const zero = first.previousSibling;
-console.log(zero);
+const link = document.getElementById('link');
+const showLink = link.getAttribute('href');
+
+// const link = document.querySelectorAll('.first');
+console.log(link);
+console.log(showLink);
+
+const item = link.nextSibling.nextSibling;
+item.setAttribute('class', 'first');
+console.log(item);
+
 
 
 
