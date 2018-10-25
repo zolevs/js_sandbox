@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        .colors {
+            background: red;
+            color: white;
+        }
+        .text {
+            font-size: 2rem;
+            letter-spacing: 1rem;
+        }
+    </style>
+<body>
+
+    <h1 id="first" class="colors">I'm first element</h1>
+    <h1 id="second">I'm second element</h1>
+    <h1 id="third">I'm third element</h1>
+
+
+
+
+<script>
+// // className 
+// // classList
+
+const first = document.getElementById('first');
+const second = document.getElementById('second');
+const third = document.getElementById('third');
+
+// get className
+
+const classname = first.className;
+console.log(classname);
+
+second.className = 'colors';
+second.className = 'text';
+
+// // classList
+
+const classes = third.classList;
+console.log(classes);
+// // addClass
+third.classList.add('colors');
+console.log(classes);
+third.classList.add('text');
+console.log(classes);
+
+// // third.classList('colors','text');
+
+// // remove 
+third.classList.remove('text');
+console.log(classes);
+
+let result = third.classList.contains('colors');
+if(result){
+    console.log('this element have the class');
+} else {
+    console.log('this element does not have the class');
+}
+</script>
+</body>
+</html>
