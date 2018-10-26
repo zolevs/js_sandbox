@@ -7,62 +7,68 @@
     <title>Document</title>
 </head>
     <style>
-        .colors {
-            background: red;
+        .show {
+            font-size: 3rem;
+            background-color: blue;
             color: white;
-        }
-        .text {
-            font-size: 2rem;
-            letter-spacing: 1rem;
         }
     </style>
 <body>
 
-    <h1 id="first" class="colors">I'm first element</h1>
-    <h1 id="second">I'm second element</h1>
-    <h1 id="third">I'm third element</h1>
-
-
-
-
+<div id="result">
+    <div class="show">I'm the child of result</div>
+</div>
+   
 <script>
-// // className 
-// // classList
+// // createElement('element')
+// // createTextNode('text content')
+// // element.appendChild(childElement)
 
-const first = document.getElementById('first');
-const second = document.getElementById('second');
-const third = document.getElementById('third');
+const result = document.querySelector('#result');
+console.log(result.children);
 
-// get className
+// // create empty element
 
-const classname = first.className;
-console.log(classname);
+const bodyDiv = document.createElement('div');
+// console.log(bodyDiv);
+// create text node
 
-second.className = 'colors';
-second.className = 'text';
+const text = document.createTextNode('body div');
+console.log(text);
 
-// // classList
+// // add text node
 
-const classes = third.classList;
-console.log(classes);
-// // addClass
-third.classList.add('colors');
-console.log(classes);
-third.classList.add('text');
-console.log(classes);
+bodyDiv.appendChild(text);
 
-// // third.classList('colors','text');
 
-// // remove 
-third.classList.remove('text');
-console.log(classes);
+// //
 
-let result = third.classList.contains('colors');
-if(result){
-    console.log('this element have the class');
-} else {
-    console.log('this element does not have the class');
-}
+// // create empty element
+
+const resultLi = document.createElement('li');
+// console.log(bodyDiv);
+// create text node
+
+const textContent = document.createTextNode('result li');
+console.log(text);
+
+// // add text node
+
+// resultLi.appendChild(textContent);
+resultLi.classList.add('show');
+// // add to result
+
+result.appendChild(resultLi);
+console.log(result.children);
+
+// //
+
+
+
+// document.body.appendChild(bodyDiv);
+document.body.insertBefore(bodyDiv, result)
+
+
 </script>
 </body>
 </html>
