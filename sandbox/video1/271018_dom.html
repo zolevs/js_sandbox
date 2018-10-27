@@ -7,40 +7,37 @@
     <title>Document</title>
 </head>
     <style>
-        .show {
+        .special {
             font-size: 3rem;
-            background-color: blue;
-            color: white;
+            background: #32f;
+            color: #adadad;
+        }
+        .show {
+            display: block;
+        }
+        .hide {
+            display: none;
         }
     </style>
 <body>
-<ul id="first">
-    <li class="item">Iznad ovoga list item </li>
-    <li> list item 2</li>
-</ul>
-<div id="second">
-    i have some text content.
+<div id="item">
+    i'm just some random text for css.
 </div>
-
 <script>
-    // // innerHTML
-    // // textContent
+    // // changing CSS
 
-    const list=document.getElementById('first');
-    const div=document.getElementById('second');
-    const item=document.querySelector('.item');
-    console.log(div.textContent);
-    console.log(list.innerHTML);
-    console.log(list.textContent);
+    const item = document.getElementById('item');
     
-    const ul = document.createElement('ul');
-    ul.innerHTML = `<li class="item">list item </li>
-    <li> list item 2</li>`;
-    document.body.appendChild(ul);
+    // item.style.backgroundColor = 'red';
+    // item.style.color = 'white';
+    // item.style.fontSize = '3rem';
+    // item.style.display = 'none';
+    // item.style.display = 'block';
 
-    const secondDiv = document.createElement('div');
-    secondDiv.textContent = `I'm second div`;
-    list.insertBefore(secondDiv, item);
+    item.classList.add('special');
+    item.classList.add('hide');
+    item.classList.remove('hide');
+
 </script>
 </body>
 </html>
