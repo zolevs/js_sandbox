@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        .special {
+            font-size: 3rem;
+            background: #32f;
+            color: #fff;
+        }
+        .show {
+            display: block;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+<body>
+<h1 id="item">
+    i'm just some random text.
+</h1>
+<button class="btn">Click me</button>
+
+<!-- <p onclick="this.classList.add('special')">This is the old way style. Click me</p> -->
+
+
+<script>
+
+// // event listeners
+// document.getElementByid('item').classList.add('special')
+
+const btn = document.querySelector('.btn');
+// btn.addEventListener('click', function(){});
+
+btn.addEventListener('click', addClass);
+
+function addClass(){
+    document.getElementById('item').classList.add('special');
+}
+
+
+</script>
+</body>
+</html>
