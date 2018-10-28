@@ -20,27 +20,52 @@
         }
     </style>
 <body>
-<h1 id="item">
-    i'm just some random text.
-</h1>
-<button class="btn">Click me</button>
-
-<!-- <p onclick="this.classList.add('special')">This is the old way style. Click me</p> -->
-
-
+<p id="item">Lorem ipsum dolor sit amet.</p>
+<h1 id="heading">Heading</h1>
+<br>
+<h2>Simple form for keypress, keydown and keyup events</h2>
+<br/>
+<input type="text" id="name">
 <script>
+// // mousedown mouseup click mouseover mouseout
 
-// // event listeners
-// document.getElementByid('item').classList.add('special')
+const item =document.getElementById('item');
+const heading = document.getElementById('heading');
 
-const btn = document.querySelector('.btn');
-// btn.addEventListener('click', function(){});
+item.addEventListener('click', function(){
+    console.log('You clicked...');
+})
+item.addEventListener('mousedown', function(){
+    console.log('Mouse down');
+})
+item.addEventListener('mouseup', function(){
+    console.log('Mouse up');
+})
 
-btn.addEventListener('click', addClass);
+heading.addEventListener('mouseover', function(){
+    heading.classList.add('special');
+})
+heading.addEventListener('mouseout', function(){
+    heading.classList.remove('special');
+})
 
-function addClass(){
-    document.getElementById('item').classList.add('special');
-}
+// keypress - when key is pressed
+// keydown - when key is down
+// keyup - when key is released
+
+const name = document.getElementById('name');
+
+// name.addEventListener('keypress', function(){
+//     console.log('key was pressed');
+// })
+// name.addEventListener('keydown', function(){
+//     console.log('key is down');
+    
+// })
+name.addEventListener('keyup', function (){
+    console.log(name.value);
+    
+})
 
 
 </script>
