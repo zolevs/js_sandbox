@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        .special {
+            font-size: 3rem;
+            background: #32f;
+            color: #fff;
+        }
+        .show {
+            display: block;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+<body>
+<div class="container">
+  
+</div>
+<button id="btn">Click Me</button>
+
+<script>
+//     // localStorage.setItem('job', 'developer');
+//     // sessionStorage.setItem('job', 'developer');
+
+// // set item in local storage
+
+// localStorage.setItem('name', 'john');
+// localStorage.setItem('job', 'developer');
+// localStorage.setItem('married', 'true');
+
+// const name = localStorage.getItem('name');
+// console.log(name);
+
+// // remove item
+// // localStorage.removeItem('name');
+
+// // clear local storage
+// localStorage.clear();
+
+// // 
+// // local storage session storage
+
+const names = ['john', 'peter', 'bob'];
+// localStorage.setItem('names', names);
+// const values = localStorage.getItem('names')
+localStorage.setItem('names', JSON.stringify(names));
+const values = JSON.parse(localStorage.getItem('names'));
+console.log(values[0]);
+
+let fruits;
+
+if (localStorage.getItem('fruits') === null ){
+    fruits = [];
+} else {
+    fruits = JSON.parse(localStorage.getItem('fruits'));
+}
+
+fruits.push('apple');
+fruits.push('orange');
+localStorage.setItem('fruits', JSON.stringify(fruits));
+
+console.log(fruits);
+
+</script>
+</body>
+</html>
