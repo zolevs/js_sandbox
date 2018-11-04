@@ -31,13 +31,36 @@ console.log(time());
 function output(time){
     var color = '#'+time;
     document.body.bgColor = color;
+    document.body.style.height = '100vh';
     document.body.textContent = color;
+    document.body.style.color = 'white';
+
 }
 
-setInterval(function(){
+function startClick(callback){
+document.body.addEventListener('dblclick', function(event){
+// document.addEventListener('dblclick', function(event){
+// moze i ovako onda nam netreba ono gore document.body.style.height = '100vh'; posoto je body velik samo onoliko koliko je velik element u njemu  
+    callback();
+});
+}
+function stopClick(callback, name){
+    document.body.addEventListener('click', function(event){
+        callback(name);
+    });
+}
+
+function init(){
+
+var tick = setInterval(function(){
     output(time());
 }, 1000);
 
+stopClick(clearInterval, tick);  // clearInterval(tick)
+startClick(init);
+}
+
+init();
 
 
 /* // 03.04
