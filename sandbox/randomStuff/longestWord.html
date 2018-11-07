@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Longest Word</title>
+</head>
+
+<body>
+    
+<script>
+function findLongestWord(str){
+    var words = str.split(' ');
+    var maxLength = 0;
+
+    for (let i = 0; i < words.length; i++){
+        if(words[i].length > maxLength){
+            maxLength = words[i].length;
+        }
+    }
+    return maxLength;
+}   
+
+console.log(findLongestWord('ZOran Ivanovic'));
+console.log(findLongestWord('Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nihil.'));
+
+
+
+</script>
+
+</body>
+</html>
