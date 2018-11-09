@@ -10,7 +10,7 @@
 <body>
     
 <script>
-function findLongestWord(str){
+/* function findLongestWord(str){
     var words = str.split(' ');
     var maxLength = 0;
 
@@ -24,8 +24,18 @@ function findLongestWord(str){
 
 console.log(findLongestWord('ZOran Ivanovic'));
 console.log(findLongestWord('Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nihil.'));
+ */
 
+// // //
 
+function findLongestWord(str){
+    return str.split(' ').reduce(function(x, y) {
+        return Math.max(x,y.length)
+    }, 0);
+}
+
+console.log(findLongestWord('ZOran Ivanovic'));
+console.log(findLongestWord('Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, nihil.'));
 
 </script>
 
