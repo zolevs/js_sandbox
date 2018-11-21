@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+        // check for palindrome
+        // race car = racecar
+
+        function palindrome(str){
+            // assign a front and back pointer
+            let front = 0;
+            let back = str.length - 1;
+
+            //
+
+            while (back > front){
+                // increment front pointer if current character doesn't meet criteria
+                while(str[front].match(/[\W_]/)){
+                    front ++;
+                    continue;
+                }
+                // decrement back ponter if current character doesn't meet criteria
+                while (str[back].match(/[\W_]/)){
+                    back--;
+                    continue;
+                }
+                // finally do the coparison on the current character
+                if (str[front].toLowerCase() !== str[back].toLowerCase()) return false;
+
+                front ++;
+                back --;
+            }
+            // if the whole string has been copared whithout returning false it's a palindroe
+            return true;
+        }
+
+        console.log(palindrome('race car'));
+        console.log(palindrome('zoan'));
+        console.log(palindrome('eye'));
+        
+    </script>
+</body>
+</html>
