@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+<body>
+<script>
+// // object
+
+// literal notation
+
+var person = {firstName: 'John',
+             lastName: 'Smith',
+             age: 45,
+            daughter: {
+                name: 'Mary',
+                age: 5
+                },
+                myFunc: function(daughterName, fatherName, daughterAge){
+                    console.log('Hello from object');
+                    console.log(daughterName + ' is a daughter of ' + fatherName + ' and she is ' + daughterAge + ' years old.');
+                    
+                }
+            };
+console.log(person);
+
+console.log(person.firstName);
+console.log(person.daughter.name);
+
+person.myFunc('Mary', 'John', 45);
+person.myFunc(person.daughter.name, person.firstName, person.daughter.age);
+
+
+
+/* var person = new Object();
+
+person.firstName = 'John';
+person.lastName = 'Smith';
+person.son = new Object();
+
+person.son.name = 'Nick';
+person.son.age = 11;
+
+console.log(person); */
+
+/* var job ='profession';
+person.firstName = 'John';
+person['lastName'] = 'Smith';
+person[job] = 'instructor';
+
+
+console.log(person);
+console.log(person.firstName);
+console.log(person['lastName']);
+
+ */
+// // array 
+/* // // literal notation
+var arr = [
+    'John',
+    'Bob',
+    'Mary',
+    10,
+    22, 
+    true,
+    [1, 2, 3],
+    function(name)
+        { return 'Hello ' + name }
+];
+console.log(arr[6][1]);
+console.log(arr[7](arr[0]));
+
+// // array constructor
+
+var arrNew = new Array(1, 'John', false);
+ */
+// // array methods
+
+/* var colors = ['white', 'black', 'red'];
+colors[1] = 'green';
+
+colors.push('blue');
+console.log(colors);
+colors.pop();
+console.log(colors);
+
+colors.shift(colors);
+console.log(colors);
+
+colors.unshift('purple');
+console.log(colors);
+
+console.log(colors.indexOf('red'));
+console.log(colors.indexOf('brown'));
+
+if(colors.indexOf('blue') === -1 ){
+    colors.push('blue');
+    console.log(colors);
+}
+ */
+
+
+</script>
+</body>
+</html>
