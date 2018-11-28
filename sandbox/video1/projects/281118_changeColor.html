@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change Background</title>
+    <link rel="stylesheet" href="css/281118main.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h2 class="hexColor">hex color code is: <span class="hex">  </span> </h2>
+        <button type="button" class="hexBtn">Press here to change color</button>
+    </div>
+    
+    <script>
+        const hexNumber = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+        const hexBtn = document.querySelector('.hexBtn');
+        const bodyBcg = document.querySelector('body');
+        const hex = document.querySelector('.hex');
+
+        hexBtn.addEventListener('click', getHex);
+
+        function getHex(){
+            let hexColor = '#';
+            for(let i = 0; i < 6; i++){
+                let random = Math.floor(Math.random()*hexNumber.length);
+                hexColor += hexNumber[random];
+                console.log(hexColor);
+            }
+            bodyBcg.style.backgroundColor = hexColor;
+            hex.innerHTML = hexColor;
+        }
+    </script>
+</body>
+</html>
