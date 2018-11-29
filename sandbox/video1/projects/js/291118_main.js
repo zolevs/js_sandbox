@@ -1,3 +1,6 @@
+ // // // // // //
+ // PUT ALWAYS SCRIPT AT THE END
+ // // // // // //
 
 
 /*         const simpleQuotes = [
