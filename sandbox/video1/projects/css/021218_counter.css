@@ -1,0 +1,38 @@
+body {
+    background: #adadad;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+}
+.counter-box {
+    flex: 0 0 80%;
+    text-align: center;
+    border: 3px solid black;
+    padding: 1rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.5);
+}
+.counter {
+    font-size: 5rem;
+}
+.btn {
+    background-color: white;
+    border-radius: 8px;
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0.25rem;
+    border: 2px solid #ddd;
+    box-shadow: 4px 4px #001221;
+    outline: none;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #4caf50;
+    color: white;
+}
+.btn:active{
+    box-shadow: none;
+}
