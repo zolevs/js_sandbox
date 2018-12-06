@@ -5,6 +5,7 @@
     document.getElementById('message-form').addEventListener('submit', function(e){
         // prevent default action
         // // e parametar se moze zvati bilo kako najcesce ih nazivamo e ili event
+        
         e.preventDefault();
         const message = document.getElementById('message');
         // // get a value
