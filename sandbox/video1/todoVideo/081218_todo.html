@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>todo function</title>
+</head>
+<body>
+    
+    <script>
+    var todos = ['item 1', 'item 2', 'item 3'];
+    
+    // function to display
+    function displayTodos(){
+        console.log('My todos: ', todos);
+    }
+    // function to add todos
+    function addTodo(todo){
+        todos.push(todo);
+    }
+    // function to change todos
+    function changeTodo(position, newValue){
+        todos[position] = newValue;
+        displayTodos();
+    }
+    // function to delete todos
+    function deleteTodo(position){
+        todos.splice(todos[position],1);
+        displayTodos();
+    }
+
+
+    addTodo('Zoran');
+    changeTodo(1,'Dexter');
+
+    deleteTodo(1);
+
+    displayTodos();
+    </script>
+
+</body>
+</html>
