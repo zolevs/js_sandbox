@@ -39,4 +39,5 @@ function addZero(time){
     }
     return time;
 }
+showTime(); // da bismo izbegli prazan ekran na pocetu od 1sekunde prvo pozivamo funkciju pa nakon toga callback funkciju
 setInterval(showTime, 1000);
