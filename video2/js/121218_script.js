@@ -19,8 +19,10 @@ console.log(iconsArr); */
 // // vec moramo da koristimo Array.from metodu da bismo dobili array
 
 
-/* Array.from(icons).forEach(function(icon, index, arr){
+Array.from(icons).forEach(function(icon, index, arr){
     console.log(icon, index, arr);
     // console.log(index);
-    
-}); */
+});
+
+var lis = document.getElementsByTagName('li');
+console.log(lis);

@@ -1,26 +1,18 @@
-var icons = document.getElementsByClassName('fa');
+// var lis = document.querySelectorAll('li');
+var lis = document.querySelectorAll('li, h2');
 
-/* for (var i=0; i < icons.length; i++){
-    console.log(icons[i]);
-}
+console.log(lis);
+// // nodeList
+// // mozemo da koristimo kao forEach ali ne i druge array metode
+// // 
 
-var iconsArr = Array.from(icons);
-console.log(icons);
-console.log(iconsArr);
-
-iconsArr.push('Hello');
-console.log(iconsArr); */
-
-// // forEach je array metod, a mi imamo HTML collection te nemozemo da koristimo 
-// // ovu formu
-// // icons.forEach(function(icon, index, arr){
-// // console.log(icon, index, arr);
-// // })
-// // vec moramo da koristimo Array.from metodu da bismo dobili array
-
-
-Array.from(icons).forEach(function(icon, index, arr){
-    console.log(icon, index, arr);
-    // console.log(index);
+// lis.forEach(function(li){
+//     console.log(li);
     
-});
+// })
+
+Array.from(lis).forEach(function(li){
+    console.log(li);
+    li.textContent = 'Hello World';
+
+})
