@@ -1,18 +1,13 @@
-// var lis = document.querySelectorAll('li');
-var lis = document.querySelectorAll('li, h2');
+var h2 = document.querySelector('header h2');
+h2.style.color = 'red';
+h2.style.backgroundColor = 'green';
 
-console.log(lis);
-// // nodeList
-// // mozemo da koristimo kao forEach ali ne i druge array metode
-// // 
+var lis = document.querySelectorAll('ul li');
+lis[1].style.backgroundColor = "#ff6347";
+var lis = document.querySelectorAll('ul li');
+for(var i = 0; i < lis.length; i++){
+    lis[i].style.backgroundColor = "pink"; 
+}
 
-// lis.forEach(function(li){
-//     console.log(li);
-    
-// })
+lis[0].style.cssText = 'background-color: yellow; font-size: 25px;';
 
-Array.from(lis).forEach(function(li){
-    console.log(li);
-    li.textContent = 'Hello World';
-
-})
