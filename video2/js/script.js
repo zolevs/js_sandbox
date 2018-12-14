@@ -35,7 +35,7 @@ function b(){
 
 // // event object
 
-h2.addEventListener('click', a);
+/* h2.addEventListener('click', a);
 
 function a(e){
     console.log('Clicked a...');
@@ -43,5 +43,13 @@ function a(e){
     console.log(e.clientX);
     console.log(e.target);
     console.log(this);
-}
+} */
 
+
+h2.addEventListener('click', function(){
+    a(5, 6);
+});
+
+function a(x, y){
+    console.log(x * y);
+}
