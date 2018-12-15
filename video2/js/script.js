@@ -1,55 +1,23 @@
-// events
+// // get & set attribute
 
-var h2 = document.querySelector('header h2');
+// var div = document.querySelector('div.wrapper');
+// // div.getAttribute('class');
 
-// h2.onclick = function (){
-//     console.log('Clicked');
-// }
+// // // setAttribute('attr', 'value');
 
-// h2.onmouseover = function(){
-//     console.log('Mouseover');
-// }
+// div.setAttribute('style', 'background: coral');
 
-/* function a(){
-    console.log('clicked');
-}
-function b(){
-    console.log('mouse over');
-}
-
- */
-
-/* h2.addEventListener('click', function(){
-    console.log('Click');
-}); */
-/* h2.addEventListener('click', a);
-h2.addEventListener('click', b);
-
-function a(){
-    console.log('Clicked a...');
-}
-function b(){
-    console.log('Clicked b...')
-}
- */
-
-// // event object
-
-/* h2.addEventListener('click', a);
-
-function a(e){
-    console.log('Clicked a...');
-    console.log(e);
-    console.log(e.clientX);
-    console.log(e.target);
-    console.log(this);
-} */
+// div.removeAttribute('style');
+// div.hasAttribute('style');
 
 
-h2.addEventListener('click', function(){
-    a(5, 6);
+var btn = document.getElementById('add-btn');
+var input = document.getElementById('add-input');
+
+btn.addEventListener('click', function(e){
+    e.preventDefault();
+    console.log('hello');
+    input.setAttribute('type','submit');
+    input.setAttribute('value',input.value);
+
 });
-
-function a(x, y){
-    console.log(x * y);
-}
