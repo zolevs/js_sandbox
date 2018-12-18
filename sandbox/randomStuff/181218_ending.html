@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ending</title>
+</head>
+<body>
+    
+    <script>
+/*         function confirmEnding(str, target){
+            return str.substr(-target.length) === target;
+        }
+
+        console.log(confirmEnding('Bastion','n'));
+ */
+        // solution two
+
+        function confirmEnding(str, target){
+            if(str.substr(str.length - target.length, str.length) !== target ){
+                return false;
+            } else {
+                return true;
+            }
+            return str;
+        }
+
+        console.log(confirmEnding('Zoran','n'));
+    </script>
+
+</body>
+</html>
