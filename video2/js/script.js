@@ -83,3 +83,23 @@ hideItem.addEventListener('click', function(){
         ul.style.display = 'block';
     }
 });
+
+// // // search filter
+
+var searchInput = document.querySelector('#search-note input');
+searchInput.addEventListener('keyup', function(e){
+    // console.log('Key is released');
+    var searchChar = e.target.value.toUpperCase();
+    // console.log(searchChar);
+    var notes = ul.getElementsByTagName('li');
+    Array.from(notes).forEach(function(note){
+        var parText = note.firstElementChild.textContent;
+
+        if(parText.toUpperCase().indexOf(searchChar) !== -1){
+            note.style.display = 'block';
+        } else {
+            note.style.display = 'none';
+        }
+    });
+
+});
