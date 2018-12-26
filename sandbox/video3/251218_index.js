@@ -1,9 +1,8 @@
-let city = 'Vrsac';
-let country = 'Vojvodina';
-let location = 'Serbia';
+// numbers
 
-let myLocation = `${city} ${country} ${location}`;
-let myLocation2 = city + ' ' + country + ' '+ location;
-console.log(myLocation);
+let num = '10' * 2;
+let multiply = 4.2 / 2;
 
-console.log(myLocation2);
+
+console.log(num);
+console.log(multiply);
