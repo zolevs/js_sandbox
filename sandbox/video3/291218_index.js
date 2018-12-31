@@ -1,3 +1,47 @@
+// global
+  // local
+    // local
+  //local
+
+// // use "let"
+
+let name = 'Andrew';
+
+if(true){
+    // shadowing
+    name = 'Mike';
+    if(true){
+      let  name = 'Jen';
+        console.log(name);
+    }
+}
+
+if(true){
+    console.log(name);
+}
+
+
+
+
+/* let varOne = 'varOne';
+
+if (true){
+    console.log(varOne);
+    let varTwo = 'varTwo';
+    console.log(varTwo);
+    if(true) {
+        let varFour = 'varFour';
+    }
+}
+if (true) {
+    let varThree = 'varThree';
+    console.log(varThree);
+}
+
+ */
+
+// console.log(varTwo);
+
 // // === equality operator
 // // !== not equal operator
 
@@ -36,7 +80,7 @@ if (isAccountLocked){
 
  */
 // // logical operators
-
+/* 
  let temp = 155;
  
  if (temp >= 60 && temp <= 90){
@@ -60,4 +104,6 @@ if (isAccountLocked){
  } else {
      console.log('Non vegan separe');
  }
+
+ */
 
