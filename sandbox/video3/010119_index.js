@@ -1,10 +1,35 @@
+// // // template strings
+
+let getTip = function (total = 0, tipPercent = .1) {
+    console.log(`Total bill is ${total} and tip percent is ${tipPercent*100}%`);
+    return total * tipPercent;
+
+}
+// let total, tipPercent;
+// console.log(total);
+// console.log(tipPercent);
+
+let tip = getTip(150, .25);
+console.log(`Total tip is ${tip}`);
+
+
+
+/* 
+let number = 10;
+let name = 'Zoran';
+console.log(`My name is ${name} and I have ${number} bitcoins`);
+ */
+
+
+
 // // // function scope start 
 
 // global scope (convertFahrenheitToCelsius, tempOne)
     // local sope (fahrenheit, celsius)
         // local sope (isFreezing)
 
-let convertFahrenheitToCelsius = function (fahrenheit){
+/* 
+    let convertFahrenheitToCelsius = function (fahrenheit){
     let celsius = (fahrenheit - 32) * 5 / 9;
     if(celsius < 0){
         let isFreezing = true;
@@ -14,6 +39,7 @@ let convertFahrenheitToCelsius = function (fahrenheit){
 let tempOne = convertFahrenheitToCelsius(32);
 
 console.log(tempOne);
+ */
 
 // // // function scope end
 
