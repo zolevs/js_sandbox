@@ -13,7 +13,7 @@ const clear = document.querySelector('.displayItems-clear');
 // // event listeners
 
 submit.addEventListener('click', addItem);
-
+document.addEventListener('DOMContentLoaded', displayStorage)
 
 
 // // functions
@@ -82,4 +82,19 @@ function updateStorage(value){
     localStorage.setItem('groceryList', JSON.stringify(groceryList));
 
 }
-localStorage.clear();
+// localStorage.clear();
+
+
+// display local storage
+
+function displayStorage(){
+    let exists = localStorage.getItem('groceryList');
+
+    if(exists){
+        let storageItems = JSON.parse(localStorage.getItem('groceryList'));
+
+        storageItems.forEach(function(element){
+            createItem(element)
+        });
+    }
+}
