@@ -27,6 +27,7 @@ function addItem(event){
     } else {
         showAction(addItemsAction, `${value} added to the list`, true);
         createItem(value)
+        updateStorage(value);
     }
 }
 
@@ -56,10 +57,29 @@ function createItem(value){
 
     // let title = document.createElement('h4');
     // title.classList.add('grocery-item_title');
-    // ovo menjamo sa ovim dole
+    // ovo menjamo sa ovim dole da bismo imali template
 
     parent.innerHTML = `<h4 class="grocery-item_title">${value}</h4>
     <a href="#" class="grocery-item_link"><i class="far fa-trash-alt"></i></a>`;
 
     list.appendChild(parent);
 }
+// // update storage
+function updateStorage(value){
+    let groceryList;
+    let exists = localStorage.getItem('groceryList');
+
+    groceryList = localStorage.getItem('groceryList') ? JSON.parse(localStorage.getItem('groceryList')) : [];
+
+    // // long version 
+    // if(exists){
+    //     groceryList = JSON.parse(localStorage.getItem('groceryList'));
+    // } else {
+    //     groceryList = [];
+    // }
+
+    groceryList.push(value);
+    localStorage.setItem('groceryList', JSON.stringify(groceryList));
+
+}
+localStorage.clear();
