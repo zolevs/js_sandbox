@@ -26,6 +26,7 @@ function addItem(event){
         showAction(addItemsAction, 'Please add grocery item.', false);
     } else {
         showAction(addItemsAction, `${value} added to the list`, true);
+        createItem(value)
     }
 }
 
@@ -46,4 +47,19 @@ function showAction(element, text, value){
            element.classList.remove('alert');
        }, 3000); 
     }
+}
+
+// // create item 
+function createItem(value){
+    let parent = document.createElement('div');
+    parent.classList.add('grocery-item');
+
+    // let title = document.createElement('h4');
+    // title.classList.add('grocery-item_title');
+    // ovo menjamo sa ovim dole
+
+    parent.innerHTML = `<h4 class="grocery-item_title">${value}</h4>
+    <a href="#" class="grocery-item_link"><i class="far fa-trash-alt"></i></a>`;
+
+    list.appendChild(parent);
 }
