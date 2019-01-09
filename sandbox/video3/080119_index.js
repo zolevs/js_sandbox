@@ -30,7 +30,7 @@ console.log(person); */
 
 // // //
 
-console.log("-----------------------------------");
+/* console.log("-----------------------------------");
 
 // // // pass object to a function
 
@@ -62,9 +62,48 @@ let bookSummary = getSummary(otherBook);
 console.log(bookSummary);
 // console.log(otherBook);
 
+otherBook.pageCount = otherBook.pageCount - 10;
+console.log(otherBook.pageCount);
+
 // // // return object from a function
 
+ */
+let myBook = {
+    title: '1984',
+    author: 'George Orwel',
+    pageCount: 120
+}
+let otherBook = {
+    title: 'Tom Sowyer',
+    author: 'Mart Twain',
+    pageCount: 732
+}
 
+let getSummary = function (book) {
+    return {
+        summary: `${book.title} by ${book.author}`,
+        pageCountSummary: `${book.title} is ${book.pageCount} pages long.`
+    }
+    console.log(`${book.title} by ${book.author}`);
+}
+
+getSummary(myBook);
+getSummary(otherBook);
+// console.log(myBook.summary);
+let bookSummary = getSummary(myBook);
+console.log(bookSummary);
+
+// // //
+let temperatureConverter = function (fahrenheit){
+    return {
+        fahrenheit: fahrenheit,
+        celsius: (fahrenheit - 32) * (5/9),
+        kelvin: (fahrenheit + 459.67) * (5/9)
+    }
+}
+
+let converted = temperatureConverter(32);
+console.log(converted);
 
 
 
