@@ -68,7 +68,8 @@ console.log(otherBook.pageCount);
 // // // return object from a function
 
  */
-let myBook = {
+
+/* let myBook = {
     title: '1984',
     author: 'George Orwel',
     pageCount: 120
@@ -104,6 +105,26 @@ let temperatureConverter = function (fahrenheit){
 
 let converted = temperatureConverter(32);
 console.log(converted);
+ */
 
+// // object references
 
+let myAccount = {
+    name: 'Zoran Zozon',
+    expenses: 0,
+    income: 0
+}
+// // referencing to same object
+let otherAccount = myAccount;
+otherAccount.income = 1000;
+otherAccount = {}
+console.log(otherAccount);
+// //
+
+let addExpense = function(account, amount){
+    account.expenses = account.expenses + amount;
+    console.log(account);
+}
+addExpense(myAccount, 2.50);
+console.log(myAccount);
 
