@@ -121,10 +121,47 @@ otherAccount = {}
 console.log(otherAccount);
 // //
 
-let addExpense = function(account, amount){
+/* let addExpense = function(account, amount){
     account.expenses = account.expenses + amount;
     console.log(account);
 }
 addExpense(myAccount, 2.50);
-console.log(myAccount);
+console.log(myAccount); */
 
+console.log('------------------------');
+
+// // addIncome
+let addIncome = function(account, amount){
+    account.income = account.income + amount;
+}
+
+// // resetAccount
+let resetAccount = function(account){
+    account.expenses = 0;
+    account.income = 0;
+}
+
+// // addExpense
+let addExpense = function(account, amount){
+    account.expenses = account.expenses + amount;
+}
+
+// // getAccountSummary
+// // 
+
+let getAccountSummary = function(account){
+
+}
+
+// addIncome
+// addExpense
+// addExpense
+// getAccountSummary
+// resetAccount
+// getAccountSUmmary
+
+
+addIncome(myAccount, 10);
+console.log(myAccount.income);
+addExpense(myAccount, 10);
+console.log(myAccount.expenses);    
