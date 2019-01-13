@@ -1,4 +1,17 @@
-// // 
+
+let name = 'Oliver Nedeljkovic';
+console.log(name.length);
+
+console.log(name.toUpperCase());
+console.log(name.toLowerCase());
+
+console.log(name.includes('era')); // true or false
+
+
+
+// // // // // // //
+
+/* // // 
 let restaurant = {
     name: 'Restauracija',
     guestCapacity: 75,
@@ -27,5 +40,4 @@ console.log(status);
 restaurant.removeParty(8);
 
 console.log(restaurant.checkAvailability(4));
-
-
+ */
