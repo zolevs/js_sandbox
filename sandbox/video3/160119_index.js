@@ -1,4 +1,4 @@
-let num = 103.9496;
+/* let num = 103.9496;
 console.log(num.toFixed(2));
 
 
@@ -13,10 +13,10 @@ let max = 20;
 
 let randomNum = Math.floor(Math.random() * (max - min + 1)) + min; // 0 - 0.999999999
 console.log(randomNum);
+ */
 
-
-// // //
-let rangeMin = 1;
+// // // ver 1
+/* let rangeMin = 1;
 let rangeMax = 5;
 
 let guesNumber = function(myGuest){
@@ -32,3 +32,16 @@ let guesNumber = function(myGuest){
 }
 
 console.log(guesNumber(3));
+ */
+
+ // // ver 2
+
+ let makeGuess = function (guess){
+    let min = 1;
+    let max = 5;
+    let randomNum = Math.floor(Math.random() * (max - min + 1))  + min;
+    console.log(randomNum);
+    return guess === randomNum;
+ }
+
+ console.log(makeGuess(1))
