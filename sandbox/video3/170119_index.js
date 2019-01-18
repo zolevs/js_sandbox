@@ -24,8 +24,12 @@ console.log(person);
  console.log(firstName);
  */
 
-if (10 === 10){
+/* if (10 === 10){
     let first = "Name";
 }
 
 console.log(first);
+ */
+
+
+ 
