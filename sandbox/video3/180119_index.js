@@ -19,14 +19,27 @@ console.log('--------------------');
 }
 toDoList.forEach(exampleCall);
  */
-
+/* 
 toDoList.forEach(function (item, index){
     // console.log(index, item);
     console.log(`This is number ${index} and todo is ${item} `);
 });
+ */
 
+// counting ... 1
 
-
+/* for (let count = 0; count <= 2; count++) {
+    console.log(count);
+}
+ */
+for (let count = 0; count <= toDoList.length -1; count++){
+    console.log(count);
+    console.log(toDoList[count]);
+}
+for (let count = 0; count <= toDoList.length - 1; count++){ 
+    let num = count + 1;
+    console.log(`Number ${num} on todo list is ${toDoList[count]}`)
+}
 
 
 // // // //
