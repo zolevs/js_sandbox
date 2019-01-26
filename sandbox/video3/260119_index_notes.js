@@ -22,8 +22,30 @@ console.log(notes);
 
 // const removed = notes.splice(1,1, 'New inserted item');
 
-notes[2] = 'New';
+/* notes[2] = 'New';
 
 console.log(notes.length);
 console.log(notes);
 // console.log(removed);
+const removed = notes.splice(1, 0, 'Add');
+ */
+/* console.log(notes.length);
+console.log(notes);
+
+notes.splice(1,1);
+
+console.log(notes.length);
+console.log(notes);
+ */
+/* const doThis = function(){
+    console.log('Hello');
+}
+notes.forEach(doThis); */
+
+/* notes.forEach(function (item, index){
+    console.log(`${index} - ${item}`);
+}) */
+
+for (let i=0; i <=  notes.length-1; i++) {
+    console.log(`${i + 1}. to do ${notes[i]}`);
+}
