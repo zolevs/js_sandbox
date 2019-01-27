@@ -1,4 +1,4 @@
-const notes = ['Note 1', 'Note 2', 'Note 3', 'Note 4'];
+// const notes = ['Note 1', 'Note 2', 'Note 3', 'Note 4'];
 
 /* notes.push('New Push Note');
 console.log(notes.length);
@@ -46,6 +46,29 @@ notes.forEach(doThis); */
     console.log(`${index} - ${item}`);
 }) */
 
-for (let i=0; i <=  notes.length-1; i++) {
+/* for (let i=0; i <=  notes.length-1; i++) {
     console.log(`${i + 1}. to do ${notes[i]}`);
-}
+} */
+/* 
+const contains = notes.indexOf('Note 3');
+console.log(contains); */
+
+const notes = [ {
+        title: 'My next trip',
+        body: 'I would like to go to Spain'
+    }, {
+        title: 'Habbits to work on',
+        body: 'Exercise. Eating a bit better'
+    }, {
+        title: 'Office notification',
+        body: 'Get a new seat'
+    }
+];
+
+// console.log(notes);
+
+const index = notes.findIndex(function(note, index){
+    return note.title === 'Habbits to work on';
+})
+
+console.log(index);
