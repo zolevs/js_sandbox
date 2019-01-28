@@ -1,6 +1,6 @@
-const todos = ['Change HDD', 'Have a walk', 'Go to dance', 'Make a snowman', 'Wash'];
+// const todos = ['Change HDD', 'Have a walk', 'Go to dance', 'Make a snowman', 'Wash'];
 
-removed = todos.splice(2,1);
+/* removed = todos.splice(2,1);
 console.log(removed);
 
 // todos.splice(todos.length,0, 'Add new item');
@@ -21,4 +21,33 @@ for (let count = 0; count <= todos.length; count++ ){
     const num = count + 1;
     const todo = todos[count];
     console.log(`${num}. ${todo}`);
+} */
+
+const todos = [{
+        text:'Buy milk',
+        completed: false
+         },{
+        text: 'Take a walk',
+        completed: false
+         },{
+        text: 'Do work',
+        completed: true
+         },{
+        text: 'Exercise',
+        completed: true
+        },{
+        text: 'Buy food',
+        completed: true
+        }
+];
+
+const deleteTodo = function (todos, todoText){
+    const index = todos.findIndex(function(todo){
+        return todo.text.toLowerCase() === todoText.toLowerCase()
+    })
+    if(index > -1){
+        todos.splice(index, 1)
+    }
 }
+deleteTodo(todos, 'Buy food');
+console.log(todos);

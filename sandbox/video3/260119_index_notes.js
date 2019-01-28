@@ -66,9 +66,29 @@ const notes = [ {
 ];
 
 // console.log(notes);
+const findNote = function(notes, noteTitle){
+    const note = notes.find(function(note, index){
+        return note.title.toLowerCase() === noteTitle.toLowerCase();
+    });
+    return note;
+}
 
+/* const findNote = function(notes, noteTitle){
+    const index = notes.findIndex(function(note, index){
+        return note.title.toLowerCase() === noteTitle.toLowerCase();
+    });
+    return notes[index];
+} */
+
+const note = findNote(notes, 'Office notification');
+console.log(note);
+
+
+/* 
 const index = notes.findIndex(function(note, index){
-    return note.title === 'Habbits to work on';
+    return note.title === 'Office notification';
 })
 
-console.log(index);
+console.log(index); 
+*/
+
