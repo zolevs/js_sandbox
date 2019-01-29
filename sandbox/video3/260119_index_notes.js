@@ -73,6 +73,20 @@ const findNote = function(notes, noteTitle){
     return note;
 }
 
+// // trazimo 'ne' string
+const findNotes = function (notes, query){
+
+    const filteredNotes = notes.filter(function(note, index){
+    const isTitleMatch = note.title.toLowerCase().includes(query.toLowerCase());
+    const isBodyMatch = note.body.toLowerCase().includes(query.toLowerCase());
+    return isTitleMatch || isBodyMatch;
+    });
+    return filteredNotes
+
+}
+
+console.log(findNotes(notes, 'ne'));
+
 /* const findNote = function(notes, noteTitle){
     const index = notes.findIndex(function(note, index){
         return note.title.toLowerCase() === noteTitle.toLowerCase();
@@ -80,7 +94,7 @@ const findNote = function(notes, noteTitle){
     return notes[index];
 } */
 
-const note = findNote(notes, 'Office notification');
+const note = findNote(notes, 'some Office notification');
 console.log(note);
 
 
