@@ -49,5 +49,19 @@ const deleteTodo = function (todos, todoText){
         todos.splice(index, 1)
     }
 }
-deleteTodo(todos, 'Buy food');
+
+const getThingsToDo = function(){
+    return todos.filter(function(todo){
+        // return todo.completed === false;
+        return !todo.completed;
+    })
+}
+
+console.log(getThingsToDo(todos))
+
+
+
+
+/* deleteTodo(todos, 'Buy food');
 console.log(todos);
+ */
