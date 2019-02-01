@@ -1,3 +1,4 @@
+
 // student score
 // total possible score
 
@@ -39,3 +40,5 @@ let calculatedScore = gradeCalc(15,20);
 
 console.log(calculatedScore);
 // console.log();
+
+
