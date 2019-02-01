@@ -34,7 +34,8 @@ let tip = function(total, tipPercent = 10){
    return `Tip is ${tipCalc}$ for ${total}$ bill, and it is ${decimalTip*100}%`;
 } 
 
-let tipAmount = tip(200, undefined);
+// let tipAmount = tip(200, undefined);
+let tipAmount = tip(200, 40);
 console.log(tipAmount);
 
 // // template string
