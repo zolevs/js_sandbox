@@ -34,7 +34,21 @@ notes.forEach(function(){
 
 }) */
 
-notes.forEach(function(item, index){
+/* notes.forEach(function(item, index){
     console.log('Test');
     console.log(item, index);
-})
+}) */
+
+// // Counting ... 1
+/* for (let count = 0; count <= 2; count++) {
+    console.log(count);
+} */
+for (let count = 0; count < notes.length; count++){
+    console.log(`${count + 1} - ${notes[count]}`)
+}
+
+// //
+for (let count = notes.length - 1; count >= 0; count--){
+    console.log(notes[count]);
+}
+// //
