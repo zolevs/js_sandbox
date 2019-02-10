@@ -49,3 +49,9 @@ console.log(text[index]);
  position = movies.findIndex(isAction);
  console.log(position);
  console.log(movies[position]);
+
+ function isDrama(movie){
+     return movie.title === 'Shine';
+ }
+//  console.log(movies.find(isDrama).title);
+ console.log(movies.find(isDrama));
