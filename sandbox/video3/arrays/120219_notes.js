@@ -14,7 +14,7 @@ const notes = [{
 // // method filter
 
 const findNotes = function (notes, query){
-    const filteredNotes = notes.filter(function (note, index){
+    return notes.filter(function (note, index){
         // const isTitleMatch = note.title.toLowerCase()
         // isTitleMatch.includes('string')
     
@@ -26,7 +26,6 @@ const findNotes = function (notes, query){
         // console.log(isTitleMatch);
         // return true;
     });
-    return filteredNotes;
 }
 
 /* const filteredNotes = notes.filter(function (note, index){
