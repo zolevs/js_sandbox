@@ -26,3 +26,4 @@ let funn1 = function (...args) {
 
 funn1();
 funn1(12,2,13,1);
+
