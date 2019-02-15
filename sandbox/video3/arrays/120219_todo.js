@@ -21,5 +21,10 @@ const deleteTodo = function (todos, todosText){
         }
     };
 
-const notes = deleteTodo(todos, 'Do work');
-console.log(todos);
+// const notes = deleteTodo(todos, 'Do work');
+// console.log(todos);
+
+
+
+
+console.log(getThingsToDo(todos));
