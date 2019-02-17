@@ -46,6 +46,7 @@ const todos2 = [{
     isDone: true
 }]
 
+/*  // // classic with function
 const thingsNotDone = todos2.filter(function(todo){
     return todo.isDone === false;
 });
@@ -53,6 +54,13 @@ const thingsNotDone = todos2.filter(function(todo){
 console.log(thingsNotDone.forEach(function(notDone){
     console.log(notDone.title);
 }));
+ */
+
+ // // arrow
+const thingsNotDone = todos2.filter((todo) => todo.isDone === false);
+thingsNotDone.forEach((notDone) => console.log(notDone.title));
+
+
 
 
 // console.log(thingsNotDone);
