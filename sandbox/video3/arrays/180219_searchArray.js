@@ -12,6 +12,9 @@ const newTodos = [{
 }, {
     title: 'Record video',
     isDone: true,
+}, {
+    title: 'Basket',
+    isDone: true,
 }];
 
 /* const index = newTodos.findIndex(function(todo, index){
@@ -43,5 +46,5 @@ console.log(printMe);
     return titleReturned
  }
 
- let printMe = findTodo(newTodos, 'Go to gym');
+ let printMe = findTodo(newTodos, 'Basket');
  console.log(printMe);
