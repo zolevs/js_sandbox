@@ -1,10 +1,49 @@
+const todos = [{
+    text: 'Order cat food',
+    completed: false
+}, {
+    text: 'Clean kitchen',
+    completed: true
+}, {
+    text: 'Do work',
+    completed: false
+}, {
+    text: 'Exercise',
+    completed: true
+}]
 
+/* 
 const paragraphs = document.querySelectorAll('p');
 console.log(paragraphs);
 // let check = ps.includes('the');
 paragraphs.forEach(function(paragraph){
     // paragraph.remove();
     if(paragraph.textContent.includes('the')){
-       paragraph.remove() 
+       paragraph.remove(); 
     };
 })
+ */
+const incompleteTodos = todos.filter(function(todo){
+    return !todo.completed;
+})
+const summary = document.createElement('h2');
+summary.textContent = `You have ${incompleteTodos.length} todos left`;
+document.querySelector('body').append(summary);
+
+
+todos.forEach(function (todo){
+    const p = document.createElement('p');
+    p.textContent = todo.text;
+    document.querySelector('body').appendChild(p);
+})
+
+
+// // You have 2 todos left
+const newParagraph = document.createElement('p');
+
+newParagraph.textContent = 'This is something';
+
+document.querySelector('body').appendChild(newParagraph);
+
+
+
