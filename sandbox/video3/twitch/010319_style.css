@@ -4,5 +4,7 @@
 ul{
     list-style: none;
 }
-
+#taskList {
+    color: red;
+}
 
