@@ -6,4 +6,3 @@ paragraphs.forEach(function (paragraph){
 })
 console.log(paragraphs);
 
-test for git
