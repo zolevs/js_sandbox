@@ -1,8 +1,11 @@
-const paragraphs = document.querySelectorAll('p');
-paragraphs.forEach(function (paragraph){
-    if (paragraph.textContent.includes('the')){
-        paragraph.remove();
+const ps = document.querySelectorAll('p');
+ps.forEach(function (p){
+    console.log(p.textContent);
+    if(p.textContent.includes('the')){
+        p.remove();
     }
-})
-console.log(paragraphs);
+  });
+
+console.log(ps);
+
 
