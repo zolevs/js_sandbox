@@ -15,36 +15,45 @@ const todos = [{
     completed: true
 }];
 
-// 
-const pElement = document.createElement('p');
-
-const newArray = todos.filter(function(element){
-    return element.completed == false;
+const incompleteTodos = todos.filter(function (todo) {
+    return !(todo.completed)
 });
-console.log(newArray.length);
-pElement.textContent = `You have ${newArray.length} todos left.`;
-document.querySelector('body').appendChild(pElement);
+const summary = document.createElement('h2');
+summary.textContent = `You have ${incompleteTodos.length} todos left.`
+document.querySelector('body').appendChild(summary);
 
-newArray.forEach(function (todo){
+todos.forEach(function(todo){
     const p = document.createElement('p');
     p.textContent = todo.text;
     document.querySelector('body').appendChild(p);
-});
+
+})
+
+// // // my solution
+// const pElement = document.createElement('p');
+
+// const newArray = todos.filter(function(element){
+//     return element.completed == false;
+// });
+// console.log(newArray.length);
+// pElement.textContent = `You have ${newArray.length} todos left.`;
+// document.querySelector('body').appendChild(pElement);
+
+// newArray.forEach(function (todo){
+//     const p = document.createElement('p');
+//     p.textContent = todo.text;
+//     document.querySelector('body').appendChild(p);
+// });
 
 // const done = todos.filter(function(todo){
 //     return todo.completed == true;
 // });
 
-
-
-
 // console.log(done);
-
 
 // const todosList = document.createElement('p');
 // todosList.textContent = todos[0].text;
 // document.querySelector('body').appendChild(todosList);
-
 
 // const paragraphs = document.querySelectorAll('p');
 // console.log(paragraphs);
