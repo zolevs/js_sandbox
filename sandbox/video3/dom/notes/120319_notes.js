@@ -14,8 +14,6 @@ const todos = [{
 
 
 
-
-
 const newParagraph = document.createElement('p');
 newParagraph.textContent = 'New content';
 // document.body.appendChild(newParagraph);
