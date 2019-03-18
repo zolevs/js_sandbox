@@ -19,10 +19,18 @@ document.querySelector('#remove-all').addEventListener('click', function(event){
     console.log('All notes removed');
     let allButton = document.querySelectorAll('.note');
 
+    let numberNotes = 1;
     allButton.forEach(function(note){
+        console.log(`${numberNotes} - removed note`);
+        numberNotes++;
         note.remove();
     });
-})
+});
+
+document.querySelector('#search-text').addEventListener('input', function(e){
+    console.log(e.target.value);
+});
+
 // let buttons = document.querySelectorAll('button');
 // console.log(buttons);
 // buttons[1].addEventListener('click', function(){

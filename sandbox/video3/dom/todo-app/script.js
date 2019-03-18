@@ -1,11 +1,19 @@
+const notes = [{
+  title: 'My next trip',
+  body: 'I would like to go to Spain'
+},{
+  title: 'Habbits to change',
+  body: 'Exercise'
+},{
+  title: 'Office modification',
+  body: 'Get a new seat'
+}];
 
- const ps = document.querySelectorAll('p');
-ps.forEach(function (p){
-    console.log(p.textContent);
-    if(p.textContent.includes('the')){
-        p.remove();
-    }
-  });
+document.querySelector('#add-todo').addEventListener('click', function(e){
+  console.log('Add new todo ...');
+});
 
-console.log(ps);
-
+// listen for todo text change
+document.querySelector('#new-todo-text').addEventListener('input', function(e){
+  console.log(e.target.value);
+})
