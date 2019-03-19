@@ -1,12 +1,12 @@
 const notes = [{
   title: 'My next trip',
-  body: 'I would like to go to Spain'
-},{
-  title: 'Habbits to change',
-  body: 'Exercise'
+  body: 'I would like to travel to spain'
 },{
   title: 'Office modification',
   body: 'Get a new seat'
+},{
+  title: 'Habbits to work on.',
+  body: 'Exercise.'
 }];
 
 document.querySelector('#add-todo').addEventListener('click', function(e){
