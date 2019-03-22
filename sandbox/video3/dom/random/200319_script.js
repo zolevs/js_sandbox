@@ -13,7 +13,7 @@ const todos = [{
 }];
 
 const filters = {
-    searchText: ''
+    searchText: '',
 }
 
 const renderTodos = function(todos, filters){
