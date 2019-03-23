@@ -1,42 +1,73 @@
-const notes = [{
-    title: 'My next trip.',
-    body: 'I would like to travel to Spain.',
+const todos = [{
+    text: 'Order cat food',
+    completed: false
 }, {
-    title: 'Office modification',
-    body: 'Get a new seat.',
+    text: 'Clean kitchen',
+    completed: true
 }, {
-    title: 'Habbits to work on',
-    body: 'Exercise'
+    text: 'Buy food',
+    completed: true
 }, {
-    title: 'Buy mayonnaise',
-    body: 'Lot of them'
-}];
+    text: 'Do work',
+    completed: false
+}, {
+    text: 'Exercise',
+    completed: true
+}]
 
 const filters = {
     searchText: '',
-};
-const renderNotes = function(notes, filters){
-    const filteredNotes = notes.filter(function(note){
-        return note.title.toLowerCase().includes(filters.searchText.toLowerCase());
+    hideCompleted: false,
+}
+
+const renderTodos = function (todos, filters) {
+    let filteredTodos = todos.filter(function (todo) {
+        return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+    })
+
+    filteredTodos = filteredTodos.filter(function (todo){
+        if(filters.hideCompleted){
+            return !todo.completed;
+        } else {
+            return true;
+        }
     });
 
-    document.querySelector('#notes').innerHTML = '';
+    const incompleteTodos = filteredTodos.filter(function (todo) {
+        return !todo.completed
+    })
 
-    filteredNotes.forEach(function(note){
-        const noteEl = document.createElement('p');
-        noteEl.textContent = note.title;
-        document.querySelector('#notes').appendChild(noteEl);
+    document.querySelector('#todos').innerHTML = ''
+
+    const summary = document.createElement('h2')
+    summary.textContent = `You have ${incompleteTodos.length} todos left`
+    document.querySelector('#todos').appendChild(summary)
+
+    filteredTodos.forEach(function (todo) {
+        const p = document.createElement('p')
+        p.textContent = todo.text
+        document.querySelector('#todos').appendChild(p)
     })
 }
 
-renderNotes(notes, filters);
+renderTodos(todos, filters)
 
-document.querySelector('#create-note').addEventListener('click', function(e){
-    e.target.textContent = 'The button was clicked';
+document.querySelector('#search-text').addEventListener('input', function (e) {
+    filters.searchText = e.target.value
+    renderTodos(todos, filters)
 })
 
-document.querySelector('#search-text').addEventListener('input', function(e){
-    filters.searchText = e.target.value;
-    renderNotes(notes, filters);
-});
+document.querySelector('#new-todo').addEventListener('submit', function (e) {
+    e.preventDefault()
+    todos.push({
+        text: e.target.elements.text.value,
+        completed: false
+    })
+    renderTodos(todos, filters)
+    e.target.elements.text.value = ''
+})
 
+document.querySelector('#hide-completed').addEventListener('change', function(e){
+    filters.hideCompleted = e.target.checked;
+    renderTodos(todos, filters);
+})

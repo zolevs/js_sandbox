@@ -1,25 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Check Boxes</title>
-    
-</head>
-<body>
-    <h1>Notes app</h1>
-    <h2>TAke notes and never foget</h2>
-    <label>
-      Search:  <input type="text" placeholder="Filter notes" id="search-text" name="firstName"> 
 
-    </label>
-    <div id="notes"></div>
-    <button class="" id="create-note">Create note</button>
-    <label>
-        <input type="checkbox" id="for-fun"> Check for fun
-    </label>
-
-    <script src="230319_script.js"></script>
-</body>
+<html>
+    <head></head>
+    <body>
+        <h1>Todos</h1>
+        <input id="search-text" type="text" placeholder="Filter todos">
+        <label>
+            <input type="checkbox" id="hide-completed"> Hide completed
+        </label>
+        <div id="todos"></div>
+        <form id="new-todo">
+            <input type="text" placeholder="Something to do" name="text">
+            <button>Add Todo</button>
+        </form>
+        <script src="230319_script.js"></script>
+    </body>
 </html>
+
