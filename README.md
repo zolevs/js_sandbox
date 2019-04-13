@@ -18,3 +18,5 @@
 
 :alien:
 ---
+
+- 13.04 - Comparison operators
