@@ -19,4 +19,5 @@
 :alien:
 ---
 
-- 13.04 - Comparison operators
+- 13.04 - Comparison operators /wierd parts/
+- 14.05 - Object and function /wierd parts/
