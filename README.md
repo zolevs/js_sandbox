@@ -23,4 +23,7 @@
 - 14.04 - Object and function /wierd parts/
 - 15.04 - Framework Aside Faking Namespaces /wierd parts/
 - 16.04 - Functions and objects /wierd parts/
-- 16.04 - Functions statements and function expressions  /wierd parts/
+        - Functions statements and function expressions  /wierd parts/
+- 17.04 - by value and by reference 
+        - object, function and this
+        - arrays
