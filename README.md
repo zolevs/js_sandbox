@@ -27,3 +27,7 @@
 - 17.04 - by value and by reference 
         - object, function and this
         - arrays
+- 18.04 - arguments and spread
+        - syntax parser
+        - semicolon insertion
+        
