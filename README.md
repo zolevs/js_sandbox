@@ -30,4 +30,7 @@
 - 18.04 - arguments and spread
         - syntax parser
         - semicolon insertion
-        
+- 20.04 - MySql with Node 
+        - Connection to database
+        - SQL commands
+            
