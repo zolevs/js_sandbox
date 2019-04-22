@@ -39,3 +39,5 @@
 
 - 21.04 - Immediately Invoked Function Expressions (IIFE)  /wierd parts/
         - closures
+- 22.04 - function factory /wierd parts/
+        - closures and callbacks
