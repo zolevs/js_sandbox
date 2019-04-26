@@ -21,6 +21,7 @@
 
 - 24.04 - Object and functions
 - 25.04 - Object literals
+- 26.04 - Functions are objects
 
 - 13.04 - Comparison operators /wierd parts/
 - 14.04 - Object and function /wierd parts/
