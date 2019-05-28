@@ -46,3 +46,9 @@
 - 22.04 - function factory /wierd parts/
         - closures and callbacks
 - 23.04 - Functional programming /wierd parts/
+
+:alien:
+---
+
+- 28.05 - reStart 
+
