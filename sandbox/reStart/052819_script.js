@@ -1,28 +1,14 @@
-// // array
+// // loop over array
 
-let myArray = [];
+let colors = ['red','gren','blue','orange'];
+for (let i = 0; i<colors.length; i++){
+    console.log(colors[i]);
+}
 
-let anotherArray = new Array();
+for (let color of colors){
+    console.log(color);
+}
 
-console.log(myArray);
-
-let fruits = ['apple', 'orange', 'grape'];
-
-console.log(fruits.length);
-console.log(fruits[1]);
-
-console.log(fruits[fruits.length-1]);
-
-fruits[0] = 'banana';
-
-console.log(fruits[0]);
-
-fruits[6] = 'limun';
-console.log(fruits);
-
-let [x,y,z] = [1,2,3];
-console.log(x,z);
-
-let multiArray = [[1,2,3],['a','b','c']];
-console.log(multiArray[0][2]);
-console.log(multiArray[1][1]);
+colors.forEach(element => {
+    console.log(element);
+});
