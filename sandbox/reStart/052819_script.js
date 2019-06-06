@@ -1,42 +1,21 @@
-// // array methods
+let numbers = new Set();
+numbers.add(1);
 
-let numbers = ['one', 'two', 'three', 'four', 'five'];
-
-// console.log(numbers.pop());
-// console.log(numbers.shift());
-
-// console.log(numbers);
-
-// console.log(numbers.push('add'));
-
-// console.log(numbers);
-
-// console.log(numbers.unshift('front'));
-// console.log(numbers);
-
-// console.log(numbers.concat(['concat 1', 'concat 2']));
-// console.log(numbers); // arrary is unchanged with concat
-// numbers = numbers.concat(['second 2', 'second 3']);
-
-// console.log(numbers);
-
-// numbers = [...numbers, ...['spread 1', 'spread 2']];
-// console.log(numbers);
-
-// console.log(numbers.join('; '));
-
-// console.log(numbers.slice(2, 4));
-
-console.log(numbers.splice(1,1));
+console.log(numbers);
+numbers.add(2);
 console.log(numbers);
 
-console.log(numbers.reverse());
 
-console.log(numbers.sort());
-console.log([1, 3, 10].sort()); // // !!!!!
+numbers.add(1);
+console.log(numbers);
 
-console.log(numbers.indexOf('two'));
-console.log(numbers.includes('one'));
+let fruits = new Set(['apples', 'oranges', 'pinapple', 'apples']); 
+console.log(fruits); // // no duplicates allowed
 
-let splitString = 'how are you ?';
-console.log(splitString.split(' '));
+let veggies = new Set(['potato', 'tomato', 'carrots']);
+let veggiesArray = [...veggies];
+console.log(veggiesArray);
+
+for (let fruit of fruits){
+    console.log(fruit);
+}
