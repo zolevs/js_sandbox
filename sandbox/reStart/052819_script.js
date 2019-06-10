@@ -1,24 +1,20 @@
-// // function
-// // arrow
 
-let squre = x => x*x;
+// // call back function
 
-console.log(squre(9));
-
-let add = (a,b) => a+b;
-
-console.log(add(10,2));
-
-let hello = () => 'Hello world';
-
-console.log(hello());
-
-let average = (...args) => {
-    let total = 0;
-    for (let arg of args) {
-        total += arg;
-    }
-    return total / args.length;
+function greeting(name){
+    console.log(`Just ${name}`);
 }
 
-console.log(average(1,2,3));
+function sayHi(callback){
+    callback('Zole');
+}
+
+sayHi(greeting);
+
+
+// 
+// 
+
+let numbers = [1,5,3,10];
+console.log(numbers.sort());
+console.log(numbers.sort((a,b)=> a-b));
