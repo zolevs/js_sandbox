@@ -1,20 +1,27 @@
+// function ask(question, yes, no){
+//     if(confirm(question)){
+//         yes();
+//     } else {
+//         no();
+//     }
+// };
 
-// // call back function
+// function showOk(){
+//     alert('You agreed');
+// }
+// function showCancel(){
+//     alert('You canceled the execution');
+// }
 
-function greeting(name){
-    console.log(`Just ${name}`);
+// ask("Do you agree?", showOk, showCancel);
+
+function ask(question, yes, no){
+    if (confirm(question)) yes()
+    else no();
 }
 
-function sayHi(callback){
-    callback('Zole');
-}
-
-sayHi(greeting);
-
-
-// 
-// 
-
-let numbers = [1,5,3,10];
-console.log(numbers.sort());
-console.log(numbers.sort((a,b)=> a-b));
+ask(
+    "Do you agree?",
+    function(){alert ("You agreed")},
+    function(){alert ("You canceled the execution")}
+);
