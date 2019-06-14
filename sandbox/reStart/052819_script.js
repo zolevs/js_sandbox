@@ -1,41 +1,23 @@
-// function ask(question, yes, no){
-//     if(confirm(question)){
-//         yes();
-//     } else {
-//         no();
-//     }
-// };
+// // array loop
 
-// function showOk(){
-//     alert('You agreed');
-// }
-// function showCancel(){
-//     alert('You canceled the execution');
-// }
+let colors = ['red', 'green', 'blue'];
 
-// ask("Do you agree?", showOk, showCancel);
+colors.forEach(function(color, index){
+    console.log(`Index: ${index} - Value: ${color}`);
+});
 
-// function ask(question, yes, no){
-//     if (confirm(question)) yes()
-//     else no();
-// }
+let numbers = [1, 2, 3];
 
-// ask(
-//     "Do you agree?",
-//     function(){alert ("You agreed")},
-//     function(){alert ("You canceled the execution")}
-// );
+let square = numbers.map(x => x*x);
+console.log(square);
 
+let reduce = [1,2,3,4,5,6].reduce((a,b) => a+b);
+console.log(reduce);
 
-let x = function(){
-    console.log('I am called from inside function');
-};
+let reduce2 = [1,2,3,4,5,6].reduce((a,b) => a+b, 100);
+console.log(reduce2);
 
-let y = function(callback){
-    console.log('do something');
-    callback();
-};
+let eventOdd = [1,2,3,4,5,6,7,8,9,10];
+let even = eventOdd.filter(x => x % 2 == 0);
 
-y(x);
-
-console.log(x);
+console.log(even);
