@@ -1,23 +1,44 @@
-// // array loop
+// // 
+let john = {
+    firstname: 'John',
+    lastname: 'Jones',
+    age: 45,
+    occupation: 'programmer',
+    //walk: walk(){
+    walk(){
+        return `I, ${this.firstname} ${this.lastname} am walknig.`;
+    }
+};
+console.log(john);
 
-let colors = ['red', 'green', 'blue'];
+let mary = {
+    'first name': 'Mary'
+}
 
-colors.forEach(function(color, index){
-    console.log(`Index: ${index} - Value: ${color}`);
-});
+let fruit = 'apples';
+let veggie = 'carrots';
 
-let numbers = [1, 2, 3];
+let rawFood = {
+    fruit,
+    veggie
+}
 
-let square = numbers.map(x => x*x);
-console.log(square);
+console.log(rawFood);
 
-let reduce = [1,2,3,4,5,6].reduce((a,b) => a+b);
-console.log(reduce);
+console.log(john.firstname);
+console.log(mary['first name']);
+console.log(john.food);
 
-let reduce2 = [1,2,3,4,5,6].reduce((a,b) => a+b, 100);
-console.log(reduce2);
+console.log('firstname' in john);
+console.log('middlename' in john);
 
-let eventOdd = [1,2,3,4,5,6,7,8,9,10];
-let even = eventOdd.filter(x => x % 2 == 0);
+console.log(john.hasOwnProperty('firstname'));
+console.log(john.hasOwnProperty('middlename'));
 
-console.log(even);
+for(let key in john){
+    // console.log(`Key: ${key} Value:${john[key]}`);
+    if(john.hasOwnProperty(key)){
+        console.log(`Key: ${key} Value ${john[key]}`);
+    }
+}
+
