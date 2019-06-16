@@ -9,36 +9,16 @@ let john = {
         return `I, ${this.firstname} ${this.lastname} am walknig.`;
     }
 };
-console.log(john);
 
-let mary = {
-    'first name': 'Mary'
+for (let key of Object.keys(john)){
+    console.log(key)
 }
+for (let value of Object.values(john)){
+    console.log(value);
+};
 
-let fruit = 'apples';
-let veggie = 'carrots';
+for (let [key, value] of Object.entries(john)){
+    console.log(key, value);
+};
 
-let rawFood = {
-    fruit,
-    veggie
-}
-
-console.log(rawFood);
-
-console.log(john.firstname);
-console.log(mary['first name']);
-console.log(john.food);
-
-console.log('firstname' in john);
-console.log('middlename' in john);
-
-console.log(john.hasOwnProperty('firstname'));
-console.log(john.hasOwnProperty('middlename'));
-
-for(let key in john){
-    // console.log(`Key: ${key} Value:${john[key]}`);
-    if(john.hasOwnProperty(key)){
-        console.log(`Key: ${key} Value ${john[key]}`);
-    }
-}
-
+// console.log(john);
