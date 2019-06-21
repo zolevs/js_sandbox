@@ -58,3 +58,4 @@
 - 17.06 - theory
 - 19.06 - theory :ghost:
 - 20.06 - theory :book:
+- 21.06 - :party:
