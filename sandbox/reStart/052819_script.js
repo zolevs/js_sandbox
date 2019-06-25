@@ -1,17 +1,20 @@
-// // math 
+// regex
 
-console.log(Math); // list all math methods
+let pattern = /[a-zA-Z]+ing$/;
+let pattern2 = new RegExp('[a-zA-Z]+ing');
 
-console.log(Math.PI);
-console.log(Math.abs(-123));
-console.log(Math.floor(1.6));
-console.log(Math.ceil(1.6));
+console.log(pattern.test('fly'));
+console.log(pattern2.test('flying'));
 
-console.log(Math.max(1,3,4,5,7,2));
+console.log(pattern.exec('fly'));
+console.log(pattern2.exec('zole flying'));
 
-console.log(Math.random());
-console.log(Math.round(Math.random()*5)); // random in a range 0 to 4
+pattern = /bannanas/;
+console.log(pattern.test('bannas'));
+console.log(pattern.test('Bannas'));
+console.log(pattern.test('Banna'));
 
-for (let i = 1; i <= 10; i++){
-    console.log(Math.round(Math.random()*5)); // random in a range 0 to 4
-}
+let names = 'John, Jack, Ann';
+
+console.log(names.replace('Ann', 'Mary'));
+console.log(names.replace(/ann/ig, 'Mary'));
