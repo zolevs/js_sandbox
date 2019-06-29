@@ -1,27 +1,29 @@
-// json
+function hello(){
+    console.log(`My name is ${this.name}`)
+}
+let person = {name: "John"};
 
-let companies = 
-`[
-    {
-        "name": "Big Corporation",
-        "numberOfEmployees": 1000,
-        "ceo": "Mary",
-        "rating": 4.3
-    },
-    {
-        "name": "Mid Corporation",
-        "numberOfEmployees": 500,
-        "ceo": "Gary",
-        "rating": 6.3
-    },
-    {
-        "name": "Small Corporation",
-        "numberOfEmployees": 3,
-        "ceo": null,
-        "rating": 1.3
+hello.call(person);
+
+function hello2(job='programmer'){
+    console.log(`My name is ${this.name}. I am ${job}`);
+}
+
+hello2.call(person);
+hello2.call(person, 'bilder');
+
+hello2.apply(person, ['bulder']);
+
+let obj = {
+
+    x: 10,
+    getX: function(){
+        return this.x;
     }
-]`;
+}
 
-console.log(JSON.parse(companies));
-console.log(JSON.parse(companies)[1]);
-console.log(JSON.parse(companies)[2].name);
+let unboundGetX = obj.getX;
+console.log(unboundGetX());
+
+let boundGetX = unboundGetX.bind(obj);
+console.log(boundGetX());
