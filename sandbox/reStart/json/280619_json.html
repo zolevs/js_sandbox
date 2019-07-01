@@ -16,28 +16,63 @@ Last: <input type="text" id="lastName">
 <script>
 
 document.getElementById('addButton').addEventListener('click', addToStorage);
-document.getElementById('seeButton').addEventListener('click',viewStorage);
+document.getElementById('seeButton').addEventListener('click', viewStorage);
+const people = JSON.parse(localStorage.getItem('tester')) || {"first":"none", "last":"none"};
+console.log(people);
 
 function addToStorage(){
     let tempFirst = document.getElementById('firstName').value;
     let tempLast = document.getElementById('lastName').value;
-    let myObj = {"first":tempFirst, "last":tempLast};
-    // localStorage.setItem('tester', tempValue);
-    // console.log('Clicked '+tempValue);
+
+    let myObj = {
+        "first": tempFirst, 
+        "last": tempLast
+    }
     console.log(myObj);
+
+    string = JSON.stringify(myObj);
+    localStorage.setItem('tester', string);
 }
 
 function viewStorage(){
-   let tempHolder = localStorage.getItem('tester');
-//    localStorage.setItem('tester',tempValue);
+    let tempHolder = JSON.parse(localStorage.getItem('tester')) || people;
     console.log(tempHolder);
+    // let outData = JSON.parse(tempHolder);
+    // console.log(outData);
 
 }
 
-var myJSON = {"name":"Zoran", "lastName":"Ivanovic","age":45};
 
-var myJSONstring = JSON.stringify(myJSON);
-var myJSONparse = JSON.parse(myJSONstring);
+
+
+// var myJSON = {
+//     "first":"Zoran",
+//     "age":45,
+//     "last":"Ivanovic"
+
+// };
+
+// // let string = JSON.stringify(myJSON);
+// let string = JSON.stringify(myJSON);
+// console.log(string);
+
+// let JSONObj = JSON.parse(string);
+// console.log(JSONObj);
+
+// JSONObj.ocupation = "programmer";
+// console.log(JSONObj);
+// console.log(string);
+// string = JSON.stringify(JSONObj);
+// console.log(string);
+
+// JSONObj.name = "Zozon";
+// JSONObj.first = "Zole";
+
+// string = JSON.stringify(JSONObj);
+// console.log(string);
+
+// var sendData = JSON.stringify(JSONObj);
+// console.log(sendData);
 
 </script>
 
