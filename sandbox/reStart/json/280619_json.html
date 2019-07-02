@@ -8,71 +8,35 @@
     <script src="280619_json.js"></script>
 </head>
 <body>
-    
-<div id="addButton">Add to storage</div>
-<div id="seeButton">View storage</div>
-First: <input type="text" id="firstName">
-Last: <input type="text" id="lastName">
+
+    <div id="addButton">Get JSON</div>
+    <div id="output"></div>
+
 <script>
+const addButton = document.getElementById('addButton');
+const output = document.querySelector('#output');
 
-document.getElementById('addButton').addEventListener('click', addToStorage);
-document.getElementById('seeButton').addEventListener('click', viewStorage);
-const people = JSON.parse(localStorage.getItem('tester')) || {"first":"none", "last":"none"};
-console.log(people);
+addButton.addEventListener('click', addJSON);
 
-function addToStorage(){
-    let tempFirst = document.getElementById('firstName').value;
-    let tempLast = document.getElementById('lastName').value;
-
-    let myObj = {
-        "first": tempFirst, 
-        "last": tempLast
-    }
-    console.log(myObj);
-
-    string = JSON.stringify(myObj);
-    localStorage.setItem('tester', string);
+function addJSON(){
+    console.log('Clicked');
+    output.innerHTML = 'Working';
+    const url="https://api.myjson.com/bins/13te3n";
+    // const url="//api.myjson.com/bins/13te3n";
+    // response 200 - all working
+    
+    fetch(url)
+    .then(function(response){
+        console.log(response.status);
+        // return response.text()
+        return response.json()
+    })
+    .then(function(data){
+        console.log(data);
+        output.innerHTML = "FirstName = " + data.first +" "+ "LastName = " + data.last;
+        // console.log(JSON.parse(data));
+    })
 }
-
-function viewStorage(){
-    let tempHolder = JSON.parse(localStorage.getItem('tester')) || people;
-    console.log(tempHolder);
-    // let outData = JSON.parse(tempHolder);
-    // console.log(outData);
-
-}
-
-
-
-
-// var myJSON = {
-//     "first":"Zoran",
-//     "age":45,
-//     "last":"Ivanovic"
-
-// };
-
-// // let string = JSON.stringify(myJSON);
-// let string = JSON.stringify(myJSON);
-// console.log(string);
-
-// let JSONObj = JSON.parse(string);
-// console.log(JSONObj);
-
-// JSONObj.ocupation = "programmer";
-// console.log(JSONObj);
-// console.log(string);
-// string = JSON.stringify(JSONObj);
-// console.log(string);
-
-// JSONObj.name = "Zozon";
-// JSONObj.first = "Zole";
-
-// string = JSON.stringify(JSONObj);
-// console.log(string);
-
-// var sendData = JSON.stringify(JSONObj);
-// console.log(sendData);
 
 </script>
 
