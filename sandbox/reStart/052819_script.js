@@ -1,49 +1,32 @@
-let food = {
-    type: 'fruit',
-    fruits: ['apple', 'carrot', 'grapes'],
-    showFruits(){
-        this.fruits.forEach(function(fruit){
-            console.log(`${this.type} : ${fruit}`);
-        });
+(function(){
+
+    console.log('Hello from IIFE');
+})();
+
+(function(){
+    let color = 'red';
+    let language = 'Javascript';
+
+    init();
+
+    function init(){
+       color = 'green';
+       language = 'C#';
+       console.log(`Color ${color} - Language ${language}`);
     }
-}
+})();
 
-food.showFruits();
-// console.log(this);
+// init();
 
-let food2 = {
-    type: 'fruit',
-    fruits: ['apple', 'carrot', 'cucumber', 'bananas'],
-    showFruits(){
-        let _this = this;
-        this.fruits.forEach(function(fruit) {
-            console.log(`${_this.type} : ${fruit}`);
-        });
+let result = (function(){
+    return 'Return from IIFE';
+})();
+
+console.log(result);
+
+(function(msg, times){
+    for (let i = 1; i<= times; i++){
+        console.log(msg);
     }
-}
+})('Hello', 4);
 
-food2.showFruits();
-
-let food3 = {
-    type: 'fruit',
-    fruits: ['apple', 'cucumber', 'orange'],
-    showFruits(){
-        // let _this = this;
-        this.fruits.forEach(function(fruit){
-            console.log(`${this.type} : ${fruit}`);
-        }.bind(this));
-    }
-}
-
-food3.showFruits();
-
-let food4 = {
-    type: 'fruit',
-    fruits: ['apple', 'cucumber', 'orange'],
-    showFruits(){
-        // let _this = this;
-        this.fruits.forEach(fruit => console.log(`${this.type} : ${fruit}`));
-    }
-}
-
-food4.showFruits();
