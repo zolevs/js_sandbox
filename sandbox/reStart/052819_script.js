@@ -1,8 +1,16 @@
-// // recursive funciton
+// // closures
 
-function factorial(n){
-    if (n === 0) return 1;
-    return n * factorial(n-1)
+function outer(){
+    let outside = 'outside';
+
+    function inner(){
+        let inside = 'inside';
+
+        console.log(outside);
+        console.log(inside);
+    }
+    console.log(outside);
+    inner();
 }
 
-console.log(factorial(3));
+outer();
