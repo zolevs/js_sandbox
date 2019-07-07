@@ -1,16 +1,26 @@
-// // promises
+// // await
 
-function getRandomNumber(n){
-    return Math.floor(Math.random() * n);
+function getStringByPromise (){
+    return new Promise((resolve) =>{
+        resolve('Javascript is great');    
+    });
 }
 
-let food = ['grapes', 'bananas', 'pork', 'beef', 'meat', 'onion', 'chicken'];
+async function printString(){
+    let fetchedString = await getStringByPromise();
+    console.log(fetchedString);
+}
 
-let getMeat = new Promise( (resolve, reject) => {
-    let n = getRandomNumber(6);
-    (n>2) ? resolve(n) : reject(n);
-});
+printString();
 
-getMeat.then(
-    result => console.log(`I'm gona eat ${food[result]}`), 
-    result => console.log(`food result ${food[result]}`))
+function someText(){
+    return 'Some text';
+}
+
+async function getText(){
+    let text = await someText();
+    console.log(text);
+}
+
+getText();
+console.log('Waiting for text...');
