@@ -59,3 +59,7 @@
 - 19.06 - theory :ghost:
 - 20.06 - theory :book:
 - 21.06 - :party:
+
+:alien:
+---
+- 08.07 - theory JSON
