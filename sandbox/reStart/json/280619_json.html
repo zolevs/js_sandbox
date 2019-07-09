@@ -9,34 +9,41 @@
 </head>
 <body>
 
-    <div id="addButton">Get JSON</div>
+    <div id="addButton">Press me</div>
+    <div id="showButton">Show storage</div>
+    <input type="text" id="firstName">
+    <input type="text" id="lastName"> 
     <div id="output"></div>
 
 <script>
-const addButton = document.getElementById('addButton');
-const output = document.querySelector('#output');
 
-addButton.addEventListener('click', addJSON);
+    document.getElementById('addButton').addEventListener('click', addtoStorage);
+    document.getElementById('showButton').addEventListener('click', showStorage);
 
-function addJSON(){
-    console.log('Clicked');
-    output.innerHTML = 'Working';
-    const url="https://api.myjson.com/bins/13te3n";
-    // const url="//api.myjson.com/bins/13te3n";
-    // response 200 - all working
+    function addtoStorage(){
+        let tempValue = document.getElementById('firstName').value;
+        let tempLast = document.getElementById('lastName').value;
+        let myObj ={"first":tempValue, "last":tempLast};
+
+
+        localStorage.setItem('tester', JSON.stringify(myObj));
+
+        // var myJSON = {"test":"value"};
+        // localStorage.setItem('tester', myJSON);
+        // doesn't work
+
+        console.log(tempValue);
+    }
     
-    fetch(url)
-    .then(function(response){
-        console.log(response.status);
-        // return response.text()
-        return response.json()
-    })
-    .then(function(data){
-        console.log(data);
-        output.innerHTML = "FirstName = " + data.first +" "+ "LastName = " + data.last;
-        // console.log(JSON.parse(data));
-    })
-}
+    function showStorage(){
+        let tempHolder = localStorage.getItem('tester')
+        console.log('clicked show button');
+        console.log(tempHolder);
+    }
+    
+
+
+
 
 </script>
 
