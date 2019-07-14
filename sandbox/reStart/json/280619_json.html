@@ -9,24 +9,48 @@
 </head>
 <body>
 
-    <div id="addButton">Get JSON</div>
+    <div id="addButton">Get USER</div>
+    <div id="testButton">Test Map</div>
     <div id="output"></div>
 
 <script>
     const addButon = document.getElementById('addButton');
     addButon.addEventListener('click', addJSON);
+    const testButton = document.getElementById('testButton');
+    testButton.addEventListener('click', addJSON);
+    
+    function tester(){
+        console.log('testing');
+        var tempArray = [4,7,4,3,6,7,8,22,5,7,9];
+        const html = tempArray.map(function(val,i){
+            console.log(val);
+            return '<li>' + i + '=' + (val * 2) + '</li>';
+        })
+        console.log(html.join(""));
+        // output.innerHTML = '<ul>'+html.join("")+'</ul>';
+    }
+
     const output = document.querySelector('#output');
+
     function addJSON(){
-        console.log('Working');
         output.innerHTML = "WORKING"
-        const url = "https://api.myjson.com/bins/cu1yv";
+        const url = "https://randomuser.me/api/?results=10";
         fetch(url)
         .then(function(response){
             return response.json();
         })
         .then(function(data){
+            let people = data.results;
             console.log(data);
-            output.innerHTML = "FirstName = "+data.name+" Occupation = "+data.ocupation;
+
+            const html = people.map(function(val,i){
+                console.log(val);
+                return '<li>'+(i+1)+ '. ' +val.name.first+' '+ val.name.last + '</li>';
+
+            })
+            output.innerHTML = '<ul>'+html.join("")+'</ul>';
+            // console.log("First name: "+people[0].name.first + " Last name: "+people[0].name.last);
+            // output.innerHTML = "FirstName = "+data.name+" Occupation = "+data.ocupation;
             // console.log(JSON.parse(data));
         })
     }
