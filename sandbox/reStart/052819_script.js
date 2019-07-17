@@ -11,20 +11,14 @@ class Animal{
 }
 
 let dog = new Animal('dog', 'barking', 'protect');
-dog.speak();
+let cat = new Animal('cat', 'meowing', 'be cute');
 
-console.log(Animal.prototype);
-Animal.prototype.doJob = function(){
-    console.log(`My job is to ${this.job}`);
-}
+console.log(dog.constructor.prototype);
 
-dog.doJob();
-let cat = new Animal('cat', 'leprrr', 'be cute');
-cat.doJob();
-cat.speak();
+// dunder proto
 
-Animal.prototype.speak = function(){
-    console.log('This is the speak method');
-}
+console.log(cat.__proto__);
 
-cat.speak();
+console.log(Object.getPrototypeOf(cat));
+
+console.log(Animal.prototype.isPrototypeOf(dog));
