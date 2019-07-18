@@ -1,24 +1,33 @@
-class Animal{
-    constructor (type, language, job){
+// // overwrite properties
+// // inheritance
+
+class Animal {
+    constructor(type, language, job){
         this.type = type;
         this.language = language;
         this.job = job;
     }
+
     speak(){
-        console.log(`I am a ${this.type} and my language is ${this.language}`);
+        console.log(`I'm a ${this.type} and my language is ${this.language}`);
     }
-    
+
 }
 
-let dog = new Animal('dog', 'barking', 'protect');
-let cat = new Animal('cat', 'meowing', 'be cute');
+class Dog extends Animal {
+    
+    constructor(type, language, job, name){
+        super(type, language, job);
+        this.name = name;
+        
+    }
 
-console.log(dog.constructor.prototype);
+    attack(){
+        console.log(`${this.name} attacks`);
+    }
 
-// dunder proto
+}
 
-console.log(cat.__proto__);
-
-console.log(Object.getPrototypeOf(cat));
-
-console.log(Animal.prototype.isPrototypeOf(dog));
+let newDog = new Dog('pitbull', 'barking', 'bite', 'Oskar');
+newDog.speak();
+newDog.attack();
