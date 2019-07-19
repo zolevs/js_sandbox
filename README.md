@@ -64,3 +64,4 @@
 ---
 - 08.07 - theory JSON
 - 11.07 - theory JSON
+- 19.07 - theory OOP
