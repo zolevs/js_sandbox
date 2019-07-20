@@ -29,7 +29,9 @@
         console.log(html.join(""));
         // output.innerHTML = '<ul>'+html.join("")+'</ul>';
     }
-
+    String.prototype.capitalize = function(){
+        return this.charAt(0).toUpperCase()+this.slice(1);
+    }
     const output = document.querySelector('#output');
 
     function addJSON(){
@@ -41,11 +43,18 @@
         })
         .then(function(data){
             let people = data.results;
-            console.log(data);
+            console.log(people);
 
             const html = people.map(function(val,i){
+                // let firstName = val.name.first.toUpperCase();
+                let firstName = val.name.first.capitalize();
+                // let lastName = val.name.last.toUpperCase();
+                let lastName = val.name.last.capitalize();
+
                 console.log(val);
-                return '<li>'+(i+1)+ '. ' +val.name.first+' '+ val.name.last + '</li>';
+                console.log(firstName);
+                // return '<li>'+(i+1)+ '. ' +val.name.first+' '+ val.name.last + '</li>';
+                return '<li>'+(i+1)+ '. ' +firstName+' '+ lastName + '</li>';
 
             })
             output.innerHTML = '<ul>'+html.join("")+'</ul>';
