@@ -1,33 +1,9 @@
-// // overwrite properties
-// // inheritance
-
-class Animal {
-    constructor(type, language, job){
-        this.type = type;
-        this.language = language;
-        this.job = job;
-    }
-
-    speak(){
-        console.log(`I'm a ${this.type} and my language is ${this.language}`);
-    }
-
+console.time('test');
+let a = 1+10;
+let add = 0;
+console.time('test2')
+for (let a = 1; a < 150; a++){
+    add = add + a;
 }
-
-class Dog extends Animal {
-    
-    constructor(type, language, job, name){
-        super(type, language, job);
-        this.name = name;
-        
-    }
-
-    attack(){
-        console.log(`${this.name} attacks`);
-    }
-
-}
-
-let newDog = new Dog('pitbull', 'barking', 'bite', 'Oskar');
-newDog.speak();
-newDog.attack();
+console.timeEnd('test2');
+console.timeEnd('test')
