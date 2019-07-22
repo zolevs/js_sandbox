@@ -37,6 +37,7 @@
     function addJSON(){
         output.innerHTML = "WORKING"
         const url = "https://randomuser.me/api/?results=10";
+        output.innerHTML = '';
         fetch(url)
         .then(function(response){
             return response.json();
@@ -45,22 +46,25 @@
             let people = data.results;
             console.log(people);
 
-            const html = people.map(function(val,i){
-                // let firstName = val.name.first.toUpperCase();
+            return people.map(function(val,i){
+                let div = document.createElement('div');
+                let img = document.createElement('img');
+                let span = document.createElement('span');
+                img.src = val.picture.thumbnail;
                 let firstName = val.name.first.capitalize();
-                // let lastName = val.name.last.toUpperCase();
                 let lastName = val.name.last.capitalize();
+                span.innerHTML = (i+1)+ '. ' +firstName+' '+ lastName;
 
                 console.log(val);
                 console.log(firstName);
-                // return '<li>'+(i+1)+ '. ' +val.name.first+' '+ val.name.last + '</li>';
-                return '<li>'+(i+1)+ '. ' +firstName+' '+ lastName + '</li>';
+                div.appendChild(span);
+                div.appendChild(img);
+                output.appendChild(div);
+            });
+        })
 
-            })
-            output.innerHTML = '<ul>'+html.join("")+'</ul>';
-            // console.log("First name: "+people[0].name.first + " Last name: "+people[0].name.last);
-            // output.innerHTML = "FirstName = "+data.name+" Occupation = "+data.ocupation;
-            // console.log(JSON.parse(data));
+        .catch(function(error){
+            console.log(error);
         })
     }
 
