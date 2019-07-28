@@ -1,9 +1,19 @@
-console.time('test');
-let a = 1+10;
-let add = 0;
-console.time('test2')
-for (let a = 1; a < 150; a++){
-    add = add + a;
-}
-console.timeEnd('test2');
-console.timeEnd('test')
+let lastLanguage = document.querySelector('ul#languages li:last-child');
+console.log(lastLanguage);
+
+lastLanguage.setAttribute('class', 'someFruit');
+console.log(lastLanguage);
+
+lastLanguage.className = 'anotherClass';
+console.log(lastLanguage);
+
+
+// ovom metodom se sve postojece klase se owervrajtuju
+lastLanguage.classList.add('anotherClass');
+
+lastLanguage.classList.remove('anotherClass');
+lastLanguage.classList.toggle('anotherClass');
+lastLanguage.classList.replace('anotherClass', 'someFruit');
+
+console.log(lastLanguage);
+console.log(lastLanguage.classList.contains('someFruit'));
