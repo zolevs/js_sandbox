@@ -1,19 +1,11 @@
-let lastLanguage = document.querySelector('ul#languages li:last-child');
-console.log(lastLanguage);
+let firstFruit = fruits.querySelector('li:first-child');
 
-lastLanguage.setAttribute('class', 'someFruit');
-console.log(lastLanguage);
+firstFruit.style.color = 'red';
+firstFruit.style.backgroundColor = 'green';
+firstFruit.style['background-color'] = 'blue';
 
-lastLanguage.className = 'anotherClass';
-console.log(lastLanguage);
+firstFruit.style.display = 'none';
+firstFruit.style.display = 'list-item';
 
-
-// ovom metodom se sve postojece klase se owervrajtuju
-lastLanguage.classList.add('anotherClass');
-
-lastLanguage.classList.remove('anotherClass');
-lastLanguage.classList.toggle('anotherClass');
-lastLanguage.classList.replace('anotherClass', 'someFruit');
-
-console.log(lastLanguage);
-console.log(lastLanguage.classList.contains('someFruit'));
+console.log(firstFruit.style);
+firstFruit.classList.add('highlight');
