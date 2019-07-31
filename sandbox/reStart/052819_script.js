@@ -1,11 +1,12 @@
-let firstFruit = fruits.querySelector('li:first-child');
+// events
 
-firstFruit.style.color = 'red';
-firstFruit.style.backgroundColor = 'green';
-firstFruit.style['background-color'] = 'blue';
+document.body.addEventListener('click', doSomething);
+function doSomething() {
+    console.log('Triggered');
+}
+document.onclick = () => console.log('Document clicked');
 
-firstFruit.style.display = 'none';
-firstFruit.style.display = 'list-item';
+addEventListener('click', () => console.log('global click'));
 
-console.log(firstFruit.style);
-firstFruit.classList.add('highlight');
+let event = new Event('click');
+window.dispatchEvent(event);
