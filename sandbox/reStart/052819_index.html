@@ -1,41 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Getting Elements</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events Continued</title>
 
     <style>
+        p {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            background-color: #ccc;
+            float: left;
+        }
+
         .highlight {
-            color: yellow;
-            background-color: blue;
+            background-color: red;
         }
     </style>
+
 </head>
 
 <body>
 
-    <h1 id="title">Getting Elements</h1>
-
-    <ul id="languages">
-        <li class="language javascript">JavaScript</li>
-        <li class="language java">Java</li>
-        <li class="language php">PHP</li>
-        <li class="language csharp">C#</li>
-    </ul>
-
-    <hr>
-
-    <ul id="fruits">
-        <li>bananas</li>
-        <li>apples</li>
-        <li>grapes</li>
-        <li>kiwi</li>
-    </ul>
-    <p>Button</p> 
-    <!-- <p onclick="console.log('You clicked')">Button</p>  -->
+    <p id="click">Click On Me</p>
+    <p id="dblClick">Double Click On Me</p>
+    <p id="mouse">Hover On Me</p>
+    <p id="remove">Remove Event Listener</p>
 
     <script src="052819_script.js"></script>
 </body>

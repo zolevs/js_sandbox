@@ -1,12 +1,39 @@
-// events
+let clickP = document.querySelector('p#click');
+console.log(clickP);
 
-document.body.addEventListener('click', doSomething);
-function doSomething() {
-    console.log('Triggered');
+clickP.addEventListener('click', () => console.log('Clicked'));
+clickP.addEventListener('mousedown', () => console.log('mouse down'));
+clickP.addEventListener('mouseup', () => console.log('mouse up'));
+
+let doubleP = document.querySelector('p#dblClick');
+console.log(doubleP);
+
+doubleP.addEventListener('dblclick', highlight);
+function highlight(e){
+    e.target.classList.toggle('highlight');
 }
-document.onclick = () => console.log('Document clicked');
+let mouse = document.querySelector('p#mouse');
+mouse.addEventListener('mouseenter', highlight);
+mouse.addEventListener('mouseleave', highlight);
 
-addEventListener('click', () => console.log('global click'));
+// key events
 
-let event = new Event('click');
-window.dispatchEvent(event);
+addEventListener('keydown', highlight);
+addEventListener('keypress', (e) => console.log(`You pressed ${e.key}`));
+
+addEventListener('keypress', function(e){
+    if(e === 'Enter'){
+        console.log('enter is pressed');
+    }
+});
+
+let removeP = document.querySelector('p#remove');
+console.log(removeP);
+removeP.addEventListener('click', remove);
+
+function remove(e){
+    console.log('Removed');
+    e.target.style.backgroundColor = 'yellow';
+    removeP.removeEventListener('click', remove);
+}
+
