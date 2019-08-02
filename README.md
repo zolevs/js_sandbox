@@ -68,3 +68,7 @@
 - 25.07 - theory OOP
 - 26.07 - theory OOP
 - 27.07 - theory OOP
+
+:alien:
+---
+- 02.08 - DOM event object
