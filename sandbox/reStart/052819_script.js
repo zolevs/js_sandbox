@@ -1,13 +1,17 @@
-// window.alert('Hello');
-// alert('Hello');
+let form;
+form = document.forms[0];
+console.log(form);
 
-// confirm('Are you sure');
+form = document.getElementsByTagName('form')[0];
+console.log(form);
 
-if(confirm('Are you sure')){
-    console.log('That is ok');
-} else {
-    console.log('Cancel');
-}
+form = document.forms.search;
+console.log(form);
 
-let name = prompt('Your name');
-console.log(name);
+form = document.querySelector('form#search');
+console.log(form);
+
+console.log(form.searchInput);
+console.log(form['searchInput']);
+
+
