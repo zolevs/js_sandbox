@@ -1,17 +1,28 @@
-let form;
-form = document.forms[0];
-console.log(form);
+let form = document.querySelector('form#person');
+form.addEventListener('submit', submit);
+function submit(e){
+    e.preventDefault();
+    let name = document.querySelector('input#name').value;
+    let colors = document.querySelector('select#colors').value;
+    let color = colors.value;
+    
+    console.log (name);
+  
+    // let food = '';
+    // let checkboxes = document.querySelectorAll('input.food');
+    
+    // for (let i = 0; i < checkboxes.length; i++){
+    //     if(checkboxes[i].checked){
+    //         food += checkboxes[i].value + ' ';
+    //     }
+    // }
 
-form = document.getElementsByTagName('form')[0];
-console.log(form);
+    let food = document.querySelectorAll('input.food:checked');
+    let foodValues = Array.from(food).map(el => el.value);
+    
 
-form = document.forms.search;
-console.log(form);
+    console.log(foodValues.toString());
+    console.log (colors);
 
-form = document.querySelector('form#search');
-console.log(form);
-
-console.log(form.searchInput);
-console.log(form['searchInput']);
-
-
+    console.log(food);
+}
