@@ -1,28 +1,72 @@
-let form = document.querySelector('form#person');
-form.addEventListener('submit', submit);
-function submit(e){
-    e.preventDefault();
-    let name = document.querySelector('input#name').value;
-    let colors = document.querySelector('select#colors').value;
-    let color = colors.value;
-    
-    console.log (name);
-  
-    // let food = '';
-    // let checkboxes = document.querySelectorAll('input.food');
-    
-    // for (let i = 0; i < checkboxes.length; i++){
-    //     if(checkboxes[i].checked){
-    //         food += checkboxes[i].value + ' ';
-    //     }
-    // }
+document.querySelector('button#getText').addEventListener('click', function(){
+    fetch('text.txt')
+        .then(response => response.text())
+        .then(text => console.log(text))
+        .catch(error => console.log('There was an error: ', error));
+});
 
-    let food = document.querySelectorAll('input.food:checked');
-    let foodValues = Array.from(food).map(el => el.value);
-    
+document.querySelector('button#getFile').addEventListener('click', function(){
+    fetch('images/fruit.jpg')
+        .then(response => response.blob())
+        // .then(blob => console.log(blob))
+        .then(blob => console.log(blob.type))
 
-    console.log(foodValues.toString());
-    console.log (colors);
+        .catch(error => console.log('There was an error: ', error));
+});
 
-    console.log(food);
+document.querySelector('button#get').addEventListener('click', function(){
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+        .then(response => response.json())
+        // .then(json => console.log(json))
+        .then(json => console.log(json.title))
+        .catch(error => console.log('There was an error: ', error));
+});
+
+
+let post = {
+    title: 'some title',
+    body: 'Some body',
+    userId: 99
 }
+
+
+document.querySelector('button#post').addEventListener('click', function(){
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify(post),
+        headers: {
+            "content-type" : "application/json"
+        }
+    })
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(error => console.log('There was an error: ', error));
+});
+
+let updatePost ={
+    title: 'Some title',
+    body: 'Some body 2',
+    userId: 101,
+    id: 1
+}
+
+document.querySelector('button#update').addEventListener('click', function(){
+    fetch('https://jsonplaceholder.typicode.com/posts/1', {
+        method: 'PUT',
+        body: JSON.stringify(post),
+        headers: {
+            "content-type" : "application/json"
+        }
+    })
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(error => console.log('There was an error: ', error));
+});
+
+// DELETE
+document.querySelector('button#delete').addEventListener('click', function(){
+    fetch('https://jsonplaceholder.typicode.com/posts/1', {
+        method: 'DELETE',
+    })
+    .then(response => console.log(response.json()));
+  });
