@@ -72,3 +72,4 @@
 :alien:
 ---
 - 02.08 - DOM event object
+- 07.08 - Promises
