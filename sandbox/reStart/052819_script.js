@@ -1,12 +1,8 @@
-let car = document.querySelector('div#car');
-let carType = car.dataset.type;
+localStorage.setItem('name', 'john');
+console.log(localStorage.getItem('name'));
 
-console.log(car);
-console.log(carType);
+sessionStorage.setItem('lastName', 'Ivanovic');
+console.log(sessionStorage.getItem('lastName'));
 
-let food = document.querySelector('div#food');
-let fruit = food.dataset.someFruit
-console.log(food);
-console.log(fruit);
-
-
+localStorage.removeItem('name');
+console.log(localStorage.getItem('name'));
