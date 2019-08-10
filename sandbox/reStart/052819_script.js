@@ -1,8 +1,10 @@
-localStorage.setItem('name', 'john');
-console.log(localStorage.getItem('name'));
+let worker = new Worker('./test.js');
 
-sessionStorage.setItem('lastName', 'Ivanovic');
-console.log(sessionStorage.getItem('lastName'));
+worker.postMessage('Hello from main script');
 
-localStorage.removeItem('name');
-console.log(localStorage.getItem('name'));
+worker.addEventListener('message', (e) => {
+    console.log(e.data);
+    worker.terminate();
+});
+
+// worker.terminate();
