@@ -1,10 +1,10 @@
-let worker = new Worker('./test.js');
+let accordions = document.querySelectorAll('button.accordion');
+// console.log(accordions);
 
-worker.postMessage('Hello from main script');
-
-worker.addEventListener('message', (e) => {
-    console.log(e.data);
-    worker.terminate();
+accordions.forEach(accordion => {
+    console.log(accordion);
+    accordion.addEventListener('click', function(){
+        this.classList.toggle('active');
+        this.nextElementSibling.classList.toggle('show');
+    })
 });
-
-// worker.terminate();
