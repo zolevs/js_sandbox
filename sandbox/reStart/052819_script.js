@@ -1,66 +1,44 @@
-let bowls = document.querySelectorAll('div.bowl');
-let scoreBoard = document.querySelector('span.badge');
-let bananas = document.querySelectorAll('div.banana');
-let start = document.querySelector('button#start');
-let timeUpDiv = document.querySelector('div.timeup');
-let lastBowl;
-let score;
-let timeUp = false;
+let tasksUl = document.querySelector('ul#tasks');
+let taskInput = document.querySelector('input#task');
+let form = document.querySelector('form#taskForm');
+let tasksArray = [];
+let clearButton = document.querySelector('button#clear');
 
-function randomTime(min, max){
-    return Math.floor(Math.random() * (max - min) + min);
-}
-function randomBowl(bowls){
-    let bowlIndex = Math.floor(Math.random() * bowls.length); // 0 - 5
-    let bowl = bowls[bowlIndex];
+populateTaskArray();
+getTasks();
 
-    if(bowl === lastBowl){
-        console.log('Same again');
-        return randomBowl(bowls);
-    }
-    lastBowl = bowl;
-    return bowl;
-}
+form.addEventListener('submit', function(e){
+    e.preventDefault();
 
-function show(){
-    let time = randomTime(500, 1500);
-    let bowl = randomBowl(bowls);
-    // console.log(bowl);
-    bowl.classList.add('show');
-    setTimeout(() => {
-        bowl.classList.remove('show');
-        if (!timeUp) show();
-    }, time);
-}
-function whack(e){
-    score++;
-    this.parentElement.classList.remove('show');
-    scoreBoard.textContent = score;
+    // console;.log('form submit detected');
+    // console.log(taskInput.value);
 
-}
-bananas.forEach(banan => {
-    banan.addEventListener('click', whack);
+    if (taskInput.value !== "") tasksArray.push(taskInput.value);
+    taskInput.value = '';
+    localStorage.setItem('tasks', JSON.stringify(tasksArray));
+    getTasks();
 });
 
-function startGame(){
-    scoreBoard .textContent = 0;
-    timeUp = false;
-    timeUpDiv.classList.add('d-none');
-    score = 0;
-    show();
-    setTimeout(() => {
-        timeUp = true;
-        timeUpDiv.classList.remove('d-none');
-    }, 10000);
+function getTasks(){;
+    if(tasksArray.length > 0){
+        tasksUl.innerHTML = "";
+        tasksArray.forEach((task, index) => {
+            let li = document.createElement('li');
+            li.innerHTML = `<input type="text" value="${task}" readonly /> <span class="removeTask btn btn-small btn-primary float-right"> remove task</span>`; 
+            li.classList.add('list-group-item');
+            li.setAttribute('data-id', index);
+            tasksUl.appendChild(li);
+        });
+    } else {
+        tasksUl.textContent = 'There are no tasks at the moment';
+    }
+};
+
+function populateTaskArray(){
+    if (localStorage.getItem('tasks') !== null){
+        let tasks = JSON.parse(localStorage.getItem('tasks'));
+        tasks.forEach(task => {
+            tasksArray.push(task);
+        })
+    }
 }
-
-start.addEventListener('click', startGame);
-
-
-// console.log(randomTime(10,50));
-
-// console.log(bowls);
-// console.log(scoreBoard);
-// console.log(bananas);
-// console.log(start);
-// console.log(timeUpDiv);
