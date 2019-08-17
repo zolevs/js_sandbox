@@ -13,21 +13,37 @@
 </head>
 
 
-<div class="container mt-5">
+<body>
+    
+    <div class="container mt-5">
 
-    <form id="taskForm">
-        <div class="form-group">
-            <label for="task">Task</label>
-            <input type="text" class="form-control" id="task" placeholder="Enter task">
+        <div class="slider">
+
+            <div class="slide active">
+                <img src="./images/elephant.jpg">
+                <div class="caption">A beatuful elephant</div>
+            </div>
+
+            <div class="slide">
+                <img src="./images/avenue.jpg">
+                <div class="caption">An avenue of trees</div>
+            </div>
+
+            <div class="slide">
+                <img src="./images/trees.jpg">
+                <div class="caption">Great trees</div>
+            </div>
+
+            <a href="#" class="prev"><</a>
+            <a href="#" class="next">></a>
         </div>
-        <button type="submit" class="btn btn-primary">Add Task</button>
-    </form>
 
-    <ul id="tasks" class="list-group mt-3"></ul>
+        <div class="dots">
+        </div>
 
-    <button id="clear" class="btn btn-danger mt-3">Clear all tasks</button>
-
-</div>
+    </div>
+    
+</body>
 
 
 <script src="052819_script.js"></script>

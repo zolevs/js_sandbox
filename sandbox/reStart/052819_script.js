@@ -1,95 +1,43 @@
-(function () {
+let prev = document.querySelector('a.prev');
+let next = document.querySelector('a.next');
+let slider = document.querySelector('div.slider');
+let activeSlide = document.querySelector('div.slide.active');
+let slides = document.querySelectorAll('div.slide');
+let dots = document.querySelector('div.dots');
 
+document.querySelector('div.slide:first-child').classList.add('first');
+document.querySelector('div.slide:last-of-type').classList.add('last');
 
+let firstSlide = document.querySelector('div.slide.first');
+let lastSlide = document.querySelector('div.slide.last');
 
-    let tasksUl = document.querySelector('ul#tasks');
-    let taskInput = document.querySelector('input#task');
-    let form = document.querySelector('form#taskForm');
-    let tasksArray = [];
-    let clearButton = document.querySelector('button#clear');
+setSliderHeight(activeSlide);
+createDots();
+addClassesToSlides();
 
-    populateTaskArray();
-    getTasks();
-    addInputDblClickEvents();
-    addRemoveTaskClickEvents();
+function setSliderHeight(activeSlide){
+    let height = activeSlide.offsetHeight;
+    console.log(height);
+    slider.style.height = height +'px';
+}
 
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
+window.onresize = function (){
+    let active = document.querySelector('div.slide.active');
+    setSliderHeight (activeSlide);
+}
 
-        // console;.log('form submit detected');
-        // console.log(taskInput.value);
+function createDots(){
+    for (let i = 0; i<slides.length; i++){
+        let span = document.createElement('span');
+        span.classList.add('dot', 'dot'+i)
+        span.hasAttribute('data-id', i);
+        dots.appendChild(span);
+    }
 
-        if (taskInput.value !== "") tasksArray.push(taskInput.value);
-        taskInput.value = '';
-        localStorage.setItem('tasks', JSON.stringify(tasksArray));
-        getTasks();
-        addInputDblClickEvents();
-        addRemoveTaskClickEvents();
+}
+
+function addClassesToSlides(){
+    slides.forEach((slide, index) => {
+        slide.classList.add('slide' + index);
     });
-
-    function getTasks() {
-        ;
-        if (tasksArray.length > 0) {
-            tasksUl.innerHTML = "";
-            tasksArray.forEach((task, index) => {
-                let li = document.createElement('li');
-                li.innerHTML = `<input type="text" value="${task}" readonly /> <span class="removeTask btn btn-small btn-primary float-right"> remove task</span>`;
-                li.classList.add('list-group-item');
-                li.setAttribute('data-id', index);
-                tasksUl.appendChild(li);
-            });
-        } else {
-            tasksUl.textContent = 'There are no tasks at the moment';
-        }
-    };
-
-    function populateTaskArray() {
-        if (localStorage.getItem('tasks') !== null) {
-            let tasks = JSON.parse(localStorage.getItem('tasks'));
-            tasks.forEach(task => {
-                tasksArray.push(task);
-            })
-        }
-    }
-    function addInputDblClickEvents() {
-        let inputs = document.querySelectorAll('ul#tasks input[type="text"]');
-        // console.log(inputs);
-        inputs.forEach(input => {
-            input.addEventListener('dblclick', function (e) {
-                e.target.removeAttribute('readonly');
-            });
-            input.addEventListener('blur', function (e) {
-                e.target.setAttribute('readonly', true);
-            });
-            input.addEventListener('change', function (e) {
-                let index = e.target.parentElement.dataset.id;
-                // console.log(index);
-                tasksArray[index] = e.target.value;
-                localStorage.setItem('tasks', JSON.stringify(tasksArray));
-            });
-        });
-    }
-    function addRemoveTaskClickEvents() {
-        let spans = document.querySelectorAll('ul#tasks span.removeTask');
-        // console.log(spans);
-        spans.forEach(span => {
-            span.addEventListener('click', function (e) {
-                if (!confirm('Confirm deletion')) return;
-                let removeSpan = e.target;
-                let index = e.target.parentElement.dataset.id;
-                tasksArray.splice(index, 1);
-                localStorage.setItem('tasks', JSON.stringify(tasksArray));
-                removeSpan.parentElement.remove();
-
-            })
-
-        });
-    }
-
-    clearButton.addEventListener('click', function () {
-        if (!confirm('Confirm delete ALL')) return;
-        localStorage.clear();
-        tasksUl.textContent = 'There are no tasks at the moment';
-    });
-
-})();
+}
