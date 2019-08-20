@@ -74,3 +74,4 @@
 - 02.08 - DOM event object
 - 07.08 - Promises
 - 19.08 - Refresh
+- 20.08 - refresh Ninja theory
