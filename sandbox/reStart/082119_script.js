@@ -1,28 +1,18 @@
-// console.log(true, false, "true", "false");
+// if statements
 
-// let email = 'luigi@thenetninja.co.uk';
-// let numbers = ['one', 'two', 'three', 'four'];
+// const age = 25;
+// if(age > 20){
+//     console.log('You are over 20 years old.')
+// }
 
-// let result = email.includes('@');
-// console.log(result);
-// result = email.includes('!');
-// console.log(result);
+// const ninjas = ['shaun', 'ryu', 'charlie', 'yoshe'];
+// if(ninjas.length > 2){
+//     console.log("That's a lot of ninjas");
+// }
 
-// let contain = numbers.includes('two');
-// console.log(contain);
+const password = 'pass12345';
 
-let age = 25;
-console.log(age == 25);
-console.log(age == 35);
-console.log(age != 35);
-console.log(age != 25);
-console.log(age <= 25);
-console.log(age < 25);
-
-let name = 'shaun';
-console.log(name == 'shaun');
-console.log(name == 'Shaun');
-
-
-
+if(password.length >= 8){
+    console.log('Nice password');
+}
 
