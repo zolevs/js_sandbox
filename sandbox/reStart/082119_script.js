@@ -1,18 +1,17 @@
-// if statements
+let age = 45;
 
-// const age = 25;
-// if(age > 20){
-//     console.log('You are over 20 years old.')
-// }
+// let age = 50;
+age = 50;
 
-// const ninjas = ['shaun', 'ryu', 'charlie', 'yoshe'];
-// if(ninjas.length > 2){
-//     console.log("That's a lot of ninjas");
-// }
+if (true){
+    let age = 40;
+    let name = 'shaun';
+    console.log('Inside first code block ', age, name);
 
-const password = 'pass12345';
-
-if(password.length >= 8){
-    console.log('Nice password');
+    if(true){
+        let age = 50;
+        console.log('inside 2nd code block',age);
+    }
 }
 
+console.log('Outside code block ', age, name);
