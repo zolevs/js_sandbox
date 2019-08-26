@@ -1,17 +1,40 @@
-let age = 45;
+// const myFunc = (callbackFunc) => {
+    
+//     let value = 50;
+//     callbackFunc(value);
+// };
 
-// let age = 50;
-age = 50;
 
-if (true){
-    let age = 40;
-    let name = 'shaun';
-    console.log('Inside first code block ', age, name);
+// myFunc( value => {
+    
+//     console.log(value);
+// });
 
-    if(true){
-        let age = 50;
-        console.log('inside 2nd code block',age);
-    }
-}
+// let people = ['Mario', 'Dalio', 'Luigi', 'Chin-Lu', 'Donotelo'];
 
-console.log('Outside code block ', age, name);
+// // people.forEach(function(person, index){
+// //     console.log(person, index);
+// // });
+
+// const logPerson = (person, index) => {
+//     console.log(`${index} - Hello ${person}`)
+// }
+
+// // people.forEach( person => {
+// //     console.log(person);
+// // });
+// people.forEach( logPerson );
+
+const ul = document.querySelector('.people');
+
+const people =  ['Mario', 'Dalio', 'Luigi', 'Chin-Lu', 'Donotelo'];
+let html = ``;
+
+// people.forEach(function (person){
+//     // html template
+//     html += `<li style = "color: #ff00ff;">${person}</li>`;
+// });
+people.forEach ( person => { html += `<li style = "color: #ff00ff;">${person}</li>` });
+ul.innerHTML = html;
+
+console.log(html);
