@@ -1,14 +1,14 @@
-console.log(Math);
+// primitive value
+let scoreOne = 50;
+let scoreTwo = scoreOne;
+console.log(`scoreOne: ${scoreOne} and scoreTwo: ${scoreTwo}`);
+scoreTwo = 100;
+console.log(`scoreOne: ${scoreOne} and scoreTwo: ${scoreTwo}`);
 
-console.log(Math.PI);
-console.log(Math.E);
+// reference value
+userOne = {name: 'ramir', age: 45};
+userTwo = userOne;
+console.log(userOne, userTwo);
 
-const area = 7.9278;
-console.log(Math.round(area));
-console.log(Math.floor(area));
-console.log(Math.trunc(area));
-
-//
-const random = Math.random();
-console.log(random);
-console.log(Math.round(random * 10));
+userTwo.age = 29;
+console.log(userOne, userTwo);
