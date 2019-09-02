@@ -1,14 +1,22 @@
-// primitive value
-let scoreOne = 50;
-let scoreTwo = scoreOne;
-console.log(`scoreOne: ${scoreOne} and scoreTwo: ${scoreTwo}`);
-scoreTwo = 100;
-console.log(`scoreOne: ${scoreOne} and scoreTwo: ${scoreTwo}`);
+const myCar = {
+    color: "red",
+    topSpeed: 300,
+    model: "Mustang",
+    year: 2017,
+    price: 5000,
+    turnOn: function(){
+        console.log('Started');
+    },
+    drive(){console.log("Drive")}
+}
+let a = 1;
 
-// reference value
-userOne = {name: 'ramir', age: 45};
-userTwo = userOne;
-console.log(userOne, userTwo);
+const test = {
+    a1: "test 1",
+    a2: "test 2"
+}
 
-userTwo.age = 29;
-console.log(userOne, userTwo);
+function tester(){
+    console.log(test['a' + a]);
+    a++;
+}
