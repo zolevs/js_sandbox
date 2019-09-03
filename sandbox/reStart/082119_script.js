@@ -1,22 +1,11 @@
-const myCar = {
-    color: "red",
-    topSpeed: 300,
-    model: "Mustang",
-    year: 2017,
-    price: 5000,
-    turnOn: function(){
-        console.log('Started');
-    },
-    drive(){console.log("Drive")}
-}
-let a = 1;
-
-const test = {
-    a1: "test 1",
-    a2: "test 2"
+function Car (miles, company, color, price) {
+    
+    this.color = color;
+    this.miles = miles;
+    this.price = price;
+    this.company = company;
 }
 
-function tester(){
-    console.log(test['a' + a]);
-    a++;
-}
+const myCar1 = new Car("Civic", "Honda", "Green", 3400);
+
+const myCar2 = new Car("324", "Mercedes", "Yellow", 6000);
