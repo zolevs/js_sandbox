@@ -1,11 +1,13 @@
-function Car (miles, company, color, price) {
-    
-    this.color = color;
-    this.miles = miles;
-    this.price = price;
-    this.company = company;
-}
+const link = document.querySelector('a');
+console.log(link.getAttribute('href'));
 
-const myCar1 = new Car("Civic", "Honda", "Green", 3400);
+link.setAttribute('href', 'https://www.zole.me');
+link.innerText = 'Link to - Zole.me';
 
-const myCar2 = new Car("324", "Mercedes", "Yellow", 6000);
+const msg = document.querySelector('p');
+
+console.log(msg.getAttribute('class'));
+msg.setAttribute('class', 'success');
+
+msg.setAttribute('style', 'color: green;');
+
