@@ -1,13 +1,25 @@
-const link = document.querySelector('a');
-console.log(link.getAttribute('href'));
+// const content = document.querySelector('p');
 
-link.setAttribute('href', 'https://www.zole.me');
-link.innerText = 'Link to - Zole.me';
+// console.log(content.classList);
 
-const msg = document.querySelector('p');
+// // content.classList.add('error');
+// // content.classList.remove('error');
 
-console.log(msg.getAttribute('class'));
-msg.setAttribute('class', 'success');
+// content.classList.add('success');
 
-msg.setAttribute('style', 'color: green;');
+const paras = document.querySelectorAll('p');
+
+paras.forEach(p => {
+    if(p.textContent.includes('error')){
+        p.classList.add('error');
+    }
+    if(p.innerText.includes('success')){
+        p.classList.add('success');
+    }
+});
+
+const title = document.querySelector('.title');
+title.classList.toggle('test');
+title.classList.toggle('test');
+
 
