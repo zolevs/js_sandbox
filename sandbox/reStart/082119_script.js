@@ -1,25 +1,32 @@
-// const content = document.querySelector('p');
+const ul = document.querySelector('ul');
+// ul.remove();
 
-// console.log(content.classList);
-
-// // content.classList.add('error');
-// // content.classList.remove('error');
-
-// content.classList.add('success');
-
-const paras = document.querySelectorAll('p');
-
-paras.forEach(p => {
-    if(p.textContent.includes('error')){
-        p.classList.add('error');
-    }
-    if(p.innerText.includes('success')){
-        p.classList.add('success');
-    }
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    // ul.innerHTML += '<li>something new</li>';
+    const li = document.createElement('li');
+    li.textContent = 'Something new to do...';
+    // ul.append(li);
+    ul.prepend(li);
 });
 
-const title = document.querySelector('.title');
-title.classList.toggle('test');
-title.classList.toggle('test');
 
 
+// const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+    console.log('Clicked');
+});
+
+const items = document.querySelectorAll('li');
+
+items.forEach(element => {
+    // console.log(element);
+    element.addEventListener('click', e => {
+        // console.log('Item clicked');
+        console.log(e.target);
+        // console.log(element);
+        // e.target.style.textDecoration = "line-through";
+        e.target.remove();
+    });
+});
