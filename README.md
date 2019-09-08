@@ -79,3 +79,4 @@
 
 :alien:
 - 03.09 - object
+- 08.09 - DOM event
