@@ -1,7 +1,7 @@
 const ul = document.querySelector('ul');
 // ul.remove();
-
 const button = document.querySelector('button');
+
 button.addEventListener('click', () => {
     // ul.innerHTML += '<li>something new</li>';
     const li = document.createElement('li');
@@ -18,15 +18,25 @@ button.addEventListener('click', () => {
     console.log('Clicked');
 });
 
-const items = document.querySelectorAll('li');
+// const items = document.querySelectorAll('li');
 
-items.forEach(element => {
-    // console.log(element);
-    element.addEventListener('click', e => {
-        // console.log('Item clicked');
-        console.log(e.target);
-        // console.log(element);
-        // e.target.style.textDecoration = "line-through";
+// items.forEach(element => {
+//     // console.log(element);
+//     element.addEventListener('click', e => {
+//         // console.log('Item clicked');
+//         console.log(e.target);
+//         // console.log(element);
+//         // e.target.style.textDecoration = "line-through";
+//         console.log('Event in LI');
+//         e.stopPropagation();
+//         e.target.remove();
+//     });
+// });
+
+ul.addEventListener('click', e => {
+    // console.log('Event in UL');
+    console.log(e.target);
+    if(e.target.tagName === 'LI'){
         e.target.remove();
-    });
-});
+    }  
+})
