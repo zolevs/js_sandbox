@@ -79,8 +79,6 @@
 
 :alien:
 - 03.09 - object
-<<<<<<< HEAD
 - 09.09 - DOM
-=======
 - 08.09 - DOM event
->>>>>>> f7ce17b9e5bc836c2e6bc4abbf7c8fb8e34c0bbd
+- 10.09 - event
