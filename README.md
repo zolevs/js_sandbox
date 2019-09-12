@@ -78,6 +78,7 @@
 - 29.08 - function
 
 :alien:
+---
 - 03.09 - object
 - 09.09 - DOM
 - 08.09 - DOM event
