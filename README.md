@@ -83,3 +83,4 @@
 - 09.09 - DOM
 - 08.09 - DOM event
 - 10.09 - event
+- 14.09 - REGEX
