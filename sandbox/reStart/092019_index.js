@@ -1,65 +1,52 @@
-// find
-
-const scores = [10, 20, 0, 50, 70, 30, 40, 60, 90, 43];
-const firstHighScore = scores.find((score) => {
-    return score > 50;
-});
-
-console.log(firstHighScore);
+// reduce
 
 
-
-
-
-
-// // reduce
-
-// const scores = [
-//     {player: 'mario', score: 50},
-//     {player: 'yoshi', score: 30},
-//     {player: 'mario', score: 70},
-//     {player: 'crystal', score: 60}
-//   ];
-
-//   const marioTotal = scores.reduce((acc, curr) =>{
-//     if(curr.player === 'mario'){
-//         acc += curr.score;
-//     }
-//     return acc;
-//   }, 0);
-
-// console.log(marioTotal);
-
-
-
-
-
-
-
-
-
-
-
-// const scores = [10, 20, 30, 40, 60, 90, 43];
-
-// const result = scores.reduce((acc, curr) => {
-//     if(curr > 50) {
+// const scores = [10, 20, 60, 40, 70, 90, 30];
+// const result = scores.reduce((acc, curr)=>{
+//     if(curr > 50){
+//         console.log(acc);
 //         acc++;
-//     } 
+//     }
 //     return acc;
 // }, 0);
 
+// console.log(result);
 
 
-// const prices = [10, 30, 15, 25, 50, 40, 5];
+
+const scores = [
+    {player: 'mario', score: 50},
+    {player: 'yoshi', score: 30},
+    {player: 'mario', score: 70},
+    {player: 'crystal', score: 60},
+    {player: 'yoshi', score: 30},
+    {player: 'mario', score: 15},
+    {player: 'crystal', score: 60}
+  ];
+
+const marioTotal = scores.reduce((acc, curr) => {
+    if(curr.player === 'mario'){
+        acc += curr.score;
+    }
+    return acc;
+}, 0);
+
+
+
+
+
+
+
+
+
+// map
+
+
+// const prices = [20, 10, 30, 25, 15, 40, 80, 5];
 
 // const salePrices = prices.map((price) => {
 //     return price / 2;
-// })
-
-// const salePrices = prices.map( price => price / 2);
-
-// console.log(salePrices);
+// });
 
 
 // const products = [
@@ -70,82 +57,35 @@ console.log(firstHighScore);
 //     {name: 'red shells', price: 50}
 //   ];
 
-//   const saleProducts = products.map((product) =>{
-//     if (product.price > 30 ){
-//         return {name: product.name, price: product.price / 2};
+// const saleProducts = products.map((product)=>{
+//     if(product.price > 30) {
+//         return {name: product.name, price: product.price/2};
 //     } else {
 //         return product;
 //     }
-//   });
-
-//   console.log(saleProducts, products);
-
-
-
-// const filteredScores = prices.filter((price) => {
-//     return price > 20;
 // });
 
-// console.log(prices);
-// console.log(filteredScores);
-
-// const users = [
-//     {name: 'Shaun', premium: true},
-//     {name: 'Hyain', premium: true},
-//     {name: 'Xi Hon', premium: false},
-//     {name: 'Nagani', premium: true}
-// ];
-
-// const premiumUsers = users.filter( (user) => {
-//     return user.premium;
-// });
-
-// console.log(premiumUsers);
 
 
 
 
-
-
-
+// filter
 
 // const scores = [10, 30, 15, 25, 50, 40, 5];
 
-// const filteredScores = scores.filter((score) => {
-//     return score > 20;
+// const highScores = scores.filter((score) => {
+//     return score < 15;
 // });
 
 // const users = [
-//     {name: 'Shaun', premium: true},
-//     {name: 'Hyain', premium: true},
-//     {name: 'Xi Hon', premium: false},
-//     {name: 'Nagani', premium: true}
-// ];
-
-
-// const premiumUsers = users.filter( (user) => {
-//     return user.premium;
-// });
-
-// console.log(premiumUsers);
-
-// const salePrice = prices.map( (price) => {
-//     return price / 2;
-// });
-
-
-// const products = [
-//     {name: 'gold star', price: 20},
-//     {name: 'mushroom', price: 40},
-//     {name: 'green shells', price: 30},
-//     {name: 'banana skin', price: 10},
-//     {name: 'red shells', price: 50}
+//     {name: 'shaun', premium: true},
+//     {name: 'yoshi', premium: false},
+//     {name: 'mario', premium: false},
+//     {name: 'chun-li', premium: true}
 //   ];
 
-//   const saleProducts = products.map((product) => {
-//       if(product.price > 30){
-//           return {name: product.name, price: product.price / 2};
-//       } else {
-//           return product;
-//       }
-//   })
+//   const premiumUsers = users.filter((user) => {
+//     return user.premium;
+//   });
+
+//   console.log(premiumUsers);
