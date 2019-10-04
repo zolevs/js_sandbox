@@ -1,9 +1,13 @@
-console.log(1);
-console.log(2);
-console.log(3);
-setTimeout(() => {
-    console.log('call back');
-}, 2000);
-console.log(4);
-console.log(5);
-console.log(6);
+const request = new XMLHttpRequest();
+console.log(request);
+request.addEventListener('readystatechange', () => {
+    // console.log(request, request.readyState);
+    if(request.readyState === 4 && request.status === 200) {
+        console.log(request, request.responseText);
+    } else if(request.readyState === 4) {
+        console.log('no data ...');
+    }
+});
+
+request.open('GET', 'https://jsonplaceholder.typicode.com/postss/');
+request.send();
