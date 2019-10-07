@@ -1,44 +1,26 @@
-const getTodos = (resource, callback) => {
+// // fetch
 
+// fetch('data.json').then((response)=>{
+//     console.log('resolve', response);
+//     return response.json();
+// }).then((data)=> {
+//     console.log(data);
+// }).catch((err)=>{
+//     console.log('rejected', err);  
+// });
 
-    const request = new XMLHttpRequest();
-    console.log(request);
-    request.addEventListener('readystatechange', () => {
-        // console.log(request, request.readyState);
-        if(request.readyState === 4 && request.status === 200) {
-            // console.log(request.readyState);
-            // console.log(request, request.responseText);
-            const data = JSON.parse(request.responseText);
-            // callback(undefined, request.responseText);
-            callback(undefined, data);
-        } else if(request.readyState === 4) {
-            // console.log('no data ...');
-            callback('no data', undefined);
-        }
-    });
+const getTodos = async () => {
+    const response = await fetch('dataa.json');
+    if(response.status !== 200){
+        throw new Error('cannot fetch the data');
+    }
+    const data = await response.json();
 
-    // request.open('GET', 'https://jsonplaceholder.typicode.com/posts/');
-    // request.open('GET', 'data.json');
-    request.open('GET', resource);
-    request.send();
-
-
+    return data;
 };
 
 
-getTodos('data.json', (err, data) => {
-    console.log(data);
-    getTodos('data2.json', (err, data) => {
-        console.log(data);
-        getTodos('data3.json', (err, data)=> {
-            console.log(data);
-        });
-    });
-    // console.log(err, data);
-    // if(err){
-    //     console.log(err);
-    // } else {
-    //     console.log(data);
-    // }
-});
-
+getTodos()
+    .then(data => console.log('resolve: ', data))
+    .catch(err => console.log('rejected: ', err.message));
+    
