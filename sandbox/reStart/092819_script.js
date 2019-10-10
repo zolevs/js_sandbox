@@ -1,26 +1,50 @@
-// // fetch
-
-// fetch('data.json').then((response)=>{
-//     console.log('resolve', response);
-//     return response.json();
-// }).then((data)=> {
-//     console.log(data);
-// }).catch((err)=>{
-//     console.log('rejected', err);  
+// first(2, function(firstResult, err){
+//     if(!err) {
+//         second(firstResult, function (secondResult, err){
+//             if(!err) {
+//                 third(secondResult, function(thirdResult, err){
+//                     if(!err){
+//                         console.log(thirdResult);
+//                     }
+//                 });
+//             }
+//         });
+//     }
 // });
 
-const getTodos = async () => {
-    const response = await fetch('dataa.json');
-    if(response.status !== 200){
-        throw new Error('cannot fetch the data');
-    }
-    const data = await response.json();
+// function first(value, callback){
+//     callback(value+2, false);
+// };
 
-    return data;
+// function second(value, callback){
+//     callback(value+2, false);
+// };
+
+// function third(value, callback){
+//     callback(value+2, false);
+// };
+
+var promise = new Promise(function(resolve, reject){
+    resolve(2);
+});
+
+promise.then(first).then(second).then(third).then(function(response){
+    console.log(response);
+});
+
+
+function first(value){
+    return value+2;
+};
+
+function second(value){
+    return value+2;
+};
+
+function third(value){
+    return value+2;
 };
 
 
-getTodos()
-    .then(data => console.log('resolve: ', data))
-    .catch(err => console.log('rejected: ', err.message));
-    
+
+
