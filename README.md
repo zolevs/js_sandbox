@@ -86,3 +86,8 @@
 - 14.09 - REGEX
 - 19.09 - quiz
 - 26.09 - todo
+
+:alien:
+---
+
+- 12.10 - weather
