@@ -1,41 +1,30 @@
-const todos = [
-    {text: 'play 1', author: 'shaun'},
-    {text: 'play 2', author: 'author'},
-    {text: 'play 3', author: 'writer'}
-];
+const userOne = {
+    userName: 'ryu',
+    email: 'ryu@net.net',
+    login(){
+        console.log('the user log in');
+    },
+    logout(){
+        console.log('the user log out')
+    }
+};
 
-console.log(todos);
-console.log(JSON.stringify(todos));
+console.log(userOne.email, userOne.userName);
+userOne.login();
 
-localStorage.setItem('todos', JSON.stringify(todos));
+const userTwo = {
+    userName: 'chung lu',
+    email: 'chung@eunet.net',
+    login(){
+        console.log('the user log in');
+    },
+    logout(){
+        console.log('the user log out')
+    }
+};
 
-const stored = localStorage.getItem('todos');
-console.log(JSON.parse(stored));
-
-// // store
-// localStorage.setItem('name', 'mario');
-// localStorage.setItem('age', 45);
-
-
-// // read
-// let name = localStorage.getItem('name');
-// let age = localStorage.getItem('age');
-
-// console.log(name, age);
-
-// // update
-// localStorage.setItem('name', 'Bob');
-// localStorage.age = '46';
+userTwo.logout();
 
 
-// name = localStorage.getItem('name');
-// age = localStorage.getItem('age');
+// const userThree = new User('hsaun@beotel.net', 'zolevs');
 
-// console.log(name, age); 
-
-
-// // delete
-// localStorage.removeItem('name');
-
-// // remove all
-// localStorage.clear();
