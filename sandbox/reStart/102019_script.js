@@ -1,30 +1,38 @@
-const userOne = {
-    userName: 'ryu',
-    email: 'ryu@net.net',
-    login(){
-        console.log('the user log in');
-    },
-    logout(){
-        console.log('the user log out')
+class User {
+    constructor(username, email){
+        // set up properties
+        this.username = username;
+        this.email = email;
+        this.score = 0;
     }
-};
-
-console.log(userOne.email, userOne.userName);
-userOne.login();
-
-const userTwo = {
-    userName: 'chung lu',
-    email: 'chung@eunet.net',
     login(){
-        console.log('the user log in');
-    },
-    logout(){
-        console.log('the user log out')
+        console.log(`${this.username} just logged in`);
+        return this;
     }
-};
+    logout(){
+        console.log( `${this.username} just logged out`);
+        return this;
+    }
+    incScore() {
+        this.score += 1;
+        console.log(`${this.username} has score ${this.score}`)
+        return this;
+    }
+}
 
-userTwo.logout();
+const userOne = new User('mario', 'wema@hotmail.com');
+const userTwo = new User('zole', 'mail@email.com');
 
 
-// const userThree = new User('hsaun@beotel.net', 'zolevs');
 
+console.log(userOne, userTwo);
+
+// userOne.login();
+// userTwo.login();
+
+// userTwo.logout();
+
+// userOne.incScore();
+// userOne.incScore();
+
+userOne.login().incScore().incScore();
