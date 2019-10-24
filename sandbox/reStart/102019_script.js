@@ -20,19 +20,21 @@ class User {
     }
 }
 
+
+class Admin extends User {
+    deleteUser(user){
+        users = users.filter(u=>u.username !== user.username);
+    }
+}
+
 const userOne = new User('mario', 'wema@hotmail.com');
 const userTwo = new User('zole', 'mail@email.com');
+const userThree = new Admin ('shaun', 'shaun@mail.com');
 
+console.log(userOne, userTwo, userThree);
 
+let users = [userOne, userTwo, userThree];
+console.log(users);
 
-console.log(userOne, userTwo);
-
-// userOne.login();
-// userTwo.login();
-
-// userTwo.logout();
-
-// userOne.incScore();
-// userOne.incScore();
-
-userOne.login().incScore().incScore();
+userThree.deleteUser(userTwo);
+console.log(users);
