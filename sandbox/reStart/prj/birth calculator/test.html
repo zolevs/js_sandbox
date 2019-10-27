@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Day of the week you were born</h1>
+
+    <div class="calculator">
+        <input type="number" id="user-month" placeholder="MM" >
+        <input type="number" id="user-day" placeholder="DD" >
+        <input type="number" id="user-year" placeholder="YY" >
+        <br>
+        <button id="submit-date">Tell me the day please...</button>
+    </div>
+    
+    <div id="message"></div>
+
+    <script>
+        let userMonth = document.getElementById('user-month');
+        let userDay = document.getElementById('user-day');
+        let userYear = document.getElementById('user-year');
+
+        let submitButton = document.getElementById('submit-date');
+        submitButton.addEventListener('click', function(evt){
+            let message = document.getElementById('message');
+
+            let parsedMonth = (parseInt(userMonth.value) - 1);
+            let parsedDay = parseInt(userDay.value);
+            let parsedYear = parseInt(userYear.value);
+
+            let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            let weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+            let dateIs = new Date(parsedYear, parsedMonth, parsedDay);
+            
+            let weekdayIs = weekday[dateIs.getDay()]
+            let monthIs = months[parsedMonth];
+
+            if(weekdayIs === undefined || monthIs === undefined) {
+                message.innerText = '';
+                setTimeout(function() {
+                    message.innerText = 'Please enter a valid date'
+                }, 500);
+            } else {
+                message.innerText = weekdayIs + ', ' + monthIs + ' ' + parsedDay + ', ' + parsedYear;
+            }
+
+
+            // console.log(dateIs);
+
+            // console.log(parsedMonth, parsedDay, parsedYear);
+        });
+
+        
+    </script>
+</body>
+</html>
