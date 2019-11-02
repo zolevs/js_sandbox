@@ -1,34 +1,29 @@
-
-class User{
-    constructor(username, email){
-        // //
-        this.username = username;
-        this.email = email;
-        this.score = 0;
-    }
+const userOne = {
+    username: 'Zoran',
+    email: 'zozon@mail.com',
     login(){
-        console.log(`${this.username} logged in`);
-        return this;
-    }
+        console.log('User logged in');
+    },
     logout(){
-        console.log(`${this.username} logged out`);
-        return this;
+        console.log('User logged out');
     }
-    incScore(){
-        this.score += 1;
-        console.log(`${this.username} has a score of ${this.score}`);
-        return this;
+};
+
+console.log(userOne.username, userOne.email);
+userOne.login();
+
+
+const userTwo = {
+    username: 'Zozon',
+    email: 'papadubi@gg.com',
+    login(){
+        console.log('User logged in');
+    },
+    logout(){
+        console.log('User logged out');
     }
-}
+};
 
-const userOne = new User('luigi', 'mail@yahoo.com');
-const userTwo = new User('baba', 'dada@google.com');
-console.log(userOne, userTwo );
+console.log(userTwo.username, userTwo.email);
 
-userOne.login().incScore().incScore().logout();
-// userTwo.logout();
-// console.log(userOne, userTwo);
-// userOne.incScore();
-// console.log(userOne, userTwo);
-
-
+const userThree = new user();
