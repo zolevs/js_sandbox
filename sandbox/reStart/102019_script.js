@@ -1,53 +1,32 @@
-class User {
-    constructor(username, email){
+function User(username, email) {
         // set up properties
         this.username = username;
         this.email = email;
-        this.score = 0;
     }
-    // // metode ne razdvajamo , zato gore nema , 
-    login(){
-        console.log(`${this.username} just logged in.`);
+
+    User.prototype.login = function () {
+        console.log(`${this.username} has logged in `);
         return this;
-    }
-    logout(){
-        console.log(`${this.username} just logged OUT`);
+    };
+
+    User.prototype.logout = function() {
+        console.log(`${this.username} has logged out`);
         return this;
+    };
+
+    function Admin(username, email, title){    
+        User.call(this, username, email);  
+        this.title = title;         
     }
-    incScore(){
-        this.score += 1;
-        console.log(`${this.username} has score of ${this.score}`);
-        return this;
-    }
-}
 
-class Admin extends User{
-    constructor(username, email, title){
-        super(username, email);
-        this.title = title;
-    }
-    deleteUser(user){
-        users = users.filter(u => u.username !== user.username);
-    }
-}
+    const userOne = new User('mario', 'mario@email.com');
+    const userTwo = new User('luigi', 'luigi@email.com');
+    const userThree = new Admin('shaun', 'shaun@testmail.com', 'black-belt');
+    console.log(userOne, userTwo, userThree);
 
-const userOne = new User('Zozon', 'zozo@mail.com');
-const userTwo = new User('Tama', 'test@mail.com');
-const userThree = new Admin('SubAdmin', 'admin@test.com', 'black-belt');
+    userOne.login().logout();
 
-
-console.log(userOne);
-console.log(userTwo);
-console.log(userThree);
-
-// userTwo.login();
-// userOne.logout();
-
-userOne.login().incScore().incScore().incScore();
-
-let users = [userOne, userTwo, userThree];
-console.log(users);
-
-userThree.deleteUser(userTwo);
-
-console.log(users);
+    Admin.prototype = Object.create(User.prototype);
+    Admin.prototype.deleteUser = function(){
+        
+    };    
