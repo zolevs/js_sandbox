@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FireBase</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+    <h1>FireBase</h1>
+    <div class="container my-5">
+        <h2>Recepies</h2>
+        <ul>
+            <!-- <li>Mushroom pie</li>
+            <li>Veg curry</li> -->
+        </ul>
+        <form action="">
+            <label for="recepies">Add recepies:</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="recepie" required>
+                <div class="input-group-append">
+                    <input type="submit" value="add" class="btn btn-outline-secondary">
+                </div>
+            </div>
+        </form>
+    </div>
+    
+
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAhmMkpxGF_RxUl7_CkwO2JfHjk9xUzKDE",
+        authDomain: "test-5d056.firebaseapp.com",
+        databaseURL: "https://test-5d056.firebaseio.com",
+        projectId: "test-5d056",
+        storageBucket: "test-5d056.appspot.com",
+        messagingSenderId: "217169116440",
+        appId: "1:217169116440:web:96538e04b99881f464f26d"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    const db = firebase.firestore();
+    
+    </script>
+
+    <script src="110519_script.js"></script>
+</body>
+</html>
