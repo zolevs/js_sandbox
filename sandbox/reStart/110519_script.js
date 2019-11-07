@@ -34,7 +34,7 @@ db.collection('recepies').get().then((snapshot) => {
     })
 }).catch((err)=>{
     console.log(err);
-})
+});
 
 // get document
 db.collection('recepies').onSnapshot(snapshot => {
