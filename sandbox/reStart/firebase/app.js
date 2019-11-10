@@ -1,5 +1,6 @@
 
-const cafelist = document.querySelector('#cafe-list');
+const cafeList = document.querySelector('#cafe-list');
+const form = document.querySelector('#add-cafe-form');
 
 // 
 function renderCafe(doc){
@@ -14,13 +15,25 @@ function renderCafe(doc){
     li.appendChild(name);
     li.appendChild(city);
 
-    cafelist.appendChild(li);
+    cafeList.appendChild(li);
 }
 
+// getting data
 db.collection('cafes').get().then((snapshot)=>{
-    console.log(snapshot.docs);
+    // console.log(snapshot.docs);
     snapshot.docs.forEach(doc => {
         // console.log(doc.data());
         renderCafe(doc);
     });
 });
+
+// saving data
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    db.collection('cafes').add({
+        name: form.name.value,
+        city: form.city.value
+    });
+    form.name.value = '';
+    form.city.value = '';
+})
