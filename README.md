@@ -93,3 +93,8 @@
 - 12.10 - weather
 - 17.10 - weather
 - 22.10 - Object
+
+:alien:
+---
+
+- 12.11 - firebase
