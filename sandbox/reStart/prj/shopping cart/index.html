@@ -81,6 +81,8 @@
 
       const cart = [];
 
+// //      
+// //  //    
       function addItem(name, price){
 
         for (let i = 0; i < cart.length; i++){
@@ -90,29 +92,53 @@
           }
         }
         
-        const item = {name: name, price: price, qty: 1};
+        // const item = {name: name, price: price, qty: 1};
+        const item = { name, price, qty: 1};
         cart.push(item);
       }
-
+// //
+// // //
       function showItems(){
+        // const qty = getQty();
+        //  console.log(`Items in a cart ${qty}`);
+         console.log(`Items in a cart ${getQty()}`);
+        for( let i = 0; i < cart.length; i++){
+          // console.log(`${cart[i].name} - ${cart[i].price} x ${cart[i].qty} = ${cart[i].qty*cart[i].price}`);
+          console.log(`${cart[i].name} - ${cart[i].price} x ${cart[i].qty} = ${cart[i].qty*cart[i].price}`);
+        }
+        console.log(`Total: $${getTotal()}`);
+// //
+// // //
+      }
+      function getQty(){
         let qty = 0;
         for (let i = 0; i < cart.length; i++){
           qty += cart[i].qty;
         }
-        console.log(`Items in a cart ${qty}`);
-        for( let i = 0; i < cart.length; i++){
-          // console.log(`${cart[i].name} - ${cart[i].price} x ${cart[i].qty} = ${cart[i].qty*cart[i].price}`);
-          console.log(`${cart[i].name} - ${cart[i].price} x ${cart[i].qty} = ${cart[i].qty*cart[i].price}`);
-
-        }
+        return qty;
+      }
+// //
+// // //
+      function getTotal(){
         let total = 0;
         for (let i = 0; i < cart.length; i++){
           total += cart[i].price * cart[i].qty;
         }
-        console.log(`Total: $${total}`);
-
+        return total.toFixed(2);
+      }
+// //
+// // //
+      function removeItem(name){
+        for(let i = 0; i < cart.length; i++){
+          if(cart[i].name === name){
+            cart.splice(i, 1);
+            return
+          }
+        }
       }
 
+// //
+// // //
       addItem('Apple', 0.99);
       addItem('Orange', 1.99);
       addItem('Apple', 0.99);
@@ -120,6 +146,9 @@
       addItem('Opinion', 2.99);
       addItem('Frisbee', 2.99);
       addItem('Opinion', 2.99);
+      showItems();
+      console.log('******************');
+      removeItem('Frisbee');
       showItems();
     </script>
 </body>
