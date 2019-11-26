@@ -100,3 +100,4 @@
 - 12.11 - firebase
 - 21.11 - cart
 - 22.11 - cart DOM
+- 26.11 - cart CSS
