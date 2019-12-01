@@ -32,13 +32,14 @@
           justify-content: flex-start;
           align-items: center;
         }
-        #items {
+        #item-list {
           list-style: none;
           margin: 0;
           padding: 0;
         }
-        #items > li {
+        #item-list > li {
           display: flex;
+          flex-direction: row;
           justify-content: space-between;
           align-items: center;
         }
@@ -52,6 +53,16 @@
           padding: 0.5em;
           margin-top: 0.5em;
         }
+        ul{
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+        #cart-total {
+          font-size: 2em;
+          border-top: 1px solid;
+        }
+
         </style>
 </head>
 <body>
@@ -104,7 +115,7 @@
           updateCart(name, qty);
         }
       }
-      
+
 
 
 
@@ -176,10 +187,17 @@
           // {name: 'Apple', price: 0,99, qty: 3};
           const {name, price, qty} = cart[i];
 
-          itemStr += `<li>${name} - $ ${price} x ${qty} = ${qty*price} <button class="remove" data-name="${name}"> Remove </button>
-          <button class="add-one" data-name="${name}"> + </button>
-          <button class="remove-one" data-name="${name}"> - </button> 
-          <input class="update" type="number" min="0" data-name="${name}"> 
+          itemStr += `
+          <li>
+            <span>
+            ${name} - $ ${price} x ${qty} = ${(qty*price).toFixed(2)}
+            </span>
+            <span>
+              <button class="remove" data-name="${name}"> Remove </button>
+              <button class="add-one" data-name="${name}"> + </button>
+              <button class="remove-one" data-name="${name}"> - </button> 
+              <input class="update" type="number" min="0" data-name="${name}"> 
+            </span>
           </li>`;
         }
         itemList.innerHTML = itemStr;
