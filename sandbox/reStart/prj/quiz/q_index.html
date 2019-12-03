@@ -8,7 +8,10 @@
 </head>
 <body>
     
+    <div id="quiz" class="container quiz">
+        <!-- questions -->
 
+    </div>
     <!-- SCRIPT -->
     <script>
 
@@ -55,6 +58,37 @@
             }
 
         ]
+
+        function init(){
+            const quizEl = document.getElementById('quiz');
+
+            // loop array
+            let quizStr = '';
+            questions.forEach(function(question) {
+                console.log(question.q);
+                console.log(question.a[0]);
+                quizStr += `
+                <form> 
+                    <h1>${question.q} </h1>
+                    <ul>
+                        ${question.a}
+                    </ul>
+                </form>
+                `;
+            }
+            );
+            quizEl.innerHTML = quizStr;
+            // make html
+            // form
+            // h1
+            // alert
+            // ul
+            //  li
+            //  li
+            //  ...
+            //  button
+        }
+        init();
     
     </script>
 </body>
