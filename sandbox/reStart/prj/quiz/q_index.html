@@ -64,15 +64,30 @@
 
             // loop array
             let quizStr = '';
-            questions.forEach(function(question) {
-                console.log(question.q);
-                console.log(question.a[0]);
+            questions.forEach(function(question, qIndex) {
+                let answerStr = '';
+                question.a.forEach(function(answer, aIndex) {
+                    answerStr += `
+                        <li> 
+                            <label> 
+                                <input 
+                                    type="radio" 
+                                    name="question-${qIndex}"
+                                    data-correct="${question.correct === aIndex}"
+                                >
+                                ${answer}
+                            </label>
+                        </li>
+                    `;
+                });
                 quizStr += `
                 <form> 
                     <h1>${question.q} </h1>
+                    <div class="alert"> - Alert </div>
                     <ul>
-                        ${question.a}
+                        ${answerStr}
                     </ul>
+                    <button type="submit"> Submit </button>
                 </form>
                 `;
             }
@@ -87,7 +102,16 @@
             //  li
             //  ...
             //  button
-        }
+
+            quizEl.addEventListener('submit',function(e){
+                e.preventDefault();
+                // console.log(e.target.querySelectorAll('li'));
+                const selectedInput = e.target.querySelector('input[type=radio]:checked');
+                console.log(selectedInput);
+            });
+
+        } // end init function
+
         init();
     
     </script>
