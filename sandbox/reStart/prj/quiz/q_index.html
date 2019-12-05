@@ -68,7 +68,7 @@
                 let answerStr = '';
                 question.a.forEach(function(answer, aIndex) {
                     answerStr += `
-                        <li> 
+                        <li style="order: ;"> 
                             <label> 
                                 <input 
                                     type="radio" 
@@ -84,7 +84,7 @@
                 <form> 
                     <h1>${question.q} </h1>
                     <div class="alert"> - Alert </div>
-                    <ul>
+                    <ul style="display: flex; flex-direction: column;">
                         ${answerStr}
                     </ul>
                     <button type="submit"> Submit </button>
@@ -113,7 +113,33 @@
         } // end init function
 
         init();
-    
+
+        function random(n){
+            const r = Math.random() * n;
+            // console.log(Math.floor(Math.random() * n));
+            return Math.floor(r);
+        }
+
+        function randomRange(x){
+            const arr = [];
+            for (let i=0; i<x; i+=1){
+                arr.push(i);
+            }
+            console.log(arr);
+            const randomArr = [];
+            while(arr.length > 0){
+                const randomIndex = random(arr.length);
+                const randomNumber = arr[randomIndex];
+                randomArr.push(randomNumber);
+                arr.splice(randomIndex, 1);
+            }
+            return randomArr;
+        }
+        console.log(randomRange(5));
+
+        // for(let i=0; i<100; i++){
+        //     random(10);
+        // }
     </script>
 </body>
 </html>
