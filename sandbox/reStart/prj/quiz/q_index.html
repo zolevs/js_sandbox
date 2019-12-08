@@ -66,9 +66,10 @@
             let quizStr = '';
             questions.forEach(function(question, qIndex) {
                 let answerStr = '';
+                const answerOrder = randomRange(question.a.length);
                 question.a.forEach(function(answer, aIndex) {
                     answerStr += `
-                        <li style="order: ;"> 
+                        <li style="order: ${answerOrder[aIndex]} ;"> 
                             <label> 
                                 <input 
                                     type="radio" 
@@ -93,20 +94,19 @@
             }
             );
             quizEl.innerHTML = quizStr;
-            // make html
-            // form
-            // h1
-            // alert
-            // ul
-            //  li
-            //  li
-            //  ...
-            //  button
 
             quizEl.addEventListener('submit',function(e){
                 e.preventDefault();
                 // console.log(e.target.querySelectorAll('li'));
                 const selectedInput = e.target.querySelector('input[type=radio]:checked');
+                const alert = e.target.querySelector('div.alert');
+                if(selectedInput === null){
+                    alert.innerHTML = 'Please select an answer.';
+                } else if (selectedInput.dataset.correct === 'true'){
+                    alert.innerHTML = 'Correct';
+                } else {
+                    alert.innerHTML = 'Try again';
+                }
                 console.log(selectedInput);
             });
 
