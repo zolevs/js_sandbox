@@ -1,7 +1,5 @@
-(function(){
-    // IIFE - immediatly invoked function expression
-    var num = 5;
-    num1 = 10;
-})();
+{
+    let slicesOfPizza = 10;
+    console.log(slicesOfPizza - 5);
 
-let y = 10;
+}
