@@ -1,5 +1,11 @@
-{
-    let slicesOfPizza = 10;
-    console.log(slicesOfPizza - 5);
+{ 
+
+let myName = 'Zole';
+let yourName = new String('Test');
+
+console.log(myName);
+console.log(yourName[2
+]);
+
 
 }
