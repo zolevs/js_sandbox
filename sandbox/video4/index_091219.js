@@ -1,11 +1,21 @@
 { 
 
-let myName = 'Zole';
-let yourName = new String('Test');
+let name = prompt('Your name');
 
-console.log(myName);
-console.log(yourName[2
-]);
-
+switch(name){
+    case 'zole':
+        console.log('Zole');
+        break;
+    case 'brana':
+        console.log('brana');
+        break;
+    case 'test':
+        console.log('test');
+        break;
+    default:
+        console.log('none of above');
+        
+}
 
 }
+
