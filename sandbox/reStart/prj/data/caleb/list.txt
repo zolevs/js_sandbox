@@ -42,11 +42,14 @@ Timestamps:
 9M4XKi25I2M&t=14059s    3:54:19 - Array Methods Part 1
 9M4XKi25I2M&t=14527s    4:02:07 - Array Methods Part 2
 9M4XKi25I2M&t=14833s    4:07:13 - Array Methods Part 3
-
 9M4XKi25I2M&t=15300s    4:15:00 - forEach Method Arrays
 9M4XKi25I2M&t=15701s    4:21:41 - Iterate Multidimensional Array with for and forEach 
+
+
 9M4XKi25I2M&t=16140s    4:29:00 - Label with Break and Continue 
 9M4XKi25I2M&t=16657s    4:37:37 - Dates
+
+
 9M4XKi25I2M&t=17049s    4:44:09 - Using Dates and Unix Timestamp in JavaScript
 9M4XKi25I2M&t=17605s    4:53:25 - Date Methods
 9M4XKi25I2M&t=18079s    5:01:19 - Intro to Functions - Functions Part 1
