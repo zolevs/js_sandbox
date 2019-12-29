@@ -1,5 +1,9 @@
-let myDate = new Date();
-console.log(myDate);
-myDate
-console.log(myDate.getDay());
+{
 
+    let doSomething = function(){
+        console.log("Done");
+    }
+
+    setTimeout(doSomething, 2000);
+
+}
