@@ -1,9 +1,11 @@
 {
 
-    let doSomething = function(){
-        console.log("Done");
-    }
+// doStuff();
 
-    setTimeout(doSomething, 2000);
+var doStuff = function (){
+    console.log('Hey');
+}
+
+doStuff();
 
 }

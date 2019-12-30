@@ -48,13 +48,15 @@ Timestamps:
 9M4XKi25I2M&t=16657s    4:37:37 - Dates
 9M4XKi25I2M&t=17049s    4:44:09 - Using Dates and Unix Timestamp in JavaScript
 9M4XKi25I2M&t=17605s    4:53:25 - Date Methods
-
 9M4XKi25I2M&t=18079s    5:01:19 - Intro to Functions - Functions Part 1
 9M4XKi25I2M&t=18582s    5:09:42 - Passing Arguments by Value - Functions Part 2
 9M4XKi25I2M&t=19024s    5:17:04 - Callback Functions - Functions Part 3
 9M4XKi25I2M&t=19555s    5:25:55 - Function Declarations and Expressions
 9M4XKi25I2M&t=19746s    5:29:06 - Hoisting
 9M4XKi25I2M&t=20023s    5:33:43 - Hoisting in Practice
+
+
+
 9M4XKi25I2M&t=20396s    5:39:56 - Functions as First Class Citizens (Objects)
 9M4XKi25I2M&t=20804s    5:46:44 - Memoization and Algorithms Optimization
 9M4XKi25I2M&t=21308s    5:55:08 - Default Parameters, Rest Parameters, Implicit Parameters
