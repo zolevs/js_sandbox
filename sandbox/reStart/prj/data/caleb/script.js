@@ -1,27 +1,28 @@
 {
 
-function pow(x, y){
-    let total = 1;
-    for (let i = 0; i < y; i++){
-        total *= x;
+    pow.calculated = {};
+    function pow(x, y){
+        let stringVersion = x + "^" + y;
+        console.log(stringVersion);
+
+        if(stringVersion in pow.calculated){
+            console.log('found....');
+            return pow.calculated[stringVersion];
+        }
+        console.log('calculating');
+        let total = 1;
+        for (let i = 0; i < y; i++){
+            total *= x;
+        }
+        pow.calculated[stringVersion] = total;
+        console.log(pow.calculated);
+        return total;
+
     }
-    return total;
-}
-let collFunctions = [pow];
-console.log(collFunctions[0](3,3));
 
+    console.log(pow(10,10));
+    console.log(pow(10,10));
+    console.log(pow(5,5));
+    console.log(pow(10,10));
 
-let mathFunction = {
-    power: pow
-}
-
-console.log(mathFunction.power(3,3));
-pow.description = "Description is here...";
-
-console.log(pow.description);
-
-function returnFunction(func){
-    return func;
-}
-console.log(returnFunction(pow(3,5)));
 }
