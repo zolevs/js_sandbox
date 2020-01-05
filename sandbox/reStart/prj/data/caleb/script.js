@@ -1,16 +1,14 @@
 {
 
-    function doStuff(input, input2){
-        console.log(input, input2);
-        console.log(this);
+    function normal(){
+        return this;
     }
 
-    let newFunction = doStuff.bind("Hello", 20, 442, 12);
+    let arrow = () => this;
 
-    newFunction();
+    let newFunc = arrow.bind("Hello");
+    console.log(newFunc());
 
-
-
-
+    console.log(normal.bind("this")());
 }
 
