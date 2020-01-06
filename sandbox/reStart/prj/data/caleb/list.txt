@@ -56,8 +56,6 @@ Timestamps:
 9M4XKi25I2M&t=20023s    5:33:43 - Hoisting in Practice
 9M4XKi25I2M&t=20396s    5:39:56 - Functions as First Class Citizens (Objects)
 9M4XKi25I2M&t=20804s    5:46:44 - Memoization and Algorithms Optimization
-
-
 9M4XKi25I2M&t=21308s    5:55:08 - Default Parameters, Rest Parameters, Implicit Parameters
 9M4XKi25I2M&t=21802s    6:03:22 - Introduction to this
 9M4XKi25I2M&t=22120s    6:08:40 - this
@@ -71,6 +69,9 @@ Timestamps:
 9M4XKi25I2M&t=23960s    6:39:20 - Intro to Debugging
 9M4XKi25I2M&t=24238s    6:43:58 - Event Listener Breakpoints
 9M4XKi25I2M&t=24438s    6:47:18 - Exemptions (Throw, Catch, Finally)
+
+
+
 9M4XKi25I2M&t=24840s    6:54:00 - Object Oriented JavaScript
 9M4XKi25I2M&t=25089s    6:58:09 - Creating a Constructor Function
 9M4XKi25I2M&t=25406s    7:03:26 - Creating a Factory Function
