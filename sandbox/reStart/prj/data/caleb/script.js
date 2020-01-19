@@ -1,7 +1,33 @@
 {
 
-    let paragrahps = document.getElementsByTagName("p");
-    console.log(paragrahps);
+
+    // document.getElementById("input").value = "!!!!";
+    console.log(document.getElementById("input").getAttribute("tacos"));
+
+    // let list = document.getElementsByTagName("ol");
+    // console.log(list);
+
+    // let ourList = list[0];
+    // console.log(ourList);
+
+    // ourList.onmouseover = function(){
+    //     console.log('Mouse over');
+    //     ourList.childNodes[1].childNodes[0].nodeValue = "House";
+    //     document.getElementById("border").innerHTML = "House 2";
+    // }
+
+
+    // let button = document.getElementById("clickme");
+    // button.onmouseenter = function(){
+    //     button.innerHTML = "Entered or revealed";
+    // }
+    // button.onmouseleave = function(){
+    //     button.innerHTML = "Mouse left";
+    //     ourList.remove();
+    // }
+
+    // let paragrahps = document.getElementsByTagName("p");
+    // console.log(paragrahps);
 
     // let myButton = document.getElementById("clickme");
     // myButton.style.backgroundColor = "red";
