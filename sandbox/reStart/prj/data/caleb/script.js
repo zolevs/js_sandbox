@@ -1,8 +1,19 @@
 {
 
+    let button = document.getElementById("clickme");
+
+    button.onclick = function (){
+        let node = document.createElement('li');
+        console.log(node);
+        node.appendChild(document.createTextNode(document.getElementById("input").value));
+        document.createTextNode("new");
+        let list = document.getElementById("items");
+        list.appendChild(node);
+    }
+
 
     // document.getElementById("input").value = "!!!!";
-    console.log(document.getElementById("input").getAttribute("tacos"));
+    // console.log(document.getElementById("input").getAttribute("tacos"));
 
     // let list = document.getElementsByTagName("ol");
     // console.log(list);
